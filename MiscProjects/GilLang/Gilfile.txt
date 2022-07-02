@@ -1,0 +1,163 @@
+# implementations. 
+#Handcrafted clouds. Clockwork operations. Putting the "work" in "network". The happiest of customers.  Made in the USA.
+
+#Selphia Twerkalos
+
+#nfs -PipeEqual -PreVariable
+#Insert-TextIntoFile needs to break up Functions in the build log so Find-Function doesn't trip over that...Or make Find-Function jump past all that...
+#Find-Function How to handle multiple functions?
+
+	
+#Get-Git?
+#Have Get-ModuleVersion check Github?
+#Make something that grabs the last thing in your Powershell buffer and clips it. 
+#need find-subroutine to find stuff inside Functions... or a -subroutine flag. 
+#Need to make like "PowerShiriAdmin" module that runs as admin and beats up the other Functions 
+#need Remove-LinesFromFile 
+#New-BeginProcessEnd 
+#Validate-Module to test for errors?
+#Check-ModuleForErrors - $e = $error; ipmo $ModuleName -force; if 'diff $e $error' '"Do stuff to revert error."'
+#Add-ToValidateSet
+
+#Count which parens/bracket we're on, how many total, and get line numbers for all of them, so we can count down the line numbers...but how to handle 2 on 1 line? 
+#nfs foreach line in function (nfs if "`{" contains line '#Count all brackets on this line, then math out if this is the bottom line for the function. Also use tab hints? No, expect the whitespace to lie, especially generated whitespace.')
+
+#Basic-Security
+#$User
+#$Pass
+#$Pair = {$user}:{$pass}
+#$Bytes = $Pair | Flip-toBytes
+#$Base64 = Convert::Base64($Bytes)
+#$Bearer = "Bearer " + $Base64
+#$Auth = @{ $Bearer }
+#$Header = $Auth
+#IWR Http://site.com -header $header
+
+#Insop:
+#This will make the thread with which you will thread the eye into NewModule.ps1.
+#Need dynamic params: 
+#Params - DynamicParam
+#For
+#Foreach
+#Filter finder stuffs?
+#Add in ALL the other types from nfs?
+#-ReplaceLine to remove a line?
+#insop only add param if FunVar is a var.
+
+#nfs SetVerbose needs to check if CmdletBinding is set?
+#nfs if RefVar's not a string that becomes a variable, make CompVar into RefVar.
+# New-FunctionStatement - Make all these TopHeaderRemoved options into dynamic params.
+#nfs/insop/instxt Verbose option adds 'Write-Verbose "$Variable1 $Variable2 $Variable3 $VariableEtc"' or 'Write-Verbose "You are in IF statement RefVar CompOp CompVar on line LineNo"'
+#Needs -ElseIf flag and vars
+#$ScriptBlock = $ScriptBlock.replace("The variable $FunctionVariable is True","The variable $FunctionVariable is '$ComparisonOperator' to the variable $ReferenceVariable");
+
+#$rc = New-Object System.Object | select "dog","frog","log"
+#$rc.dog=2
+
+
+#Insert-TextIntoFunction to do what insop does, basically. Find function by FileName and insert.
+
+#Rebuild-Parameters
+#If Parameter, add other Parameter options to next variable.
+#Rebuild-Parameters - Remove all whitespace and line breaks, split on commas, then go from there.
+
+#Get-OperationsFromFunction to reverse a Function back out into Get-Function etc.
+#Build this out into Rebuild-Insop?
+
+#New-Module should make PSD1 and PSM1? -Module Flag?
+#Have it take a line number as input (FLAG)
+
+#nf2 Insert-AliasToFile
+
+#Find-Function
+#How to handle if string not found?
+#How to handle multiple mentions?
+#if -1 break?
+#$Func = New-Object System.Object | select "FileName","StartLine","EndLine","Parameters","Process"
+#$Func.FileName = (gc $FileName)[1](etc...)
+<#
+	#Backup method.
+	#Read forward until you get the first bracket, and then add left brackets and subtract right brackets.
+	if (($Func.EndLine -eq ($Filecontents.Length - 1)) -OR ($Func.EndLine -eq -1)) {
+		$StartReadLine = ((($Func.Process| select-string "`{")[0].LineNumber))
+		$Counter = 1
+		While ($Counter -gt 0) {
+			Foreach ($Char in $Func.Process[$StartReadLine..$Func.EndLine].Tochararray()) {	
+				
+				switch ($Char) 
+					{ 
+						"`{" { $Counter++ ; write-verbose $Counter }
+						"`}" { $Counter-- ; write-verbose $Counter }
+						#3 {"The color is green."} 
+						default {write-verbose $Char }
+					}; #end switch Char
+			}; #end Foreach NewFileContents[$StartReadLine..$Func.EndLine].Tochararray()
+		}; #end While Counter
+		#How to determine the line number?
+	}; #end if 
+#>
+
+
+#PKI
+#First cert/key exchanged somehow (Smart card?)
+#Client encrypts first message and next key token with first key/cert, sends payload.
+#Server hosts server token (encrypted with server key?) at client token location, restricted to client IP and random port (in token) for 10s. 
+#Client encrypts next message and next client token with new key and current server token, sends new key and payload.
+#Server hosts server token at client token location, restricted to client IP and random port (in token) for 10s. 
+
+#Scramble CipherTextAlpha from PlainTextAlpha on every PowerGIL build?
+#Send build number to show which CipherTextAlpha version to use?
+#
+#
+
+
+#Identity manager to manage all the identities you meet online.
+
+#
+#We may lose, and we may win, but we keep respawning here again. Welcome back to the same old new age. Everything that's new is old already. 
+#
+#GilFile function:
+#New-Module FizzBuzz.ps1 (New-Function2 Filter-FizzBuzz (nfs If _ Modulus 15 'return "FizzBuzz"' (nfs ElseIf _ Modulus 5 'return "Fizz"' (nfs ElseIf _ Modulus 3 'return "Buzz"' 'return $_' -not ) -not ) -not ) -Filter) 
+#
+<#
+$fg = Get-ModuleVersion -Functions
+#New-ForeachStatement fg -top -bot -one -clip -ScriptBlock 'Get-OperationsFromFunction $f'
+foreach ($f in $fg) {Get-OperationsFromFunction (Find-Function $f)}; #end foreach fg
+
+$gg = Get-OperationsFromFunction
+$hh = $gg.split("._,$") | select -u #| where {$_ -ne $null}
+$hh = $hh[2..($hh.Length)]
+#New-ForeachStatement hh -top -bot -one -clip -ScriptBlock 'New-Parameter $h'
+New-Parameter Top -top; foreach ($h in $hh) {New-Parameter $h}; New-Parameter Last -bot
+
+#[object]$rc = "" | select "dog","frog","log" ; $rc.dog=2
+
+$s = "c:/folder name/somewhere/application.exe instanceName"
+$s -match '(.*) (.*)$'
+$matches[1]
+$matches[2]
+
+#>
+<#
+git config --global user.email "stephen.gillie@gmail.com"
+git config --global user.name "Gilgamech"
+git add -A
+git commit -m "Auto-add"
+git push https://Gilgamech:password@github.com/Gilgamech/Main.git
+#>
+#New-Function2 Filter-FizzBuzz (nfs If _ Modulus 15 'return "FizzBuzz"' (nfs if _ Modulus 5 'return "Fizz"' (nfs if _ Modulus 3 'return "Buzz"' 'return $_' -not ) -not ) -not ) -Filter
+#nfs if _ Modulus 5 'return "Buzz"' -not
+#New-Module FizzBuzz.ps1 (nf2 Filter-FizzBuzz (nfs If _ Modulus 15 'return "FizzBuzz"' (nfs if _ Modulus 5 'return "Fizz"' (nfs if _ Modulus 3 'return "Buzz"' 'return $_' -not ) -not ) -not ) -Filter) 
+#nf2 Filter-FizzBuzz (nfs If _ Modulus 15 'return "FizzBuzz"' (nfs elseif _ Modulus 5 'return "Fizz"' (nfs elseif _ Modulus 3 'return "Buzz"' 'return $_' -not ) -not ) -not ) -Filter
+#nfs if '(test-path $buildpath)' -ScriptBlock 'md $buildpath' -not -tab 1
+#$rnf = New-FunctionStatement ScriptBlock -else -scr 'Insert-TextIntoFile (New-FunctionStatement $OperationType $VariableName ) $FileName $InsertAtLineNo' -elses 'Insert-TextIntoFile (New-FunctionStatement $OperationType $VariableName -scr $ScriptBlock) $FileName $InsertAtLineNo'
+#insop if string operationtype "'test'" Insert-OperationIntoFunction 304
+#insop if string ComparisonOperator -ScriptBlock ' += -ComparisonOperator ' Insert-OperationIntoFunction 321
+#insop if switch Filter` New-Function2 555 '$FunctionContents += "Filter $FunctionName {" + $NewLineVar' '$FunctionContents += "Function $FunctionName {" + $NewLineVar'
+#instxt (nfs -top -else '$FunctionContents += "Function $FunctionName {" + $NewLineVar' -bot) $PowerGIL 557
+#instxt (nfs if 'ElseScriptBlock.split("`n")[0]' Like '"ElseIf *"' -scr "[string]`$NewFunctionOperation += `$TabVar  + $ClosingBracket" -else "[string]`$NewFunctionOperation += `$TabVar +'} else {' + `$NewLineVar`;" -tab 2) $PowerGIL 1011
+#insop if switch CmdletBind '$PrameterStatementOptions += @{ CmdletBind = $True }; #end Prameterstatement' Insert-OperationIntoFunction 347 
+
+
+
+

@@ -7,27 +7,21 @@ document.body.appendChild(canvas);
 
 //background image 
 var bgImage = new Image();
-bgImage.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/tictactoe.png";
+bgImage.src = "/images/tictactoe.png";
 var bgReady = false;
-bgImage.onload = function () {
-bgReady = true;
-};
+bgImage.onload = function () { bgReady = true; };
 
 //x image
 var ximgImage = new Image();
 ximgReady = false;
-ximgImage.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/ticX.png"
-ximgImage.onload = function () {
-	ximgReady = true;
-};
+ximgImage.src = "/images/ticX.png"
+ximgImage.onload = function () {ximgReady = true;};
 
 //o image
 var oimgImage = new Image();
 oimgReady = false;
-oimgImage.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/ticO.png"
-oimgImage.onload = function () {
-	oimgReady = true;
-}
+oimgImage.src = "/images/ticO.png"
+oimgImage.onload = function () { oimgReady = true; }
 
 //Creates variables
 function init() {
@@ -87,7 +81,7 @@ addEventListener('mousemove', function(e) {
 //mouse click event listener
 addEventListener('click', function(ev) {
 	mosPos = getMousePos(canvas, ev);
-	mouseOnclickLoc = [ mosPos.x, mosPos.y ]; // not sure why I put this in here...
+	mouseOnclickLoc = [ mosPos.x, mosPos.y ];
 	clickLoc();
 	//check to make sure mouse is within borders before changing turn
 

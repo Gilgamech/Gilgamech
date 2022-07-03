@@ -9,7 +9,7 @@ document.body.appendChild(canvas);
 //need to come up with something
 //separate sections?
 var bgImg = new Image();
-bgImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/bgrps.png";
+bgImg.src = "/images/bgrps.png";
 var bgRdy = false;
 bgImg.onload = function () {
 	bgRdy = true;
@@ -17,7 +17,7 @@ bgImg.onload = function () {
 
 //rock image
 var rockImg = new Image();
-rockImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/rock.src";
+rockImg.src = "/images/rock.png";
 rockRdy = false;
 rockImg.onload = function () {
 	rockRdy = true;
@@ -25,7 +25,7 @@ rockImg.onload = function () {
 
 //paper image
 var paperImg = new Image();
-paperImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/paper.png";
+paperImg.src = "/images/paper.png";
 paperRdy = false;
 paperImg.onload = function () {
 	paperRdy = true;
@@ -33,14 +33,14 @@ paperImg.onload = function () {
 
 //scissors image
 var scissorsImg = new Image();
-scissorsImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/scissors.png";
+scissorsImg.src = "/images/scissors.png";
 scissorsRdy = false;
 scissorsImg.onload = function () {
 	scissorsRdy = true;
 };
 //lizard image
 var lizardImg = new Image();
-lizardImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/lizard.png";
+lizardImg.src = "/images/lizard.png";
 lizardRdy = false;
 lizardImg.onload = function (){
 	lizardRdy = true;
@@ -48,7 +48,7 @@ lizardImg.onload = function (){
 
 //spock image
 var spockImg = new Image();
-spockImg.src = "https://dl.dropboxusercontent.com/u/21982561/html5/images/spock.png";
+spockImg.src = "/images/spock.png";
 spockRdy = false;
 spockImg.onload = function () {
 	spockRdy = true;
@@ -78,7 +78,7 @@ addEventListener('click', function(e) {
 
 //Computer chooses
 compChoice = function() {
-	compPiece = Math.random(5)):
+	compPiece = Math.random(5);
 
 
 };

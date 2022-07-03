@@ -1,12 +1,9 @@
 # implementations. 
 #Handcrafted clouds. Clockwork operations. Putting the "work" in "network". The happiest of customers.  Made in the USA.
 
-#Selphia Twerkalos
-
 #nfs -PipeEqual -PreVariable
 #Insert-TextIntoFile needs to break up Functions in the build log so Find-Function doesn't trip over that...Or make Find-Function jump past all that...
 #Find-Function How to handle multiple functions?
-
 	
 #Get-Git?
 #Have Get-ModuleVersion check Github?
@@ -113,8 +110,6 @@
 
 #Identity manager to manage all the identities you meet online.
 
-#
-#We may lose, and we may win, but we keep respawning here again. Welcome back to the same old new age. Everything that's new is old already. 
 #
 #GilFile function:
 #New-Module FizzBuzz.ps1 (New-Function2 Filter-FizzBuzz (nfs If _ Modulus 15 'return "FizzBuzz"' (nfs ElseIf _ Modulus 5 'return "Fizz"' (nfs ElseIf _ Modulus 3 'return "Buzz"' 'return $_' -not ) -not ) -not ) -Filter) 

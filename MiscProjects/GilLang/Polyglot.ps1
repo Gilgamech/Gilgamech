@@ -172,6 +172,29 @@ Function New-ModuleFile {
 }; #end New-ModuleFile
 
 
+Function ConvertFrom-GilLang {
+	Param(
+		$Variable1
+	); #end Param
+	$Variable1.elements[0] |%{
+		New-Function -FunctionName $_.ID -ScriptBlock ($Variable1.elements[1..99] |%{
+			New-FunctionStatement -OperatorVar $_.OperatorVar -Not  -FunctionVariable ($_.FunctionVariable  -replace('this','_')) -ComparisonOperator $_.ComparisonOperator -ReferenceVariable $_.ReferenceVariable -ScriptBlock ($_.ScriptBlock -replace("`<","") -replace("`>"," ")) -ElseScriptBlock ($_.ElseScriptBlock) -OneLiner
+		}) 
+	}	
+}
+
+Function ConvertTo-GilLang {
+	Param(
+		$Variable1
+	); #end Param
+	$Variable1 = $Variable1 -replace("!"," not ")
+	$Variable1 = $Variable1 -replace("$_"," this ")
+	$Variable1 = $Variable1 -replace("%"," modulus ")
+	$Variable1 = $Variable1 -replace("return"," <return> ")
+	$t = $Variable1  -split " "
+	'{ "elements": [ { "ElementParent": "ParentElement", "ID": "'+$t[1]+'", "ElementType": "'+$t[0]+'"}, { "ElementParent": "'+$t[1]+'", "ID": "IfNotModFifteen", "ElementType": "FunctionStatement", "OperatorVar": "If", "Not": "Not", "FunctionVariable": "this", "ComparisonOperator": "Equal", "ReferenceVariable": "[int]15", "ScriptBlock": "<return>[string]''FizzBuzz''" }, { "ElementParent": "IfNotModFifteen", "ID": "IfNotModFive", "ElementType": "FunctionStatement","OperatorVar": "ElseIf", "Not": "Not", "FunctionVariable": "this", "ComparisonOperator": "Equal", "ReferenceVariable": "[int]5", "ScriptBlock": "<return>[string]''Buzz''" }, { "ElementParent": "IfNotModFifteen", "ID": "IfNotModThree", "ElementType": "FunctionStatement","Not": "Not", "OperatorVar": "ElseIf", "FunctionVariable": "this", "ComparisonOperator": "Equal", "ReferenceVariable": "[int]3", "ScriptBlock": "<return>[string]''Fizz''", "ElseScriptBlock": "<return>this" } ] }'  | convertfrom-json
+
+}
 
 New-Alias -name nf2 -value New-Function -Force
 Function New-Function {
@@ -386,7 +409,6 @@ Function New-Parameter {
 		return $NewParameterOutstring
 	}; #end if Clipboard
 }; #end New-Parameter
-
 
 New-Alias -name nfs -value New-FunctionStatement -Force
 Function New-FunctionStatement {

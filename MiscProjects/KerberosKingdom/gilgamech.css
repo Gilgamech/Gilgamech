@@ -1,0 +1,89 @@
+body {
+	background-color:#303030;
+	color: #A3C7B2;
+	margin: 0px;
+	padding: 0px;
+	text-align:left;
+}
+a:link {
+	color:#9ab945;
+}
+a:visited{
+	color: #777777;
+}
+a:active{
+	color: #777777;
+}
+canvas {
+	display: block;
+	margin: 0px auto;
+	border: 1px solid black;
+	
+}
+video{
+	display: block;
+	margin: 0px auto;
+	border: 1px solid black;
+	
+}
+pre {
+	text-align:left;
+}
+p.menu {
+	margin:0;
+	padding:0;
+	border:1px solid #000;
+	text-align:left;
+	background-color:#000;
+}
+p.game {
+	text-align:center;
+	background-color:7f7f7f;
+	
+}
+
+p.banner {
+	text-align:center;
+}
+p.copyright {
+	font-weight:bold;
+	text-align:center;
+}
+h1 {
+
+}
+h2 {
+	font-variant: small-caps;
+	font-family: Verdana, Arial, Helveltica, sans-serif;
+	font-weight:bold;
+	font-size:4ex;
+	text-align:center;
+}
+div.game {
+	text-align:center;
+
+}
+
+div.top {
+	margin:0;
+	padding:0;
+	border:1px solid #909090;
+	background-color:#909090;
+	color:#000;
+	font-variant: small-caps;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-align:left;
+	font-size: 7ex;
+}
+div.top a:link{
+	text-decoration:none;
+	color:#000;
+}
+div.top a:visited {
+
+	color:#000;
+}
+html,body {
+    margin:-10;
+}

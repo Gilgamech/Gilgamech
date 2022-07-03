@@ -1,0 +1,31 @@
+kerberos game
+
+story: inside the Kerberos Kingdom, you need a ticket to do anything, including get a ticket! can you navigate the maze of security protocols to get all of the puzzle pieces and assemble the web page, before the user gets bored?
+
+gameplay:
+-play as KDC (TGS)
+--grant TGT
+--grant service tickets
+
+-play as AS
+--
+
+-play as User
+--Get tickets
+
+
+Screens
+-ticket window (in)
+-KDC booth (out)
+-AS booth? how to show?
+-Different client services
+
+Pie in the sky! NTLM mode? Different game modes for different implementations? Different skins for different models? Multiplayer modes where different players play as KDC, AS, client services, and browsers?
+
+Pages
+Loading/Menu
+KDC window
+AS window
+
+
+

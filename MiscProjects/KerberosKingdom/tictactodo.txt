@@ -1,0 +1,23 @@
+1. if box already filled, no change
+ELSE:
+1. on mouseover, X shows in box (DONE)
+2. on click, X fills box (DONE)
+3. on mouseover, O shows in box (DONE)
+4. on click, O fills (DONE)
+5. repeat (DONE)
+
+6. victory conditions
+	a. if 1, 2, 3 match, that letter wins (DONE)
+	b. Same for rest of matches (DONE)
+	f. if none match, nobody wins (DONE)
+7. click off-canvas (DONE)
+8. get text to show (DONE)
+9. click on screen to reset
+
+Clean up code:
+	mouseover events
+	mouseclick events
+	
+
+
+NehPets

@@ -1,0 +1,44 @@
+Rock:
+	scissors - w - breaks
+	paper 	- l - covered by
+	lizard	- w - crushes
+	Spock	- l - vaporized by
+	
+Scissors:
+	rock 	- l - crushed by
+	paper 	- w - cuts
+	lizard 	- w - decapitates
+	Spock	- l - melted by
+	
+Paper:
+	rock	- w - covers
+	scissors - l - cut by
+	lizard	- l - eaten by
+	Spock	- w - disproves
+	
+Lizard:
+	rock	- l - crushed by
+	scissors - l - decapitated by
+	paper	- w - eats
+	Spock	- w - poisons
+
+Spock:
+	rock	- w - vaporizes
+	scissors - w - melts
+	paper	- l - disproved by
+	lizard	- l - poisoned by
+	
+Rock crushes lizard
+Rock breaks scissors
+
+Paper disproves Spock
+Paper covers rock
+
+Scissors cut paper
+Scissors decapitate lizard
+
+Lizard poisons Spock
+Lizard eats paper
+
+Spock vaporizes rock
+Spock smashes (or melts) scissors

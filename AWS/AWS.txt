@@ -1,0 +1,111 @@
+Multi account structure
+* Main - holds aggregated billing and organizations
+= Audit
+= Logging
+= Security
+- Other application accounts
+-- Application 1
+-- Application 2
+-- Application 3
+
+CLI
+- Programmatic Access must be setup from IAM
+- aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
+- Installed via Python script
+
+CloudFormation
+- Best use is to automate the provisioning of resources and InfraAsCode
+- JSON or YAML
+- Errors rollback with message "ROLLBACK_IN_PROGRESS"
+CloudFormation Templates
+- Must define at least one resource.
+- Larger than 51,200 bytes (0.05 MB) must be imported from S3 bucket
+- Can be nested into NestedStacks. 
+- Fields:
+-- MetaData - extra info
+-- Description - of the template
+-- Parameters - user inputs
+-- Transforms - Macros to modify data.
+-- Outputs - Become inputs into other stacks.
+-- Mappings - key value lookup table
+-- Resources - define what to provision (minimum 1)
+-- Conditions - control if resources get created and/or properties assigned.
+
+CloudFront CDN
+- Origin is storage location of data. (S3, Private S3 through Origin Access Identity (OAI), EC2, ELB, R53, etc)
+- Distribution defines a collection of Edge Locations and behavior on how it should handle your cached content.
+- 2 types: Web (static content) and RTMP (streaming media) 
+- Security through Signed URLs or Signed Cookies.
+- Distributes cached copies to Edge Locations. 
+- Write to Edge Locations with verbs like PUT objects. (How does this work and what are the use cases? Invalidate cache for a specific location, or A/B test stuff in a specific region?)
+- Lambda@Edge allows passing requests through a Lambda to transform.
+- TTL defines cache expiry in seconds.
+- Invalidating cache immediately expires the cached items, so they refresh immediately.
+- Refreshing a cached item has a bandwidth cost of moving the item from origin to edge.
+
+CloudTrail
+- Logs calls between AWS services.
+- Involves governance, compliance, operational auditing, and risk auditing.
+- Can be configured to gather all logs in all regions in all accounts across an AWS Organization. 
+- Default is 90 days via Event History, and beyond 90 days requires creating a Trail, which is logged to an S3 bucket, and can be analyzed with Athena.
+CloudTrail Logs
+- Log Validation prevents tampering. (How?)
+- Encryption with KMS
+- Can be streamed to CloudWatch Logs
+- 2 event kinds: management (operations like IAM) and data (resources like EC2 or Lambda). Trails don't include data events by default.
+
+CloudWatch
+- Collection of monitoring services: Dashboards, Events, Alarms, Logs, Metrics
+- Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
+- EC2 starts with 5 and calls the 1 min option "detailed monitoring" (does it cost more?) - CloudWatch Agent required.
+- Can stream custom logs too.
+CloudWatch Dashboards
+- Visualize metrics
+CloudWatch Events
+- Trigger AWS events based on condition (use case hourly snapshots)
+CloudWatch Alarms
+- Notifications based on metrics
+CloudWatch Logs
+- Data point logging
+- Must belong to log group
+CloudWatch Metrics
+- Capture one data point across time.
+- Custom Metrics allow much higher resolution, down to 1 second.
+
+Cognito
+- Decentralized managed auth. 
+- User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix? Goog, AAD, etc) 
+
+DNS
+ODS-DynamoDB
+EBS
+EC2-AMI
+EC2-ASG
+EC2-NAT
+EC2-pricing
+EC2-pricing2
+EC2
+ELB
+IAM
+Lambda
+LandingZone
+Organizations
+R53
+RDS-Aurora
+RDS
+RDS2
+Redshift
+S3-snowball
+S3-storageClasses
+S3-transfer
+S3
+SDK
+- Programmatic Access must be setup from IAM
+- Available languages: C++, Go, Java, JS & NodeJS, .NET, PHP, Python, Ruby
+Transit Gateway
+VPC-endpoints
+VPC-flowLogs
+VPC-nacls
+VPC-nat
+VPC-securityGroups
+

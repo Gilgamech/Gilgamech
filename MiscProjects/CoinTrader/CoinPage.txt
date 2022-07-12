@@ -1,0 +1,142 @@
+BotDB
+- Asset type infos.
+- CRUD
+- Data source
+- Buy/sell price strategies
+- Bot settings as dropdown
+
+
+curl "https://olymptrade.com/user/set-option" -H "Cookie: checked=1; lang=en_US; session=1000000000000594446900736398131081513801526685118229571196716166; CSRF-TOKEN=M7OiUmPw98fWjckPf52w1-wyPl8zv1pc9ISeIbcGWo0; enterdate=2017-12-20+23^%^3A25^%^3A27; guest_id=1000000000000594446911136398131081513801527371914125152420139937; props^[chatCol^]=true; props^[user_data_enriched17352083^]=true" -H "Origin: https://olymptrade.com" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.9" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "Accept: application/json, text/javascript, */*; q=0.01" -H "Referer: https://olymptrade.com/en-us/platform" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" -H "DNT: 1" 	-data "name=duration_history^&value=^%^5B^%^5D" 	-compressed
+
+
+curl "https://olymptrade.com/user/set-option" -H "Cookie: checked=1; lang=en_US; session=1000000000000594446900736398131081513801526685118229571196716166; CSRF-TOKEN=M7OiUmPw98fWjckPf52w1-wyPl8zv1pc9ISeIbcGWo0; enterdate=2017-12-20+23^%^3A25^%^3A27; guest_id=1000000000000594446911136398131081513801527371914125152420139937; props^[chatCol^]=true; props^[user_data_enriched17352083^]=true" -H "Origin: https://olymptrade.com" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.9" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "Accept: application/json, text/javascript, */*; q=0.01" -H "Referer: https://olymptrade.com/en-us/platform" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" -H "DNT: 1" 	-data "name=duration_history^&value=^%^5B^%^5D" 	-compressed
+
+curl "https://olymptrade.com/user/set-option" -H "Cookie: checked=1; lang=en_US; session=1000000000000594446900736398131081513801526685118229571196716166; CSRF-TOKEN=M7OiUmPw98fWjckPf52w1-wyPl8zv1pc9ISeIbcGWo0; enterdate=2017-12-20+23^%^3A25^%^3A27; guest_id=1000000000000594446911136398131081513801527371914125152420139937; props^[chatCol^]=true; props^[user_data_enriched17352083^]=true" -H "Origin: https://olymptrade.com" -H "Accept-Encoding: gzip, deflate, br" -H "Accept-Language: en-US,en;q=0.9" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36" -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -H "Accept: application/json, text/javascript, */*; q=0.01" -H "Referer: https://olymptrade.com/en-us/platform" -H "X-Requested-With: XMLHttpRequest" -H "Connection: keep-alive" -H "DNT: 1" 	-data "name=duration_history^&value=^%^5B^%^5D" 	-compressed
+
+
+- Asset is dropdown of coins. Array.
+- Something updates all DIVs on page with new prices? 
+- Remove borders between rows.
+- Spacer between bots.
+- Top bar shows top scores. Something gets those from below?
+- "getNumberFromDiv"
+
+
+1. Add download links to Git page.
+2. Add insert location and auto-insert to Git page files. 
+3. Make wysiwyg page with default "hello world" page. 
+4. Fix up meme-maker (impact font, white with black border)
+5. Set up database for chatroom.
+- Sort out domains.
+
+- Search page.js files for dupe functions, auto-move to Gilgamech.js
+- Fix divs
+
+# Todo
+- Git page
+- Admin page
+- Passport
+- Error page
+
+New page steps:
+Example: 
+https://stackoverflow.com/questions/26320525/prettify-json-data-in-textarea\-input#26324037
+- Find code on StackOverflow
+- Identify HTML and JS parts
+- index.js get page call
+- test.js increment test count
+- test.js add tests
+- nav.ejs add to project in flight.
+- Pagename.ejs add in HTML boilerplate, HTML parts, and Pagename.js call.
+- Write JS parts as Pagename.js
+
+
+Passport:
+Mostly works currently - successfully passes loginFailure when given no password. 
+- Requires:
+- Functions:
+- Strategies:
+- Pages: 
+- DB: 
+
+Options: 
+- Local Dev (Need to setup NPM)
+- Reference Build (Tried with Enkida - passes tests but fails on Heroku)
+
+Way to simulate 24h of these? (24*60 = 1440 random changes for a random amount.)
+
+Average of last 24h? 
+LTC - 
+var Median = $87.5.
+var unit = 1 LTC
+var Mult = $2.5
+var 
+
+BTC - 
+var Median = $9250.
+var unit = 0.1 BTC
+
+ETH - 
+var Median = $440.
+var unit = 1 ETH
+
+If price is Median - Mult, and has gone up 2 times in a row, buy 1*unit. 
+If price is Median - 3*Mult, and has gone up 2 times in a row, buy 2*unit. 
+If price is Median + Mult, and has gone down 2 times in a row, buy 1*unit. 
+If price is Median + 3*Mult, and has gone down 2 times in a row, buy 2*unit. 
+- If market stays between these for 24h, buy 1*unit?
+- Prevent rebuy churn? If price stays above Median+3 for 24h, reset median and continue. 
+- 
+
+Min Spread = 
+
+OutputCurrency = ActualSalePrice - ActualBuyPrice
+OutputCurrency = ActualSalePrice - ((InputCurrency - Fee )  * ConversionRateA)
+OutputCurrency = ((ConversionRateB * SalePrice) - Fee) - ((InputCurrency - Fee )  * ConversionRateA)
+OutputCurrency = ((ConversionRateB * SalePrice) - Fee) - ((InputCurrency - Fee )  * ConversionRateA)
+
+BuyPrice = ConversionRateA * InputCurrency
+ActualBuyPrice + (InputCurrency - Fee )  * ConversionRateA
+OutputCurrency / SalePrice = ConversionRateB
+OutputCurrency = ConversionRateB * SalePrice
+ActualSalePrice = SalePrice - Fee
+Spread = ActualSalePrice - ActualBuyPrice
+Profit =  SalePrice - BuyPrice
+
+Profit =  SalePrice - ConversionRateB * Input Currency
+Spread = SalePrice - Fee - ConversionRateB * InputCurrency + Fee
+
+OutputCurrency = ConversionRate * SalePrice
+
+Target Sale Price = ABP + Spread - fee
+
+Velocity of price changes
+Each share has its own sale price? 
+
+
+Way to find "target" price
+More variance at certain times of day? Find patterns?
+
+- I tell Page my Coinbase totals. (It can save?)
+- Page calcuates fees and gives a "zero profit" sale price. 
+
+Table shows: 
+<div class="calculator-value ng-binding">$ 13.39</div>
+1. Current prices
+2. Recent changes
+3. Highs, lows
+- Better than graphs. How? 
+
+- Page to gather stats.
+	- Diff the 3 coins.
+
+- Mine Eth
+
+
+.temp123{
+  text-align:center;
+}
+.temp123 > input{
+  text-align:left;
+}
+

@@ -208,6 +208,16 @@ https://zetcode.com/csharp/datetime/
 https://www.tutorialkart.com/c-sharp-tutorial/c-sharp-math-round/
 https://docs.microsoft.com/en-us/dotnet/api/system.net.ipaddress?view=net-5.0
 https://stackoverflow.com/questions/40215995/system-array-doesnt-contain-a-definition-for-length
-
+https:#stackoverflow.com/questions/15653921/get-current-folder-path
+https:#www.sqlite.org/lang_UPSERT.html
+https:#stackoverflow.com/questions/29312882/sqlite-preventing-duplicate-rows
+https:#stackoverflow.com/questions/7702573/importing-csv-data-into-c-sharp-classes
+https:#thesysadminchannel.com/create-free-lets-encrypt-ssl-certificates-using-powershell/
+https:#support.n4l.co.nz/s/article/Installing-an-SSL-Certificate-on-a-Windows-Device-Manually
+https:#stackoverflow.com/questions/15212190/why-is-the-netsh-http-add-sslcert-throwing-error-from-powershell-ps1-file
+https:#community.qlik.com/t5/Knowledge-Base/How-To-Setup-HTTPS-SSL-with-QlikView-AccessPoint-WebServer-and/ta-p/1710263
+https:#docs.microsoft.com/en-us/windows/win32/http/add-sslcert
+https:#stackoverflow.com/questions/537173/what-appid-should-i-use-with-netsh-exe
+https:#csharp.net-tutorials.com/regular-expressions-regex/search-replace-with-the-regex-class/
 */
 

@@ -1,37 +1,103 @@
-Multi account structure
-* Main - holds aggregated billing and organizations
-= Audit
-= Logging
-= Security
-- Other application accounts
--- Application 1
--- Application 2
--- Application 3
+Set up sample companies based on real data.
+- Uber as a CloudFormation template
 
-CLI
+How to install Audacity inside a container?
+Host websites. What's after this? Download the container instead of the website - is this just apps all over again?
+Incubation & Startup Advising
+- Designing 3d printed products that people can buy.
+- Animation (make animation of your process of animating - animated flowchart)
+- Solutions Architect 
+Overlay rental and house sales price on the same map.
+
+
+# Combine A and B
+- Make 3d comparative levels of architecture solutions - tech level, tech flavor, tech maturity (Gartner bracket) 
+- How do game studios go cloud native? Epic?
+- Why buy what you can make?
+- What makes your proprietary standard more valuable than the industry standard? 
+
+- Getting companies to stop operating like it's 2006 or 2014 and act like it's 2022. (messaging)
+- Replacing with SaaS allows coupling costs to usage much more effectively than hiring contractors to mange your IaaS.
+- To move from the multi-network hydra of VPC foam:
+	1. Main
+	2. Audit
+	3. Logging
+	4. Security Dev
+	5. Security Prod
+	6. Corp Dev
+	7. Corp Test
+	8. Corp Prod
+	9. AppA Dev
+	10. AppA Test 
+	11. AppA Stage
+	12. AppA QA
+	13. AppA Prod
+	14. AppB Dev
+	15. AppB Test 
+	16. AppB Stage
+	17. AppB QA
+	18. AppB Prod
+	19. DevOps Dev
+	20. DevOps Test
+	21. DevOps Prod
+
+Remodel your workflow of Dev -> (Test -> Stage -> QA ->) Prod (a few stacks are optional in some applications)
+to a workflow more like Dev locally -> Commit -> CI/CD pipeline [automated unit Testing -> automated Build -> automated stack Validation -> automated Deploy] -> automated blue/green rebalancing (until only the new version is running).
+
+Which reduces you down to:
+	1. Main
+	2. Audit
+	3. Logging
+	4. Security Prod
+	5. Security is using entirely SaaS products.
+		1. Security Dev
+	- Corp is using entirely SaaS products.
+		2. Corp Dev 
+		3. Corp Test
+		4. Corp Prod
+	- CI/CD pipeline handles these steps.
+		5. App Dev
+		6. App Test
+		7. App Stage
+		8. App QA
+	6. App Prod
+		9. App Dev
+		10. App Test
+		11. App Stage
+		12. App QA
+	7. App Prod
+	- CI/CD pipeline is entirely SaaS products.
+		13. DevOps Dev
+		14. DevOps Test
+		15. DevOps Prod
+
+- SaaS cost differential
+
+
+# CLI
 - Programmatic Access must be setup from IAM
 - aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
 - Installed via Python script
 
-CloudFormation
+# CloudFormation
 - Best use is to automate the provisioning of resources and InfraAsCode
 - JSON or YAML
 - Errors rollback with message "ROLLBACK_IN_PROGRESS"
-CloudFormation Templates
+## CloudFormation Templates
 - Must define at least one resource.
 - Larger than 51,200 bytes (0.05 MB) must be imported from S3 bucket
 - Can be nested into NestedStacks. 
 - Fields:
--- MetaData - extra info
--- Description - of the template
--- Parameters - user inputs
--- Transforms - Macros to modify data.
--- Outputs - Become inputs into other stacks.
--- Mappings - key value lookup table
--- Resources - define what to provision (minimum 1)
--- Conditions - control if resources get created and/or properties assigned.
+	- MetaData - extra info
+	- Description - of the template
+	- Parameters - user inputs
+	- Transforms - Macros to modify data.
+	- Outputs - Become inputs into other stacks.
+	- Mappings - key value lookup table
+	- Resources - define what to provision (minimum 1)
+	- Conditions - control if resources get created and/or properties assigned.
 
-CloudFront CDN
+# CloudFront CDN
 - Origin is storage location of data. (S3, Private S3 through Origin Access Identity (OAI), EC2, ELB, R53, etc)
 - Distribution defines a collection of Edge Locations and behavior on how it should handle your cached content.
 - 2 types: Web (static content) and RTMP (streaming media) 
@@ -43,7 +109,7 @@ CloudFront CDN
 - Invalidating cache immediately expires the cached items, so they refresh immediately.
 - Refreshing a cached item has a bandwidth cost of moving the item from origin to edge.
 
-CloudTrail
+# CloudTrail
 - Logs calls between AWS services.
 - Involves governance, compliance, operational auditing, and risk auditing.
 - Can be configured to gather all logs in all regions in all accounts across an AWS Organization. 
@@ -54,7 +120,7 @@ CloudTrail Logs
 - Can be streamed to CloudWatch Logs
 - 2 event kinds: management (operations like IAM) and data (resources like EC2 or Lambda). Trails don't include data events by default.
 
-CloudWatch
+# CloudWatch
 - Collection of monitoring services: Dashboards, Events, Alarms, Logs, Metrics
 - Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
 - EC2 starts with 5 and calls the 1 min option "detailed monitoring" (does it cost more?) - CloudWatch Agent required.
@@ -72,20 +138,46 @@ CloudWatch Metrics
 - Capture one data point across time.
 - Custom Metrics allow much higher resolution, down to 1 second.
 
-Cognito
+# Cognito
 - Decentralized managed auth. 
-- User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix? Goog, AAD, etc) 
+- User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix?, Goog, AAD, itself, etc) 
+	- Uses JWTs to persist auth
+- Identity Pools can provide temp AWS creds for service access (S3, DynamoDB, etc)
+- Cognito Sync can sync user data and preferences across devices with one line of code (powered by SNS)
+- Web Identity Federation exchanges identity and security info between IdP and apps.
+- IdP is a trusted login source for other services. 
+	- OIDC is an Oauth type of IdP.
+	- SAML is an SSO type of IdP.
 
-DNS
-ODS-DynamoDB
-EBS
-EC2-AMI
-EC2-ASG
-EC2-NAT
-EC2-pricing
-EC2-pricing2
-EC2
-ELB
+# DNS
+- Domain Name Service converts domain names into IPs and back.
+- IPv4 - 32 bit address space (relatively limited)
+- IPv6 - 128 bit address space (relatively unlimited)
+- TLD i.e. .com
+- 2LD i.e. Gilgamech.com
+- Domain Registrar is a 3rd party company who sells domains.
+- Name Servers are the DNS servers with your domain info.
+- Start of Authority (SOA) contains info about the DNS zone and associated records.
+- A Record converts directly into an IPv4 address.
+- CName Record redirects to another record.
+- Time To Live (TTL) is record cache duration. 
+
+# EBS
+- Elastic Block Store is a virtual block-level storage drive that you can attach to a single EC2 instance. 
+- Volume dimensions (size, storage type) can be changed at any time.
+- Instance Store Volumes are physical storage attached to a host, and cannot be stopped - if the host fails, the data is lost. (What is the use case for these?)
+- EBS backed instances can be stopped without data loss.
+- Root volumes delete on termination by default.
+- Volumes can have termination protection. 
+- Restoring a snapshots of an encrypted volume will give you a snaphsot that is still encrypted, and you can't share encrypted snapshots.
+- Unencrypted snapshots can be shared with other AWS accounts or made public. (Why would you want to make a snapshot public?)
+## Snapshots
+- Snapshots are incremental point-in-time copies, and only changes made since the last snapshot are moved to S3.
+- Initial snapshots will take longer than subsequent snapshots.
+- EC2 instance should be stopped before snapshotting root volume. But other disks can be taken while the server is running. 
+- AMIs can be created from snapshots, or volumes.
+
+
 IAM
 Lambda
 LandingZone
@@ -96,6 +188,14 @@ RDS
 RDS2
 Redshift
 S3-snowball
+ELB
+EC2-AMI
+EC2-ASG
+EC2-NAT
+EC2-pricing
+EC2-pricing2
+EC2
+ODS-DynamoDB
 S3-storageClasses
 S3-transfer
 S3
@@ -108,4 +208,7 @@ VPC-flowLogs
 VPC-nacls
 VPC-nat
 VPC-securityGroups
+
+datasync
+storagegateway/volume/
 

@@ -1,6 +1,13 @@
 Set up sample companies based on real data.
 - Uber as a CloudFormation template
 
+CI/CD pipeline as a bunch of local containers.
+- Repo?
+- Jenkins
+- Testing
+- DinD
+- etc
+
 How to install Audacity inside a container?
 Host websites. What's after this? Download the container instead of the website - is this just apps all over again?
 Incubation & Startup Advising
@@ -72,6 +79,19 @@ Which reduces you down to:
 		15. DevOps Prod
 
 - SaaS cost differential
+
+# Misc 
+Code should be as atomic as possible, leading to smaller microservices, leading to smaller clusters, and more flexible compute supply
+The short term benefits of doing X exceed the long term support costs.
+Maintenance is technical taxes.
+Lift and shift on cloud is a technical loan. It gives you more runway but doesn't reduce your technical taxes.
+Unscalable, inefficient, or unmaintained is technical debt, and refactoring/rewriting/redesigning is paying off technical debt. 
+
+# Fork your own repo 
+cd website
+git remote set-url origin https://github.com/Gilgamech/website
+git remote add upstream https://github.com/Gilgamech/SiteTemplate
+
 
 
 # CLI

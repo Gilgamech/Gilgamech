@@ -1,0 +1,3661 @@
+<html>
+<p><P>
+<a name="top_of_form"></a>
+<FORM name=form1>
+<TABLE>
+<TBODY>
+<TR>
+<TD><INPUT onclick=RollSomeDice() type=button value="Roll the Dice" name=rollTheDice1>
+<img name="rollthedicearrow" src="dragonarrowleft.gif">
+<SELECT onchange=ChangeDiceMethod() name=methods_list> 
+<OPTION selected>Standard</OPTION> 
+<OPTION>5d6 best 3</OPTION>
+<option>2d6 + 6</option> 
+<OPTION>Elite Array</OPTION> 
+<OPTION>Point Buy</OPTION> 
+<OPTION>Non-Elite Array</OPTION> 
+<OPTION>Original 3d6</OPTION> 
+<OPTION>Simple Entry</OPTION></SELECT> 
+</FONT></TD>
+<TD align=right width="20%"></FONT>
+<img name="changemhere" src="adjustyourscoreshere.gif"></TD></TR>
+<TR>
+<TD>
+<img name="stat1arrow" src="dragonblank.gif"><INPUT size=3 name=firststatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(1,1) type=radio value=1 name=firststat>&nbsp;Strength 
+<INPUT onclick=assignstat(1,2) type=radio value=1 name=firststat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(1,3) type=radio value=1 name=firststat>&nbsp;Constitution 
+<INPUT onclick=assignstat(1,4) type=radio value=1 name=firststat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(1,5) type=radio value=1 name=firststat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(1,6) type=radio value=1 name=firststat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(1) name=stat1_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR>
+<TR>
+<TD>
+<img name="stat2arrow" src="dragonblank.gif"><INPUT size=3 name=secondstatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(2,1) type=radio value=1 name=secondstat>&nbsp;Strength 
+<INPUT onclick=assignstat(2,2) type=radio value=1 name=secondstat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(2,3) type=radio value=1 name=secondstat>&nbsp;Constitution 
+<INPUT onclick=assignstat(2,4) type=radio value=1 name=secondstat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(2,5) type=radio value=1 name=secondstat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(2,6) type=radio value=1 name=secondstat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(2) name=stat2_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR>
+<TR>
+<TD>
+<img name="stat3arrow" src="dragonblank.gif"><INPUT size=3 name=thirdstatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(3,1) type=radio value=1 name=thirdstat>&nbsp;Strength 
+<INPUT onclick=assignstat(3,2) type=radio value=1 name=thirdstat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(3,3) type=radio value=1 name=thirdstat>&nbsp;Constitution 
+<INPUT onclick=assignstat(3,4) type=radio value=1 name=thirdstat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(3,5) type=radio value=1 name=thirdstat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(3,6) type=radio value=1 name=thirdstat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(3) name=stat3_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR>
+<TR>
+<TD>
+<img name="stat4arrow" src="dragonblank.gif"><INPUT size=3 name=fourthstatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(3,1) type=radio value=1 name=thirdstat>&nbsp;Strength 
+<INPUT onclick=assignstat(4,2) type=radio value=1 name=fourthstat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(4,3) type=radio value=1 name=fourthstat>&nbsp;Constitution 
+<INPUT onclick=assignstat(4,4) type=radio value=1 name=fourthstat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(4,5) type=radio value=1 name=fourthstat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(4,6) type=radio value=1 name=fourthstat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(4) name=stat4_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR>
+<TR>
+<TD>
+<img name="stat5arrow" src="dragonblank.gif"><INPUT size=3 name=fifthstatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(3,1) type=radio value=1 name=thirdstat>&nbsp;Strength 
+<INPUT onclick=assignstat(5,2) type=radio value=1 name=fifthstat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(5,3) type=radio value=1 name=fifthstat>&nbsp;Constitution 
+<INPUT onclick=assignstat(5,4) type=radio value=1 name=fifthstat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(5,5) type=radio value=1 name=fifthstat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(5,6) type=radio value=1 name=fifthstat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(5) name=stat5_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR>
+<TR>
+<TD>
+<img name="stat6arrow" src="dragonblank.gif"><INPUT size=3 name=sixthstatistic onChange=DisplayTrueStatistics()> 
+<INPUT onclick=assignstat(6,1) type=radio value=1 name=sixthstat>&nbsp;Strength 
+<INPUT onclick=assignstat(6,2) type=radio value=1 name=sixthstat>&nbsp;Dexterity 
+<INPUT onclick=assignstat(6,3) type=radio value=1 name=sixthstat>&nbsp;Constitution 
+<INPUT onclick=assignstat(6,4) type=radio value=1 name=sixthstat>&nbsp;Intelligence 
+<INPUT onclick=assignstat(6,5) type=radio value=1 name=sixthstat>&nbsp;Wisdom 
+<INPUT onclick=assignstat(6,6) type=radio value=1 name=sixthstat>&nbsp;Charisma 
+</FONT></TD>
+<TD align=right><SELECT onchange=assign_stat(6) name=stat6_list> 
+<OPTION selected>03</OPTION> 
+<OPTION>04</OPTION> 
+<OPTION>05</OPTION> 
+<OPTION>06</OPTION> 
+<OPTION>07</OPTION> 
+<OPTION>08</OPTION> 
+<OPTION>09</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION></SELECT> 
+</FONT></TD></TR></TBODY></TABLE>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD>
+</TD>
+<TD><INPUT onclick=lock_abilities() type=button value="Accept These Scores" name=acceptthesescores>
+<img name="acceptscoresarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=first_comment_box rows=5 cols=30 > 
+</TEXTAREA> 
+<P></P></FONT></TD>
+<TD>
+</TD></TR></TBODY></TABLE>
+<P>
+<img name="racearrow" src="dragonblank.gif"><B>Race:</B>
+<INPUT onclick=assignrace(1) type=radio value=1
+name=racechoice>&nbsp; Human&nbsp; &nbsp; &nbsp; 
+<INPUT
+onclick=assignrace(4) type=radio value=1 name=racechoice>&nbsp; Dwarf&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(3)
+type=radio value=1 name=racechoice>&nbsp; Elf&nbsp; &nbsp; &nbsp; 
+<INPUT
+onclick=assignrace(5) type=radio value=1 name=racechoice>&nbsp; Gnome&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(2)
+type=radio value=1 name=racechoice>&nbsp; Half-Elf&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(6) type=radio value=1 name=racechoice>&nbsp; Halfling&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(7) type=radio value=1 name=racechoice>&nbsp; Half-Orc&nbsp; &nbsp; &nbsp; 
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font size="-1">
+<INPUT onclick=assignrace(28) type=radio value=1 name=racechoice>&nbsp; Aasimar&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(9) type=radio value=1 name=racechoice>&nbsp; Dhampir&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(12) type=radio value=1 name=racechoice>&nbsp; Drow&nbsp[Dark&nbsp;Elf]&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(31) type=radio value=1 name=racechoice>&nbsp; Ifrit&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(29) type=radio value=1 name=racechoice>&nbsp; Sylph&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(22) type=radio value=1 name=racechoice>&nbsp; Orc&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(30) type=radio value=1 name=racechoice>&nbsp; Oread&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(33) type=radio value=1 name=racechoice>&nbsp; Tiefling&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assignrace(32) type=radio value=1 name=racechoice>&nbsp; Undine&nbsp; &nbsp; &nbsp; 
+
+<p>
+</font size>
+
+<P>
+<img name="genderarrow" src="dragonblank.gif"><B>Gender:</B> 
+<INPUT onclick=assigngender(2) type=radio value=1 name=sexchoice>&nbsp; Female&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=assigngender(1) type=radio value=1 name=sexchoice>&nbsp; Male&nbsp; &nbsp; &nbsp; 
+<P>
+<TABLE>
+<TBODY>
+<TR>
+<TD>
+<img name="alignmentarrow" src="dragonblank.gif">
+<B>Alignment:</B> 
+</FONT></TD>
+<TD><INPUT onclick=assignalignment(1) type=radio value=1 name=alignments>Lawful Good </FONT></TD>
+<TD><INPUT onclick=assignalignment(2) type=radio value=1 name=alignments>Neutral Good </FONT></TD>
+<TD><INPUT onclick=assignalignment(3) type=radio value=1 name=alignments>Chaotic Good </FONT></TD></TR>
+<TR>
+<TD></TD>
+<TD><INPUT onclick=assignalignment(4) type=radio value=1 name=alignments>Lawful Neutral </FONT></TD>
+<TD><INPUT onclick=assignalignment(5) type=radio value=1 name=alignments>True Neutral </FONT></TD>
+<TD><INPUT onclick=assignalignment(6) type=radio value=1 name=alignments>Chaotic Neutral </FONT></TD></TR>
+<TR>
+<TD></TD>
+<TD><INPUT onclick=assignalignment(7) type=radio value=1 name=alignments>Lawful Evil </FONT></TD>
+<TD><INPUT onclick=assignalignment(8) type=radio value=1 name=alignments>Neutral Evil </FONT></TD>
+<TD><INPUT onclick=assignalignment(9) type=radio value=1 name=alignments>Chaotic Evil </FONT></TD></TR></TBODY></TABLE>
+<P>
+<P>
+<img name="totallevelsarrow" src="dragonblank.gif"><B>Total levels:</B> 
+<INPUT onclick=assignlevel(1) type=radio value=1 name=totallevels>1&nbsp; 
+<INPUT onclick=assignlevel(2) type=radio value=1 name=totallevels>2&nbsp; 
+<INPUT onclick=assignlevel(3) type=radio value=1 name=totallevels>3&nbsp; 
+<INPUT onclick=assignlevel(4) type=radio value=1 name=totallevels>4&nbsp; 
+<INPUT onclick=assignlevel(5) type=radio value=1 name=totallevels>5&nbsp; 
+<INPUT onclick=assignlevel(6) type=radio value=1 name=totallevels>6&nbsp; 
+<INPUT onclick=assignlevel(7) type=radio value=1 name=totallevels>7&nbsp; 
+<INPUT onclick=assignlevel(8) type=radio value=1 name=totallevels>8&nbsp; 
+<INPUT onclick=assignlevel(9) type=radio value=1 name=totallevels>9&nbsp; 
+<INPUT onclick=assignlevel(10) type=radio value=1 name=totallevels>10&nbsp; 
+<INPUT onclick=assignlevel(11) type=radio value=1 name=totallevels>11&nbsp; 
+<INPUT onclick=assignlevel(12) type=radio value=1 name=totallevels>12&nbsp; 
+<INPUT onclick=assignlevel(13) type=radio value=1 name=totallevels>13&nbsp; 
+<INPUT onclick=assignlevel(14) type=radio value=1 name=totallevels>14&nbsp; 
+<INPUT onclick=assignlevel(15) type=radio value=1 name=totallevels>15&nbsp; 
+<INPUT onclick=assignlevel(16) type=radio value=1 name=totallevels>16&nbsp; 
+<INPUT onclick=assignlevel(17) type=radio value=1 name=totallevels>17&nbsp; 
+<INPUT onclick=assignlevel(18) type=radio value=1 name=totallevels>18&nbsp; 
+<INPUT onclick=assignlevel(19) type=radio value=1 name=totallevels>19&nbsp; 
+<INPUT onclick=assignlevel(20) type=radio value=1 name=totallevels>20&nbsp; 
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD><INPUT onclick=lock_identity() type=button value="Accept This Person" name=acceptthisperson>
+<img name="acceptthispersonarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=second_comment_box rows=8 cols=40 >
+</TEXTAREA></FONT></TD>
+<TD> 
+</TD></TR></TBODY></TABLE>
+<P><B>Class(es)</B>
+<img name="classesarrow" src="dragonblank.gif">
+<BR>
+Level 01: 
+<INPUT onclick=assignclass(1,1) type=radio
+value=1 name=choose_class01>Barbarian 
+<INPUT onclick=assignclass(1,2) type=radio value=1 name=choose_class01>Bard 
+<INPUT onclick=assignclass(1,3) type=radio value=1 name=choose_class01>Cleric 
+<INPUT onclick=assignclass(1,4) type=radio value=1 name=choose_class01>Druid 
+<INPUT onclick=assignclass(1,5) type=radio value=1 name=choose_class01>Fighter 
+<INPUT onclick=assignclass(1,6) type=radio value=1 name=choose_class01>Monk 
+<INPUT onclick=assignclass(1,7) type=radio value=1 name=choose_class01>Paladin 
+<INPUT onclick=assignclass(1,8) type=radio value=1 name=choose_class01>Ranger 
+<INPUT onclick=assignclass(1,9) type=radio value=1 name=choose_class01>Rogue 
+<INPUT onclick=assignclass(1,10) type=radio value=1 name=choose_class01>Sorcerer 
+<INPUT onclick=assignclass(1,11) type=radio value=1 name=choose_class01>Wizard 
+<BR>Level 02: 
+<INPUT onclick=assignclass(2,1) type=radio value=1 name=choose_class02>Barbarian 
+<INPUT onclick=assignclass(2,2) type=radio value=1 name=choose_class02>Bard 
+<INPUT onclick=assignclass(2,3) type=radio value=1 name=choose_class02>Cleric 
+<INPUT onclick=assignclass(2,4) type=radio value=1 name=choose_class02>Druid 
+<INPUT onclick=assignclass(2,5) type=radio value=1 name=choose_class02>Fighter 
+<INPUT onclick=assignclass(2,6) type=radio value=1 name=choose_class02>Monk 
+<INPUT onclick=assignclass(2,7) type=radio value=1 name=choose_class02>Paladin 
+<INPUT onclick=assignclass(2,8) type=radio value=1 name=choose_class02>Ranger 
+<INPUT onclick=assignclass(2,9) type=radio value=1 name=choose_class02>Rogue 
+<INPUT onclick=assignclass(2,10) type=radio value=1 name=choose_class02>Sorcerer 
+<INPUT onclick=assignclass(2,11) type=radio value=1 name=choose_class02>Wizard 
+<BR>Level 03: 
+<INPUT onclick=assignclass(3,1) type=radio value=1 name=choose_class03>Barbarian 
+<INPUT onclick=assignclass(3,2) type=radio value=1 name=choose_class03>Bard 
+<INPUT onclick=assignclass(3,3) type=radio value=1 name=choose_class03>Cleric 
+<INPUT onclick=assignclass(3,4) type=radio value=1 name=choose_class03>Druid 
+<INPUT onclick=assignclass(3,5) type=radio value=1 name=choose_class03>Fighter 
+<INPUT onclick=assignclass(3,6) type=radio value=1 name=choose_class03>Monk 
+<INPUT onclick=assignclass(3,7) type=radio value=1 name=choose_class03>Paladin 
+<INPUT onclick=assignclass(3,8) type=radio value=1 name=choose_class03>Ranger 
+<INPUT onclick=assignclass(3,9) type=radio value=1 name=choose_class03>Rogue 
+<INPUT onclick=assignclass(3,10) type=radio value=1 name=choose_class03>Sorcerer 
+<INPUT onclick=assignclass(3,11) type=radio value=1 name=choose_class03>Wizard 
+
+<BR>Level 04: 
+<INPUT onclick=assignclass(4,1) type=radio value=1 name=choose_class04>Barbarian 
+<INPUT onclick=assignclass(4,2) type=radio value=1 name=choose_class04>Bard 
+<INPUT onclick=assignclass(4,3) type=radio value=1 name=choose_class04>Cleric 
+<INPUT onclick=assignclass(4,4) type=radio value=1 name=choose_class04>Druid 
+<INPUT onclick=assignclass(4,5) type=radio value=1 name=choose_class04>Fighter 
+<INPUT onclick=assignclass(4,6) type=radio value=1 name=choose_class04>Monk 
+<INPUT onclick=assignclass(4,7) type=radio value=1 name=choose_class04>Paladin 
+<INPUT onclick=assignclass(4,8) type=radio value=1 name=choose_class04>Ranger 
+<INPUT onclick=assignclass(4,9) type=radio value=1 name=choose_class04>Rogue 
+<INPUT onclick=assignclass(4,10) type=radio value=1 name=choose_class04>Sorcerer 
+<INPUT onclick=assignclass(4,11) type=radio value=1 name=choose_class04>Wizard 
+<BR>Level 05: 
+<INPUT onclick=assignclass(5,1) type=radio value=1 name=choose_class05>Barbarian 
+<INPUT onclick=assignclass(5,2) type=radio value=1 name=choose_class05>Bard 
+<INPUT onclick=assignclass(5,3) type=radio value=1 name=choose_class05>Cleric 
+<INPUT onclick=assignclass(5,4) type=radio value=1 name=choose_class05>Druid 
+<INPUT onclick=assignclass(5,5) type=radio value=1 name=choose_class05>Fighter 
+<INPUT onclick=assignclass(5,6) type=radio value=1 name=choose_class05>Monk 
+<INPUT onclick=assignclass(5,7) type=radio value=1 name=choose_class05>Paladin 
+<INPUT onclick=assignclass(5,8) type=radio value=1 name=choose_class05>Ranger 
+<INPUT onclick=assignclass(5,9) type=radio value=1 name=choose_class05>Rogue 
+<INPUT onclick=assignclass(5,10) type=radio value=1 name=choose_class05>Sorcerer 
+<INPUT onclick=assignclass(5,11) type=radio value=1 name=choose_class05>Wizard 
+<BR>Level 06: 
+<INPUT onclick=assignclass(6,1) type=radio value=1 name=choose_class06>Barbarian 
+<INPUT onclick=assignclass(6,2) type=radio value=1 name=choose_class06>Bard 
+<INPUT onclick=assignclass(6,3) type=radio value=1 name=choose_class06>Cleric 
+<INPUT onclick=assignclass(6,4) type=radio value=1 name=choose_class06>Druid 
+<INPUT onclick=assignclass(6,5) type=radio value=1 name=choose_class06>Fighter 
+<INPUT onclick=assignclass(6,6) type=radio value=1 name=choose_class06>Monk 
+<INPUT onclick=assignclass(6,7) type=radio value=1 name=choose_class06>Paladin 
+<INPUT onclick=assignclass(6,8) type=radio value=1 name=choose_class06>Ranger 
+<INPUT onclick=assignclass(6,9) type=radio value=1 name=choose_class06>Rogue 
+<INPUT onclick=assignclass(6,10) type=radio value=1 name=choose_class06>Sorcerer 
+<INPUT onclick=assignclass(6,11) type=radio value=1 name=choose_class06>Wizard 
+<INPUT onclick=assignclass(6,14) type=radio value=1 name=choose_class06>Prestige 
+
+<BR>Level 07: 
+<INPUT onclick=assignclass(7,1) type=radio value=1 name=choose_class07>Barbarian 
+<INPUT onclick=assignclass(7,2) type=radio value=1 name=choose_class07>Bard 
+<INPUT onclick=assignclass(7,3) type=radio value=1 name=choose_class07>Cleric 
+<INPUT onclick=assignclass(7,4) type=radio value=1 name=choose_class07>Druid 
+<INPUT onclick=assignclass(7,5) type=radio value=1 name=choose_class07>Fighter 
+<INPUT onclick=assignclass(7,6) type=radio value=1 name=choose_class07>Monk 
+<INPUT onclick=assignclass(7,7) type=radio value=1 name=choose_class07>Paladin 
+<INPUT onclick=assignclass(7,8) type=radio value=1 name=choose_class07>Ranger 
+<INPUT onclick=assignclass(7,9) type=radio value=1 name=choose_class07>Rogue 
+<INPUT onclick=assignclass(7,10) type=radio value=1 name=choose_class07>Sorcerer 
+<INPUT onclick=assignclass(7,11) type=radio value=1 name=choose_class07>Wizard 
+<INPUT onclick=assignclass(7,14) type=radio value=1 name=choose_class07>Prestige 
+<BR>Level 08: 
+<INPUT onclick=assignclass(8,1) type=radio value=1 name=choose_class08>Barbarian 
+<INPUT onclick=assignclass(8,2) type=radio value=1 name=choose_class08>Bard 
+<INPUT onclick=assignclass(8,3) type=radio value=1 name=choose_class08>Cleric 
+<INPUT onclick=assignclass(8,4) type=radio value=1 name=choose_class08>Druid 
+<INPUT onclick=assignclass(8,5) type=radio value=1 name=choose_class08>Fighter 
+<INPUT onclick=assignclass(8,6) type=radio value=1 name=choose_class08>Monk 
+<INPUT onclick=assignclass(8,7) type=radio value=1 name=choose_class08>Paladin 
+<INPUT onclick=assignclass(8,8) type=radio value=1 name=choose_class08>Ranger 
+<INPUT onclick=assignclass(8,9) type=radio value=1 name=choose_class08>Rogue 
+<INPUT onclick=assignclass(8,10) type=radio value=1 name=choose_class08>Sorcerer 
+<INPUT onclick=assignclass(8,11) type=radio value=1 name=choose_class08>Wizard 
+<INPUT onclick=assignclass(8,14) type=radio value=1 name=choose_class08>Prestige 
+<BR>Level 09: 
+<INPUT onclick=assignclass(9,1) type=radio value=1 name=choose_class09>Barbarian 
+<INPUT onclick=assignclass(9,2) type=radio value=1 name=choose_class09>Bard 
+<INPUT onclick=assignclass(9,3) type=radio value=1 name=choose_class09>Cleric 
+<INPUT onclick=assignclass(9,4) type=radio value=1 name=choose_class09>Druid 
+<INPUT onclick=assignclass(9,5) type=radio value=1 name=choose_class09>Fighter 
+<INPUT onclick=assignclass(9,6) type=radio value=1 name=choose_class09>Monk 
+<INPUT onclick=assignclass(9,7) type=radio value=1 name=choose_class09>Paladin 
+<INPUT onclick=assignclass(9,8) type=radio value=1 name=choose_class09>Ranger 
+<INPUT onclick=assignclass(9,9) type=radio value=1 name=choose_class09>Rogue 
+<INPUT onclick=assignclass(9,10) type=radio value=1 name=choose_class09>Sorcerer 
+<INPUT onclick=assignclass(9,11) type=radio value=1 name=choose_class09>Wizard 
+<INPUT onclick=assignclass(9,14) type=radio value=1 name=choose_class09>Prestige 
+
+<BR>Level 10: 
+<INPUT onclick=assignclass(10,1) type=radio value=1 name=choose_class10>Barbarian 
+<INPUT onclick=assignclass(10,2) type=radio value=1 name=choose_class10>Bard 
+<INPUT onclick=assignclass(10,3) type=radio value=1 name=choose_class10>Cleric 
+<INPUT onclick=assignclass(10,4) type=radio value=1 name=choose_class10>Druid 
+<INPUT onclick=assignclass(10,5) type=radio value=1 name=choose_class10>Fighter 
+<INPUT onclick=assignclass(10,6) type=radio value=1 name=choose_class10>Monk 
+<INPUT onclick=assignclass(10,7) type=radio value=1 name=choose_class10>Paladin 
+<INPUT onclick=assignclass(10,8) type=radio value=1 name=choose_class10>Ranger 
+<INPUT onclick=assignclass(10,9) type=radio value=1 name=choose_class10>Rogue 
+<INPUT onclick=assignclass(10,10) type=radio value=1 name=choose_class10>Sorcerer 
+<INPUT onclick=assignclass(10,11) type=radio value=1 name=choose_class10>Wizard 
+<INPUT onclick=assignclass(10,14) type=radio value=1 name=choose_class10>Prestige 
+<BR>Level 11: 
+<INPUT onclick=assignclass(11,1) type=radio value=1 name=choose_class11>Barbarian 
+<INPUT onclick=assignclass(11,2) type=radio value=1 name=choose_class11>Bard 
+<INPUT onclick=assignclass(11,3) type=radio value=1 name=choose_class11>Cleric 
+<INPUT onclick=assignclass(11,4) type=radio value=1 name=choose_class11>Druid 
+<INPUT onclick=assignclass(11,5) type=radio value=1 name=choose_class11>Fighter 
+<INPUT onclick=assignclass(11,6) type=radio value=1 name=choose_class11>Monk 
+<INPUT onclick=assignclass(11,7) type=radio value=1 name=choose_class11>Paladin 
+<INPUT onclick=assignclass(11,8) type=radio value=1 name=choose_class11>Ranger 
+<INPUT onclick=assignclass(11,9) type=radio value=1 name=choose_class11>Rogue 
+<INPUT onclick=assignclass(11,10) type=radio value=1 name=choose_class11>Sorcerer 
+<INPUT onclick=assignclass(11,11) type=radio value=1 name=choose_class11>Wizard 
+<INPUT onclick=assignclass(11,14) type=radio value=1 name=choose_class11>Prestige 
+<BR>Level 12: 
+<INPUT onclick=assignclass(12,1) type=radio value=1 name=choose_class12>Barbarian 
+<INPUT onclick=assignclass(12,2) type=radio value=1 name=choose_class12>Bard 
+<INPUT onclick=assignclass(12,3) type=radio value=1 name=choose_class12>Cleric 
+<INPUT onclick=assignclass(12,4) type=radio value=1 name=choose_class12>Druid 
+<INPUT onclick=assignclass(12,5) type=radio value=1 name=choose_class12>Fighter 
+<INPUT onclick=assignclass(12,6) type=radio value=1 name=choose_class12>Monk 
+<INPUT onclick=assignclass(12,7) type=radio value=1 name=choose_class12>Paladin 
+<INPUT onclick=assignclass(12,8) type=radio value=1 name=choose_class12>Ranger 
+<INPUT onclick=assignclass(12,9) type=radio value=1 name=choose_class12>Rogue 
+<INPUT onclick=assignclass(12,10) type=radio value=1 name=choose_class12>Sorcerer 
+<INPUT onclick=assignclass(12,11) type=radio value=1 name=choose_class12>Wizard 
+<INPUT onclick=assignclass(12,14) type=radio value=1 name=choose_class12>Prestige 
+<BR>Level 13: 
+<INPUT onclick=assignclass(13,1) type=radio value=1 name=choose_class13>Barbarian 
+<INPUT onclick=assignclass(13,2) type=radio value=1 name=choose_class13>Bard 
+<INPUT onclick=assignclass(13,3) type=radio value=1 name=choose_class13>Cleric 
+<INPUT onclick=assignclass(13,4) type=radio value=1 name=choose_class13>Druid 
+<INPUT onclick=assignclass(13,5) type=radio value=1 name=choose_class13>Fighter 
+<INPUT onclick=assignclass(13,6) type=radio value=1 name=choose_class13>Monk 
+<INPUT onclick=assignclass(13,7) type=radio value=1 name=choose_class13>Paladin 
+<INPUT onclick=assignclass(13,8) type=radio value=1 name=choose_class13>Ranger 
+<INPUT onclick=assignclass(13,9) type=radio value=1 name=choose_class13>Rogue 
+<INPUT onclick=assignclass(13,10) type=radio value=1 name=choose_class13>Sorcerer 
+<INPUT onclick=assignclass(13,11) type=radio value=1 name=choose_class13>Wizard 
+<INPUT onclick=assignclass(13,14) type=radio value=1 name=choose_class13>Prestige 
+<BR>Level 14: 
+<INPUT onclick=assignclass(14,1) type=radio value=1 name=choose_class14>Barbarian 
+<INPUT onclick=assignclass(14,2) type=radio value=1 name=choose_class14>Bard 
+<INPUT onclick=assignclass(14,3) type=radio value=1 name=choose_class14>Cleric 
+<INPUT onclick=assignclass(14,4) type=radio value=1 name=choose_class14>Druid 
+<INPUT onclick=assignclass(14,5) type=radio value=1 name=choose_class14>Fighter 
+<INPUT onclick=assignclass(14,6) type=radio value=1 name=choose_class14>Monk 
+<INPUT onclick=assignclass(14,7) type=radio value=1 name=choose_class14>Paladin 
+<INPUT onclick=assignclass(14,8) type=radio value=1 name=choose_class14>Ranger 
+<INPUT onclick=assignclass(14,9) type=radio value=1 name=choose_class14>Rogue 
+<INPUT onclick=assignclass(14,10) type=radio value=1 name=choose_class14>Sorcerer 
+<INPUT onclick=assignclass(14,11) type=radio value=1 name=choose_class14>Wizard 
+<INPUT onclick=assignclass(14,14) type=radio value=1 name=choose_class14>Prestige 
+<BR>Level 15: 
+<INPUT onclick=assignclass(15,1) type=radio value=1 name=choose_class15>Barbarian 
+<INPUT onclick=assignclass(15,2) type=radio value=1 name=choose_class15>Bard 
+<INPUT onclick=assignclass(15,3) type=radio value=1 name=choose_class15>Cleric 
+<INPUT onclick=assignclass(15,4) type=radio value=1 name=choose_class15>Druid 
+<INPUT onclick=assignclass(15,5) type=radio value=1 name=choose_class15>Fighter 
+<INPUT onclick=assignclass(15,6) type=radio value=1 name=choose_class15>Monk 
+<INPUT onclick=assignclass(15,7) type=radio value=1 name=choose_class15>Paladin 
+<INPUT onclick=assignclass(15,8) type=radio value=1 name=choose_class15>Ranger 
+<INPUT onclick=assignclass(15,9) type=radio value=1 name=choose_class15>Rogue 
+<INPUT onclick=assignclass(15,10) type=radio value=1 name=choose_class15>Sorcerer 
+<INPUT onclick=assignclass(15,11) type=radio value=1 name=choose_class15>Wizard 
+<INPUT onclick=assignclass(15,14) type=radio value=1 name=choose_class15>Prestige 
+<BR>Level 16: 
+<INPUT onclick=assignclass(16,1) type=radio value=1 name=choose_class16>Barbarian 
+<INPUT onclick=assignclass(16,2) type=radio value=1 name=choose_class16>Bard 
+<INPUT onclick=assignclass(16,3) type=radio value=1 name=choose_class16>Cleric 
+<INPUT onclick=assignclass(16,4) type=radio value=1 name=choose_class16>Druid 
+<INPUT onclick=assignclass(16,5) type=radio value=1 name=choose_class16>Fighter 
+<INPUT onclick=assignclass(16,6) type=radio value=1 name=choose_class16>Monk 
+<INPUT onclick=assignclass(16,7) type=radio value=1 name=choose_class16>Paladin 
+<INPUT onclick=assignclass(16,8) type=radio value=1 name=choose_class16>Ranger 
+<INPUT onclick=assignclass(16,9) type=radio value=1 name=choose_class16>Rogue 
+<INPUT onclick=assignclass(16,10) type=radio value=1 name=choose_class16>Sorcerer 
+<INPUT onclick=assignclass(16,11) type=radio value=1 name=choose_class16>Wizard 
+<INPUT onclick=assignclass(16,14) type=radio value=1 name=choose_class16>Prestige 
+<BR>Level 17: 
+<INPUT onclick=assignclass(17,1) type=radio value=1 name=choose_class17>Barbarian 
+<INPUT onclick=assignclass(17,2) type=radio value=1 name=choose_class17>Bard 
+<INPUT onclick=assignclass(17,3) type=radio value=1 name=choose_class17>Cleric 
+<INPUT onclick=assignclass(17,4) type=radio value=1 name=choose_class17>Druid 
+<INPUT onclick=assignclass(17,5) type=radio value=1 name=choose_class17>Fighter 
+<INPUT onclick=assignclass(17,6) type=radio value=1 name=choose_class17>Monk 
+<INPUT onclick=assignclass(17,7) type=radio value=1 name=choose_class17>Paladin 
+<INPUT onclick=assignclass(17,8) type=radio value=1 name=choose_class17>Ranger 
+<INPUT onclick=assignclass(17,9) type=radio value=1 name=choose_class17>Rogue 
+<INPUT onclick=assignclass(17,10) type=radio value=1 name=choose_class17>Sorcerer 
+<INPUT onclick=assignclass(17,11) type=radio value=1 name=choose_class17>Wizard 
+<INPUT onclick=assignclass(17,14) type=radio value=1 name=choose_class17>Prestige 
+<BR>Level 18: 
+<INPUT onclick=assignclass(18,1) type=radio value=1 name=choose_class18>Barbarian 
+<INPUT onclick=assignclass(18,2) type=radio value=1 name=choose_class18>Bard 
+<INPUT onclick=assignclass(18,3) type=radio value=1 name=choose_class18>Cleric 
+<INPUT onclick=assignclass(18,4) type=radio value=1 name=choose_class18>Druid 
+<INPUT onclick=assignclass(18,5) type=radio value=1 name=choose_class18>Fighter 
+<INPUT onclick=assignclass(18,6) type=radio value=1 name=choose_class18>Monk 
+<INPUT onclick=assignclass(18,7) type=radio value=1 name=choose_class18>Paladin 
+<INPUT onclick=assignclass(18,8) type=radio value=1 name=choose_class18>Ranger 
+<INPUT onclick=assignclass(18,9) type=radio value=1 name=choose_class18>Rogue 
+<INPUT onclick=assignclass(18,10) type=radio value=1 name=choose_class18>Sorcerer 
+<INPUT onclick=assignclass(18,11) type=radio value=1 name=choose_class18>Wizard 
+<INPUT onclick=assignclass(18,14) type=radio value=1 name=choose_class18>Prestige 
+<BR>Level 19: 
+<INPUT onclick=assignclass(19,1) type=radio value=1 name=choose_class19>Barbarian 
+<INPUT onclick=assignclass(19,2) type=radio value=1 name=choose_class19>Bard 
+<INPUT onclick=assignclass(19,3) type=radio value=1 name=choose_class19>Cleric 
+<INPUT onclick=assignclass(19,4) type=radio value=1 name=choose_class19>Druid 
+<INPUT onclick=assignclass(19,5) type=radio value=1 name=choose_class19>Fighter 
+<INPUT onclick=assignclass(19,6) type=radio value=1 name=choose_class19>Monk 
+<INPUT onclick=assignclass(19,7) type=radio value=1 name=choose_class19>Paladin 
+<INPUT onclick=assignclass(19,8) type=radio value=1 name=choose_class19>Ranger 
+<INPUT onclick=assignclass(19,9) type=radio value=1 name=choose_class19>Rogue 
+<INPUT onclick=assignclass(19,10) type=radio value=1 name=choose_class19>Sorcerer 
+<INPUT onclick=assignclass(19,11) type=radio value=1 name=choose_class19>Wizard 
+<INPUT onclick=assignclass(19,14) type=radio value=1 name=choose_class19>Prestige 
+<BR>Level 20: 
+<INPUT onclick=assignclass(20,1) type=radio value=1 name=choose_class20>Barbarian 
+<INPUT onclick=assignclass(20,2) type=radio value=1 name=choose_class20>Bard 
+<INPUT onclick=assignclass(20,3) type=radio value=1 name=choose_class20>Cleric 
+<INPUT onclick=assignclass(20,4) type=radio value=1 name=choose_class20>Druid 
+<INPUT onclick=assignclass(20,5) type=radio value=1 name=choose_class20>Fighter 
+<INPUT onclick=assignclass(20,6) type=radio value=1 name=choose_class20>Monk 
+<INPUT onclick=assignclass(20,7) type=radio value=1 name=choose_class20>Paladin 
+<INPUT onclick=assignclass(20,8) type=radio value=1 name=choose_class20>Ranger 
+<INPUT onclick=assignclass(20,9) type=radio value=1 name=choose_class20>Rogue 
+<INPUT onclick=assignclass(20,10) type=radio value=1 name=choose_class20>Sorcerer 
+<INPUT onclick=assignclass(20,11) type=radio value=1 name=choose_class20>Wizard 
+<INPUT onclick=assignclass(20,14) type=radio value=1 name=choose_class20>Prestige 
+<BR>
+<P>
+<INPUT onclick=lock_classes() type=button value="Accept Class(es)" name=acceptclasses>
+
+<img name="acceptclassesarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=third_comment_box rows=5 cols=40 > Go back up
+</TEXTAREA> 
+<p>
+<b>Favored class points:</b><p><ul>
+<table><tr><td>
+Add to Total Hit Points:
+<SELECT onchange=favored_class_points(1) name=favored_for_hit_points> 
+<OPTION selected>0</OPTION></SELECT>
+</td><td width=5%></td><td>
+Add to Total Skill Points:
+<SELECT onchange=favored_class_points(2) name=favored_for_skill_points> 
+<OPTION selected>0</OPTION></SELECT>
+<img name="favored_arrow" src="dragonblank.gif">
+</td></tr></table></ul>
+<p><b>Humans, Half-Elves, Half-Orcs, Elemental Plane-Touched:</b> Increase an ability
+<BR><ul>
+<INPUT onclick=up00(1) type=radio value=1 name=upat00>Strength 
+<INPUT onclick=up00(2) type=radio value=1 name=upat00>Dexterity 
+<INPUT onclick=up00(3) type=radio value=1 name=upat00>Constitution 
+<INPUT onclick=up00(4) type=radio value=1 name=upat00>Intelligence 
+<INPUT onclick=up00(5) type=radio value=1 name=upat00>Wisdom 
+<INPUT onclick=up00(6) type=radio value=1 name=upat00>Charisma
+<img name="up00arrow" src="dragonblank.gif">
+<BR></ul>
+
+<P><B>High-Level Characters:</B> Increase your abilities
+<BR>
+<UL>At level 04: 
+<INPUT onclick=up04(1) type=radio value=1 name=upat04>Strength 
+<INPUT onclick=up04(2) type=radio value=1 name=upat04>Dexterity 
+<INPUT onclick=up04(3) type=radio value=1 name=upat04>Constitution 
+<INPUT onclick=up04(4) type=radio value=1 name=upat04>Intelligence 
+<INPUT onclick=up04(5) type=radio value=1 name=upat04>Wisdom 
+<INPUT onclick=up04(6) type=radio value=1 name=upat04>Charisma
+<img name="up04arrow" src="dragonblank.gif">
+<BR>
+At level 08: 
+<INPUT onclick=up08(1) type=radio value=1 name=upat08>Strength 
+<INPUT onclick=up08(2) type=radio value=1 name=upat08>Dexterity 
+<INPUT onclick=up08(3) type=radio value=1 name=upat08>Constitution 
+<INPUT onclick=up08(4) type=radio value=1 name=upat08>Intelligence 
+<INPUT onclick=up08(5) type=radio value=1 name=upat08>Wisdom 
+<INPUT onclick=up08(6) type=radio value=1 name=upat08>Charisma
+<img name="up08arrow" src="dragonblank.gif">
+<BR>At level 12: 
+<INPUT onclick=up12(1) type=radio value=1 name=upat12>Strength 
+<INPUT onclick=up12(2) type=radio value=1 name=upat12>Dexterity 
+<INPUT onclick=up12(3) type=radio value=1 name=upat12>Constitution 
+<INPUT onclick=up12(4) type=radio value=1 name=upat12>Intelligence 
+<INPUT onclick=up12(5) type=radio value=1 name=upat12>Wisdom 
+<INPUT onclick=up12(6) type=radio value=1 name=upat12>Charisma
+<img name="up12arrow" src="dragonblank.gif">
+<BR>At level 16: 
+<INPUT onclick=up16(1) type=radio value=1 name=upat16>Strength 
+<INPUT onclick=up16(2) type=radio value=1 name=upat16>Dexterity 
+<INPUT onclick=up16(3) type=radio value=1 name=upat16>Constitution 
+<INPUT onclick=up16(4) type=radio value=1 name=upat16>Intelligence 
+<INPUT onclick=up16(5) type=radio value=1 name=upat16>Wisdom 
+<INPUT onclick=up16(6) type=radio value=1 name=upat16>Charisma
+<img name="up16arrow" src="dragonblank.gif">
+<BR>At level 20: 
+<INPUT onclick=up20(1) type=radio value=1 name=upat20>Strength 
+<INPUT onclick=up20(2) type=radio value=1 name=upat20>Dexterity 
+<INPUT onclick=up20(3) type=radio value=1 name=upat20>Constitution 
+<INPUT onclick=up20(4) type=radio value=1 name=upat20>Intelligence 
+<INPUT onclick=up20(5) type=radio value=1 name=upat20>Wisdom 
+<INPUT onclick=up20(6) type=radio value=1 name=upat20>Charisma
+<img name="up20arrow" src="dragonblank.gif">
+<BR></UL>
+<P><!--<table width=100%><tr width=100%><td>-->
+<font size="-1">
+<b>Age adjustment</b><p>
+<input name=age_radio type=radio value=1 onclick=recall_age()>Young: No adjustment
+<BR>
+<input name=age_radio type=radio value=1 onclick=recall_age()>Middle age: -1 to str, dex, con; +1 to int, wis, chr
+<BR>
+<input name=age_radio type=radio value=1 onclick=recall_age()>Old age: -3 to str, dex, con; +2 to int, wis, chr
+<BR>
+<input name=age_radio type=radio value=1 onclick=recall_age()>Venerable: -6 to str, dex, con; +3 to int, wis, chr
+<BR>
+</font size>
+<p>
+<B>Clerics:</B> Choose two domains <img name="domainarrow" src="dragonblank.gif">
+<P>
+<UL><INPUT onclick=DomainsA() type=checkbox name=air_domain>Air&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=animal_domain>Animal&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=artifice_domain>Artifice&nbsp; &nbsp;
+<INPUT onclick=DomainsA() type=checkbox name=chaos_domain>Chaos&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=charm_domain>Charm&nbsp; &nbsp;
+<input onclick=DomainsA() type=checkbox name=community_domain>Community&nbsp; &nbsp;
+<input onclick=DomainsA() type=checkbox name=darkness_domain>Darkness&nbsp; &nbsp;
+<INPUT onclick=DomainsA() type=checkbox name=death_domain>Death&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=destruction_domain>Destruction&nbsp; &nbsp;
+<BR> 
+<INPUT onclick=DomainsA() type=checkbox name=earth_domain>Earth&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=evil_domain>Evil&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=fire_domain>Fire&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=glory_domain>Glory&nbsp; &nbsp;
+<INPUT onclick=DomainsA() type=checkbox name=good_domain>Good&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=healing_domain>Healing&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=knowledge_domain>Knowledge&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=law_domain>Law&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=liberation_domain>Liberation&nbsp; &nbsp;
+<BR>
+<INPUT onclick=DomainsA() type=checkbox name=luck_domain>Luck&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=madness_domain>Madness&nbsp; &nbsp;
+<INPUT onclick=DomainsA() type=checkbox name=magic_domain>Magic&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=plant_domain>Plant&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=protection_domain>Protection&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=nobility_domain>Nobility&nbsp; &nbsp;
+<input onclick=DomainsA() type=checkbox name=repose_domain>Repose&nbsp; &nbsp;
+<input onclick=DomainsA() type=checkbox name=rune_domain>Rune&nbsp; &nbsp;
+<INPUT onclick=DomainsA() type=checkbox name=strength_domain>Strength&nbsp; &nbsp; 
+<BR>
+<INPUT onclick=DomainsA() type=checkbox name=sun_domain>Sun&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=travel_domain>Travel&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=trickery_domain>Trickery&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=war_domain>War&nbsp; &nbsp; 
+<INPUT onclick=DomainsA() type=checkbox name=water_domain>Water&nbsp; &nbsp; 
+<input onclick=DomainsA() type=checkbox name=weather_domain>Weather&nbsp; &nbsp;
+
+<P>Energy type: 
+<INPUT onclick=DomainsA() type=radio value=1 name=choose_energy>Positive/Healing <INPUT onclick=DomainsA() type=radio value=1 name=choose_energy>Negative/Harmful <img name="energyarrow" src="dragonblank.gif">
+<P>Sect (optional): 
+<INPUT name=sect> 
+<P></P></UL><!--</td><td>
+</td></tr></table>-->
+
+<p>
+<p>
+<b>Druids</b> may choose either an animal companion or a clerical domain:<ul>
+<img name="druidchoicearrow" src="dragonblank.gif">
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Animal&nbsp;Companion&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Air&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Animal&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Earth&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Fire&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Plant&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Water&nbsp;&nbsp;
+<input onclick=ChooseForDruid() type=radio name=druid_domain>Weather&nbsp;&nbsp;
+</ul>
+<p>
+<p>
+<P><B>Rangers</B>: Combat track 
+<INPUT onclick=ChooseRangerCombatTrack() type=radio name=ranger_combat_track>Archery 
+<INPUT onclick=ChooseRangerCombatTrack() type=radio name=ranger_combat_track>Two-weapon 
+fighting <img name="rangerarrow" src="dragonblank.gif">
+
+<p>
+<b>Ranger favored enemies</b>:<img name="favoredenemiesarrow" src="dragonblank.gif"><p>
+<table width=100%><tr width=100%><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rf_aberration_list"><option>--</option></select>Aberration
+<BR>
+<select onchange=RangerFoesA() name="rf_animal_list"><option>--</option></select>Animal
+<BR>
+<select onchange=RangerFoesA() name="rf_construct_list"><option>--</option></select>Construct
+<BR>
+<select onchange=RangerFoesA() name="rf_dragon_list"><option>--</option></select>Dragon
+<BR>
+<select onchange=RangerFoesA() name="rf_fey_list"><option>--</option></select>Fey
+<BR>
+<select onchange=RangerFoesA() name="rf_giant_list"><option>--</option></select>Humanoid (giant)
+<BR>
+<select onchange=RangerFoesA() name="rf_aquatic_list"><option>--</option></select>Humanoid (aquatic)
+<BR>
+<select onchange=RangerFoesA() name="rf_dwarf_list"><option>--</option></select>Humanoid (dwarf)
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rf_elf_list"><option>--</option></select>Humanoid (elf)
+<BR>
+<select onchange=RangerFoesA() name="rf_goblinoid_list"><option>--</option></select>Humanoid (goblinoid)
+<BR>
+<select onchange=RangerFoesA() name="rf_gnoll_list"><option>--</option></select>Humanoid (gnoll)
+<BR>
+<select onchange=RangerFoesA() name="rf_gnome_list"><option>--</option></select>Humanoid (gnome)
+<BR>
+<select onchange=RangerFoesA() name="rf_halfling_list"><option>--</option></select>Humanoid (halfling)
+<BR>
+<select onchange=RangerFoesA() name="rf_human_list"><option>--</option></select>Humanoid (human)
+<BR>
+<select onchange=RangerFoesA() name="rf_orc_list"><option>--</option></select>Humanoid (orc)
+<BR>
+<select onchange=RangerFoesA() name="rf_reptilian_list"><option>--</option></select>Humanoid (reptilian)
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rf_humanoidothersubtype_list"><option>--</option></select>Humanoid (other subtype)
+<BR>
+<select onchange=RangerFoesA() name="rf_magicalbeast_list"><option>--</option></select>Magical Beast
+<BR>
+<select onchange=RangerFoesA() name="rf_monstroushumanoid_list"><option>--</option></select>Monstrous Humanoid
+<BR>
+<select onchange=RangerFoesA() name="rf_ooze_list"><option>--</option></select>Ooze
+<BR>
+<select onchange=RangerFoesA() name="rf_air_list"><option>--</option></select>Outsider (air)
+<BR>
+<select onchange=RangerFoesA() name="rf_chaotic_list"><option>--</option></select>Outsider (chaotic)
+<BR>
+<select onchange=RangerFoesA() name="rf_earth_list"><option>--</option></select>Outsider (earth)
+<BR>
+<select onchange=RangerFoesA() name="rf_evil_list"><option>--</option></select>Outsider (evil)
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rf_fire_list"><option>--</option></select>Outsider (fire)
+<BR>
+<select onchange=RangerFoesA() name="rf_good_list"><option>--</option></select>Outsider (good)
+<BR>
+<select onchange=RangerFoesA() name="rf_lawful_list"><option>--</option></select>Outsider (lawful)
+<BR>
+<select onchange=RangerFoesA() name="rf_native_list"><option>--</option></select>Outsider (native)
+<BR>
+<select onchange=RangerFoesA() name="rf_water_list"><option>--</option></select>Outsider (water)
+<BR>
+<select onchange=RangerFoesA() name="rf_plant_list"><option>--</option></select>Plant
+<BR>
+<select onchange=RangerFoesA() name="rf_undead_list"><option>--</option></select>Undead
+<BR>
+<select onchange=RangerFoesA() name="rf_vermin_list"><option>--</option></select>Vermin
+<BR>
+</td></tr></table>
+<b>Ranger favored terrains</b>:<img name="favoredterrainsarrow" src="dragonblank.gif"><p>
+<table width=100%><tr width=100%><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rt_cold_list"><option>--</option></select>Cold
+<BR>
+<select onchange=RangerFoesA() name="rt_desert_list"><option>--</option></select>Desert
+<BR>
+<select onchange=RangerFoesA() name="rt_forest_list"><option>--</option></select>Forest
+<BR>
+<select onchange=RangerFoesA() name="rt_jungle_list"><option>--</option></select>Jungle
+<BR>
+<select onchange=RangerFoesA() name="rt_mountain_list"><option>--</option></select>Mountain
+<BR>
+<select onchange=RangerFoesA() name="rt_plains_list"><option>--</option></select>Plains
+<BR>
+<select onchange=RangerFoesA() name="rt_planeabaddon_list"><option>--</option></select>Plane -- Abaddon
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rt_planeabyss_list"><option>--</option></select>Plane -- Abyss
+<BR>
+<select onchange=RangerFoesA() name="rt_planeair_list"><option>--</option></select>Plane -- Air
+<BR>
+<select onchange=RangerFoesA() name="rt_planeastral_list"><option>--</option></select>Plane -- Astral
+<BR>
+<select onchange=RangerFoesA() name="rt_planeaxis_list"><option>--</option></select>Plane -- Axis
+<BR>
+<select onchange=RangerFoesA() name="rt_planeearth_list"><option>--</option></select>Plane -- Earth
+<BR>
+<select onchange=RangerFoesA() name="rt_planeelysium_list"><option>--</option></select>Plane -- Elysium
+<BR>
+<select onchange=RangerFoesA() name="rt_planeethereal_list"><option>--</option></select>Plane -- Ethereal
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rt_planefire_list"><option>--</option></select>Plane -- Fire
+<BR>
+<select onchange=RangerFoesA() name="rt_planeheaven_list"><option>--</option></select>Plane -- Heaven
+<BR>
+<select onchange=RangerFoesA() name="rt_planehell_list"><option>--</option></select>Plane -- Hell
+<BR>
+<select onchange=RangerFoesA() name="rt_planemaelstrom_list"><option>--</option></select>Plane -- Maelstrom
+<BR>
+<select onchange=RangerFoesA() name="rt_planenirvana_list"><option>--</option></select>Plane -- Nirvana
+<BR>
+<select onchange=RangerFoesA() name="rt_planeshadow_list"><option>--</option></select>Plane -- Shadow
+<BR>
+<select onchange=RangerFoesA() name="rt_planewater_list"><option>--</option></select>Plane -- Water
+<BR>
+</td><td width=25%><font size="-1">
+<select onchange=RangerFoesA() name="rt_swamp_list"><option>--</option></select>Swamp
+<BR>
+<select onchange=RangerFoesA() name="rt_underground_list"><option>--</option></select>Underground
+<BR>
+<select onchange=RangerFoesA() name="rt_urban_list"><option>--</option></select>Urban
+<BR>
+<select onchange=RangerFoesA() name="rt_water_list"><option>--</option></select>Water
+<BR>
+<select onchange=RangerFoesA() name="rt_other1_list"><option>--</option></select><input name=other_ranger_terrain_1>
+<BR>
+<select onchange=RangerFoesA() name="rt_other2_list"><option>--</option></select><input name=other_ranger_terrain_2>
+<BR>
+</td></tr></table><P>
+<b>Sorcerers:</b> Choose your bloodline <img name="bloodlinearrow" src="dragonblank.gif"><p><ul>
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Aberrant&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Abyssal&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Arcane&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Celestial&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Destined&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Draconic&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Elemental&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Fey&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Infernal&nbsp; &nbsp; 
+<input onclick=BloodlineCountA() type=radio name=choose_bloodline>Undead&nbsp; &nbsp; </ul>
+<p>
+
+<P><B>Wizards</B> (and <b>Arcane Sorcerers</b>) may have a familiar:
+<UL>
+<img name="familiararrow" src="dragonblank.gif"><INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>None 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Bat <INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Cat <INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Hawk 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Lizard 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Monkey 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Owl <INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Rat <INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Raven 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Snake 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Toad 
+<INPUT onclick=ChooseFamiliar() type=radio value=1 name=choose_familiar>Weasel</UL>
+<P><B>Wizards</B> may specialize 
+<P>
+<UL>
+<img name="wizardspecialtyarrow" src="dragonblank.gif">
+<INPUT onclick=WizardSpecialtyA() type=radio value=1
+name=choose_specialty>Generalist / Universal<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Abjurer 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Conjuror 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Diviner 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Enchanter 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Evoker 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Illusionist <INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Necromancer 
+<INPUT onclick=WizardSpecialtyA() type=radio value=1 name=choose_specialty>Transmuter 
+<P>
+<img name="wizardgiveuparrow" src="dragonblank.gif">
+Giving up 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_abjuration>Abjuration 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_conjuration>Conjuration 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_divination>Divination
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_enchantment>Enchantment 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_evocation>Evocation 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_illusion>Illusion 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_necromancy>Necromancy 
+<INPUT onclick=WizardSpecialtyA() type=checkbox name=forbid_transmutation>Transmutation 
+<P></P></UL>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD></TD></TR></TBODY></TABLE></TABLE>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD><B>Prestige Class</B> 
+<img name="prestigearrow" src="dragonblank.gif">
+<UL>
+<TABLE>
+<TBODY>
+<TR>
+<TD width="15%">Name of your class:</FONT></TD>
+<TD><INPUT name=prestige_name onclick="LookForPrestigeClassName()"></FONT></TD></TR>
+<TR>
+<TD>Hit point dice:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_hit_dice>d4&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_hit_dice>d6&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_hit_dice>d8&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_hit_dice>d10&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_hit_dice>d12&nbsp; &nbsp; &nbsp; </FONT></TD></TR>
+<TR>
+<TD>Attack bonus progress:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_attack_progress>slow&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_attack_progress>medium&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_attack_progress>fast&nbsp; &nbsp; &nbsp; </FONT></TD></TR></TBODY></TABLE></UL></TD>
+<TD>
+</TD></TR></TBODY></TABLE>
+<UL>
+<TABLE>
+<TBODY>
+<TR>
+<TD>Fortitude save progress:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_fortitude_progress>slow&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_fortitude_progress>fast&nbsp; &nbsp; &nbsp; </FONT></TD></TR>
+<TR>
+<TD>Reflex save progress:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_reflex_progress>slow&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_reflex_progress>fast&nbsp; &nbsp; &nbsp; </FONT></TD></TR>
+<TR>
+<TD>Will save progress:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_will_progress>slow&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_will_progress>fast&nbsp; &nbsp; &nbsp; </FONT></TD></TR>
+<TR>
+<TD>Skill points per level:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_skill_progress>2&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_skill_progress>4&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_skill_progress>6&nbsp; &nbsp; &nbsp; 
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_skill_progress>8&nbsp; &nbsp; &nbsp; </FONT></TD></TR>
+
+<TR>
+<TD vAlign=top>
+Additional arcane spell levels as:</FONT></UL></TD>
+<TD>
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_arcanespell_type>None 
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_arcanespell_type>Bard
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_arcanespell_type>Sorcerer
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_arcanespell_type>Wizard
+</FONT></TD></TR>
+<TR>
+<TD vAlign=top>
+Additional divine spell levels as:</FONT></UL></TD>
+<TD>
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_divinespell_type>None
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_divinespell_type>Cleric
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_divinespell_type>Druid 
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_divinespell_type>Paladin
+<INPUT onclick=PrestigeClassAq() type=radio value=1 name=prestige_divinespell_type>Ranger
+</FONT></TD></TR> 
+
+<TR>
+<TD>How many spellcaster levels:</FONT></TD>
+<TD><INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>0 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>1 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>2 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>3 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>4 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>5 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>6 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>7 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>8 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>9 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>10 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>11 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>12 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>13 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>14 <INPUT onclick=PrestigeClassA() type=radio value=1 name=count_prestige_spell_levels>15</FONT></TD></TR>
+<TR>
+<TD vAlign=top>
+Bonus feats:</FONT></TD>
+<TD>
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_bonus_feats>0
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_bonus_feats>1
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_bonus_feats>2
+<INPUT onclick=PrestigeClassA() type=radio value=1 name=prestige_bonus_feats>3
+<UL></UL></FONT></TD></TR>
+</TBODY></TABLE></TABLE></UL>
+<P>
+<TABLE>
+<TBODY>
+<TR>
+<TD></TD>
+<TD><INPUT onclick=FreezeFighterFeatsEtc() type=button value="Move On" name=acceptstuff>
+<img name="moveonarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=fourth_comment_box rows=5 cols=30 onchange="">
+</TEXTAREA> 
+<P>In "Pathfinder", for multi-class characters, a class skill 
+for any is a class skill for all, and prestige class skills are those 
+of the previous classes. 
+<P>Mark or unmark class skills as appropriate for classes and their variants.
+
+You are on your honor.
+</P></FONT></TD></TR></TBODY></TABLE>
+<P><B>Skill Points: </B>
+<BR><INPUT size=50 value="This will show your count." 
+name=skillpointcount> 
+<img name="skillsarrow" src="dragonblank.gif">
+<P>
+
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top>
+<TABLE>
+<TBODY>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=acrobatics_ics>
+<FONT face=Arial>Acrobatics</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_acrobatics() name=acrobatics_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_acrobatics> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=appraise_ics>
+<FONT face=Arial>Appraise</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_appraise() name=appraise_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_appraise> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=bluff_ics>
+<FONT face=Arial>Bluff</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_bluff() name=bluff_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_bluff> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=climb_ics>
+<FONT face=Arial>Climb</FONT></TD>
+<TD>Str</FONT></TD>
+<TD><SELECT onchange=figure_climb() name=climb_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_climb> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=craft_1_ics>
+<FONT face=Arial>Craft_1</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_craft_1() name=craft_1_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_craft_1> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=craft_2_ics>
+<FONT face=Arial>Craft_2</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_craft_2() name=craft_2_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_craft_2> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=craft_3_ics>
+<FONT face=Arial>Craft_3</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_craft_3() name=craft_3_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_craft_3> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=diplomacy_ics>
+<FONT face=Arial>Diplomacy</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_diplomacy() name=diplomacy_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_diplomacy> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=disabledevice_ics>
+<FONT face=Arial>Disable
+<BR>&nbsp; &nbsp; device</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_disabledevice() name=disabledevice_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_disabledevice> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=disguise_ics>
+<FONT face=Arial>Disguise</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_disguise() name=disguise_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_disguise> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=escapeartist_ics>
+<FONT face=Arial>Escape
+<BR>&nbsp; &nbsp; artist</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_escapeartist() name=escapeartist_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_escapeartist> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=fly_ics>
+<FONT face=Arial>Fly</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_fly() name=fly_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_fly> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=handleanimal_ics>
+<FONT face=Arial>Handle
+<BR>&nbsp; &nbsp; animal</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_handleanimal() name=handleanimal_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_handleanimal> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=heal_ics>
+<FONT face=Arial>Heal</FONT></TD>
+<TD>Wis</FONT></TD>
+<TD><SELECT onchange=figure_heal() name=heal_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_heal> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=intimidate_ics>
+<FONT face=Arial>Intimidate</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_intimidate() name=intimidate_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_intimidate> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgearcana_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (arcana)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgearcana() name=knowledgearcana_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgearcana> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgeengineering_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (engineering) 
+</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgeengineering() name=knowledgeengineering_list> 
+<OPTION 
+selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgeengineering> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgedungeoneering_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (dungeoneering)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT 
+onchange=figure_knowledgedungeoneering() name=knowledgedungeoneering_list> 
+<OPTION 
+selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgedungeoneering> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgegeography_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (geography)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgegeography() name=knowledgegeography_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgegeography> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgehistory_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (history)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgehistory() name=knowledgehistory_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgehistory> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgelocal_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (local)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgelocal() name=knowledgelocal_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgelocal> 
+</FONT></TD></TR></TBODY></TABLE></TD>
+<TD vAlign=top>
+<TABLE>
+<TBODY>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgenature_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (nature)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgenature() name=knowledgenature_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgenature> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgenobility_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (nobility) 
+</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgenobility() name=knowledgenobility_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgenobility> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgeplanes_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (planes)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgeplanes() name=knowledgeplanes_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgeplanes> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=knowledgereligion_ics>
+<FONT face=Arial>Knowledge
+<BR>&nbsp; &nbsp; (religion)</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_knowledgereligion() name=knowledgereligion_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_knowledgereligion> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=linguistics_ics>
+<FONT face=Arial>Linguistics</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_linguistics() name=linguistics_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_linguistics> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perception_ics>
+<FONT face=Arial>Perception</FONT></TD>
+<TD>Wis</FONT></TD>
+<TD><SELECT onchange=figure_perception() name=perception_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perception> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perform_1_ics>
+<FONT face=Arial>Perform_1</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_perform_1() name=perform_1_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perform_1> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perform_2_ics>
+<FONT face=Arial>Perform_2</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_perform_2() name=perform_2_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perform_2> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perform_3_ics>
+<FONT face=Arial>Perform_3</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_perform_3() name=perform_3_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perform_3> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perform_4_ics>
+<FONT face=Arial>Perform_4</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_perform_4() name=perform_4_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perform_4> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=perform_5_ics>
+<FONT face=Arial>Perform_5</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_perform_5() name=perform_5_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_perform_5> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=profession_ics>
+<FONT face=Arial>Profession</FONT></TD>
+<TD>Wis</FONT></TD>
+<TD><SELECT onchange=figure_profession() name=profession_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_profession> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=ride_ics>
+<FONT face=Arial>Ride</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_ride() name=ride_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_ride> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=sensemotive_ics>
+<FONT face=Arial>Sense
+<BR>&nbsp; &nbsp; motive</FONT></TD>
+<TD>Wis</FONT></TD>
+<TD><SELECT onchange=figure_sensemotive() name=sensemotive_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_sensemotive> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=sleightofhand_ics>
+<FONT face=Arial>Sleight
+<BR>&nbsp; &nbsp; of hand</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_sleightofhand() name=sleightofhand_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_sleightofhand> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=spellcraft_ics>
+<FONT face=Arial>Spellcraft</FONT></TD>
+<TD>Int</FONT></TD>
+<TD><SELECT onchange=figure_spellcraft() name=spellcraft_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_spellcraft> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=stealth_ics>
+<FONT face=Arial>Stealth</FONT></TD>
+<TD>Dex</FONT></TD>
+<TD><SELECT onchange=figure_stealth() name=stealth_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_stealth> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=survival_ics>
+<FONT face=Arial>Survival</FONT></TD>
+<TD>Wis</FONT></TD>
+<TD><SELECT onchange=figure_survival() name=survival_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_survival> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=swim_ics>
+<FONT face=Arial>Swim</FONT></TD>
+<TD>Str</FONT></TD>
+<TD><SELECT onchange=figure_swim() name=swim_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_swim> 
+</FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=ics() type=checkbox name=usemagicdevice_ics>
+<FONT face=Arial>Use magic
+<BR>&nbsp; &nbsp; device</FONT></TD>
+<TD>Cha</FONT></TD>
+<TD><SELECT onchange=figure_usemagicdevice() name=usemagicdevice_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_usemagicdevice> 
+</FONT></TD></TR>
+
+<TR>
+<TD><input name="otherskill1_name"></FONT></TD>
+<TD>
+<select name=otherskill1_ability_list>
+<option selected>Str</option>
+<option>Dex</option>
+<option>Con</option>
+<option>Int</option>
+<option>Wis</option>
+<option>Chr</option></select>
+</FONT></TD>
+<TD><SELECT onchange=figure_otherskill1() name=otherskill1_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_otherskill1> 
+</FONT></TD></TR>
+
+<TR>
+<TD><input name="otherskill2_name"></FONT></TD>
+<TD>
+<select name=otherskill2_ability_list>
+<option selected>Str</option>
+<option>Dex</option>
+<option>Con</option>
+<option>Int</option>
+<option>Wis</option>
+<option>Chr</option></select>
+</FONT></TD>
+<TD><SELECT onchange=figure_otherskill2() name=otherskill2_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_otherskill2> 
+</FONT></TD></TR>
+
+<TR>
+<TD><input name="otherskill3_name"></FONT></TD>
+<TD>
+<select name=otherskill3_ability_list>
+<option selected>Str</option>
+<option>Dex</option>
+<option>Con</option>
+<option>Int</option>
+<option>Wis</option>
+<option>Chr</option></select>
+</FONT></TD>
+<TD><SELECT onchange=figure_otherskill3() name=otherskill3_list> 
+<OPTION selected>0</OPTION></SELECT> 
+<INPUT size=15 name=about_otherskill3> 
+</FONT></TD></TR>
+
+</TBODY></TABLE></TD></TR></TBODY></TABLE>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+
+<TD><INPUT onclick=lock_skills() type=button value="Accept These Skills" name=acceptskills>
+<img name="acceptskillsarrow" src="dragonblank.gif">
+
+<BR>
+<P><TEXTAREA name=fifth_comment_box cols=30 onchange=""> 
+</TEXTAREA> 
+<P><B>Feats: </B>
+<img name="featsarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=feat rows=8 cols=30 onchange=""></TEXTAREA></P></FONT></TD>
+<TD>
+</TD></TR></TBODY></TABLE><TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=acrobatic>Acrobatic<img name=acrobatic_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=agilemaneuvers>Agile Maneuvers<img name=agilemaneuvers_star src="no_asterisk.gif">
+<img name=fstar01 src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=alertness>Alertness<img name=alertness_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=alignmentchannel>Alignment Channel<img name=alignmentchannel_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=animalaffinity>Animal Affinity<img name=animalaffinity_star src="no_asterisk.gif"></FONT></TD>
+</TR>
+<TR>
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=arcanestrike>Arcane Strike<img name=arcanestrike_star src="no_asterisk.gif">
+<img name=fstar02 src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><INPUT onclick=Feats() type=checkbox name=athletic>Athletic<img name=athletic_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=augmentsummoning>Augment Summoning<img name=augmentsummoning_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=blindfight>Blind-Fight<img name=blindfight_star src="no_asterisk.gif">
+<img name=fstar03 src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=catchoffguard>Catch Off Guard<img name=catchoffguard_star src="no_asterisk.gif">
+<img name=fstar04 src="no_asterisk.gif">
+<img name=mstar01 src="no_asterisk.gif"></td>
+</tr><tr>
+<TD width="20%"><input onclick=Feats() type=checkbox name=channelsmite>Channel Smite<img name=channelsmite_star src="no_asterisk.gif">
+<img name=fstar05 src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=combatcasting>Combat Casting<img name=combatcasting_star src="no_asterisk.gif"></FONT></TD>
+
+<TD width="20%"><input onclick=Feats() type=checkbox name=commandundead>Command Undead<img name=commandundead_star src="no_asterisk.gif"></td>
+<TD width="20%"><input onclick=Feats() type=checkbox name=deadlyaim>Deadly Aim<img name=deadlyaim_star src="no_asterisk.gif">
+<img name=fstar06 src="no_asterisk.gif"></td><TD><INPUT onclick=Feats() type=checkbox name=deceitful>Deceitful<img name=deceitful_star src="no_asterisk.gif"></FONT></TD>
+</tr><tr>
+<TD width="20%"><input onclick=Feats() type=checkbox name=defensivecombattraining>Defensive Combat Training<img name=defensivecombattraining_star src="no_asterisk.gif">
+<img name=fstar07 src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=defthands>Deft Hands<img name=defthands_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=elementalchannel>Elemental Channel<img name=elementalchannel_star src="no_asterisk.gif"></td><TD><INPUT onclick=Feats() type=checkbox name=eschewmaterials>Eschew Materials<img name=eschewmaterials_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=exoticweaponproficiency>Exotic Weapon Proficiency<img name=exoticweaponproficiency_star src="no_asterisk.gif">
+<img name=fstar08 src="no_asterisk.gif"></FONT></TD>
+</TR>
+<TR>
+<TD><SELECT onchange=Feats() name=extrachannel_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Channel<img name=extrachannel_list_star src="no_asterisk.gif"></FONT></TD>
+<TD><SELECT onchange=Feats() name=extraki_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Ki<img name=extraki_list_star src="no_asterisk.gif"></FONT></TD>
+<TD><SELECT onchange=Feats() name=extralayonhands_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Lay on Hands<img name=extralayonhands_list_star src="no_asterisk.gif"></FONT></TD>
+<TD><SELECT onchange=Feats() name=extramercy_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Mercy<img name=extramercy_list_star src="no_asterisk.gif"></FONT></TD>
+<TD><SELECT onchange=Feats() name=extraperformance_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Performance<img name=extraperformance_list_star src="no_asterisk.gif"></FONT></TD>
+</tr><tr>
+<TD><SELECT onchange=Feats() name=extrarage_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Extra 
+Rage<img name=extrarage_list_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=fleet>Fleet<img name=fleet_star src="no_asterisk.gif"></td>
+<TD width="20%"><input onclick=Feats() type=checkbox name=improvedchannel>Improved Channel<img name=improvedchannel_star src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=improvedcounterspell>Improved Counterspell<img name=improvedcounterspell_star src="no_asterisk.gif"></FONT></TD>
+<TD>
+<SELECT onchange=Feats() name=improvedcritical_list>
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT>
+Improved Critical<img name=improvedcritical_list_star src="no_asterisk.gif">
+<img name=fstar09 src="no_asterisk.gif">
+<img name=mstar14 src="no_asterisk.gif"></FONT>
+</TD>
+</tr><tr>
+<TD width="20%"><input onclick=Feats() type=checkbox name=improvedfamiliar>Improved Familiar<img name=improvedfamiliar_star src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=improvedinitiative>Improved Initiative<img name=improvedinitiative_star src="no_asterisk.gif">
+<img name=fstar10 src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=improvisedweaponmastery>Improvised Weapon Mastery<img name=improvisedweaponmastery_star src="no_asterisk.gif">
+<img name=fstar101 src="no_asterisk.gif"></td>
+<TD width="20%"><input onclick=Feats() type=checkbox name=intimidatingprowess>Intimidating Prowess<img name=intimidatingprowess_star src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=leadership>Leadership<img name=leadership_star src="no_asterisk.gif"></FONT></TD>
+</tr><tr>
+<TD width="20%"><input onclick=Feats() type=checkbox name=lunge>Lunge<img name=lunge_star src="no_asterisk.gif"></td>
+<TD><INPUT onclick=Feats() type=checkbox name=magicalaptitude>Magical Aptitude<img name=magicalaptitude_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=martialweaponproficiency>Martial Weapon Proficiency<img name=martialweaponproficiency_star src="no_asterisk.gif"></FONT></TD>
+<TD width="20%"><input onclick=Feats() type=checkbox name=mastercraftsman>Master Craftsman<img name=mastercraftsman_star src="no_asterisk.gif"></td>
+
+<TD><INPUT onclick=Feats() type=checkbox name=naturalspell>Natural Spell<img name=naturalspell_star src="no_asterisk.gif"></FONT></TD>
+</tr><tr>
+<TD><INPUT onclick=Feats() type=checkbox name=persuasive>Persuasive<img name=persuasive_star src="no_asterisk.gif"></FONT></TD>
+
+<TD><INPUT onclick=Feats() type=checkbox name=quickdraw>Quick Draw<img name=quickdraw_star src="no_asterisk.gif">
+<img name=fstar11 src="no_asterisk.gif">
+<img name=r2star01 src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=rapidreload>Rapid Reload<img name=rapidreload_star src="no_asterisk.gif">
+<img name=fstar12 src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=run>Run<img name=run_star src="no_asterisk.gif"></FONT></TD>
+
+<TD><INPUT onclick=Feats() type=checkbox name=selfsufficient>Self-Sufficient<img name=selfsufficient_star src="no_asterisk.gif"></FONT></TD>
+</tr><tr><TD><input onclick=Feats() type=checkbox name=selectivechanneling>Selective Channeling<img name=selectivechanneling_star src="no_asterisk.gif"></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=simpleweaponproficiency>Simple Weapon Proficiency<img name=simpleweaponproficiency_star src="no_asterisk.gif"></FONT></TD>
+<TD><SELECT onchange=Feats() name=spellmastery_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION> 
+<OPTION>11</OPTION> 
+<OPTION>12</OPTION> 
+<OPTION>13</OPTION> 
+<OPTION>14</OPTION> 
+<OPTION>15</OPTION> 
+<OPTION>16</OPTION> 
+<OPTION>17</OPTION> 
+<OPTION>18</OPTION> 
+<OPTION>19</OPTION> 
+<OPTION>20</OPTION> 
+<OPTION>21</OPTION> 
+<OPTION>22</OPTION> 
+<OPTION>23</OPTION></SELECT> Spell 
+Mastery<img name=spellmastery_list_star src="no_asterisk.gif">
+<img name=wstar01 src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=stealthy>Stealthy<img name=stealthy_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=stepup>Step Up<img name=stepup_star src="no_asterisk.gif">
+<img name=fstar13 src="no_asterisk.gif"></FONT></TD>
+</tr><tr>
+<TD><INPUT onclick=Feats() type=checkbox name=strikeback>Strike Back<img name=strikeback_star src="no_asterisk.gif">
+<img name=fstar14 src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=throwanything>Throw Anything<img name=throwanything_star src="no_asterisk.gif">
+<img name=fstar15 src="no_asterisk.gif">
+<img name=mstar07 src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=toughness>Toughness<img name=toughness_star src="no_asterisk.gif"></FONT></TD>
+
+<TD width="20%"><input onclick=Feats() type=checkbox name=turnundead>Turn Undead<img name=turnundead_star src="no_asterisk.gif"></td><TD><INPUT onclick=Feats() type=checkbox name=weaponfinesse>Weapon Finesse<img name=weaponfinesse_star src="no_asterisk.gif">
+<img name=fstar102 src="no_asterisk.gif"></FONT></TD>
+</TR></table><p>
+<table width=100%><tr width=100%>
+<td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=arcanearmortraining>Arcane Armor Training<img name=arcanearmortraining_star src="no_asterisk.gif">
+<img name=fstar16 src="no_asterisk.gif"><ul><p>
+<input onclick=Feats() type=checkbox name=arcanearmormastery>Arcane Armor Mastery<img name=arcanearmormastery_star src="no_asterisk.gif">
+<img name=fstar17 src="no_asterisk.gif"></ul><p>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=armorproficiencylight>Armor Proficiency (light) 
+<img name=armorproficiencylight_star src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=armorproficiencymedium>Armor Proficiency (medium)<img name=armorproficiencymedium_star src="no_asterisk.gif">
+<BR><INPUT onclick=Feats() type=checkbox name=armorproficiencyheavy>Armor 
+Proficiency (heavy)<img name=armorproficiencyheavy_star src="no_asterisk.gif"></UL>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=combatexpertise>Combat Expertise 
+<img name=combatexpertise_star src="no_asterisk.gif">
+<img name=fstar18 src="no_asterisk.gif"><P>
+<UL>
+<INPUT onclick=Feats() type=checkbox name=improveddisarm>Improved Disarm<img name=improveddisarm_star src="no_asterisk.gif">
+<img name=fstar19 src="no_asterisk.gif">
+<img name=mstar10 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greaterdisarm>Greater Disarm<img name=greaterdisarm_star src="no_asterisk.gif">
+<img name=fstar20 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedfeint>Improved Feint<img name=improvedfeint_star src="no_asterisk.gif">
+<img name=fstar21 src="no_asterisk.gif">
+<img name=mstar11 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greaterfeint>Greater Feint<img name=greaterfeint_star src="no_asterisk.gif">
+<img name=fstar22 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedtrip>Improved Trip <img name=improvedtrip_star src="no_asterisk.gif">
+<img name=fstar23 src="no_asterisk.gif">
+<img name=mstar12 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greatertrip>Greater Trip<img name=greatertrip_star src="no_asterisk.gif">
+<img name=fstar24 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=whirlwindattack>Whirlwind Attack<img name=whirlwindattack_star src="no_asterisk.gif">
+<img name=fstar25 src="no_asterisk.gif">
+
+</td></tr><tr>
+
+<td width=33% valign="top">
+
+<INPUT onclick=Feats() type=checkbox name=combatreflexes>Combat Reflexes<img name=combatreflexes_star src="no_asterisk.gif">
+<img name=fstar26 src="no_asterisk.gif">
+<img name=mstar02 src="no_asterisk.gif"><p><ul>
+<input onclick=Feats() type=checkbox name=standstill>Stand Still<img name=standstill_star src="no_asterisk.gif">
+<img name=fstar27 src="no_asterisk.gif">
+<BR>
+</ul>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=criticalfocus>Critical Focus<img name=criticalfocus_star src="no_asterisk.gif">
+<img name=fstar28 src="no_asterisk.gif">
+<BR><p><ul>
+<input onclick=Feats() type=checkbox name=bleedingcritical>Bleeding Critical<img name=bleedingcritical_star src="no_asterisk.gif">
+<img name=fstar29 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=blindingcritical>Blinding Critical<img name=blindingcritical_star src="no_asterisk.gif">
+<img name=fstar30 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=criticalmastery>Critical Mastery<img name=criticalmastery_star src="no_asterisk.gif">
+<img name=fstar31 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=deafeningcritical>Deafening Critical<img name=deafeningcritical_star src="no_asterisk.gif">
+<img name=fstar32 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=sickeningcritical>Sickening Critical<img name=sickeningcritical_star src="no_asterisk.gif">
+<img name=fstar33 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=staggeringcritical>Staggering Critical<img name=staggeringcritical_star src="no_asterisk.gif">
+<img name=fstar34 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=stunningcritical>Stunning Critical<img name=stunningcritical_star src="no_asterisk.gif">
+<img name=fstar35 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=tiringcritical>Tiring Critical<img name=tiringcritical_star src="no_asterisk.gif">
+<img name=fstar36 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=exhaustingcritical>Exhausting Critical<img name=exhaustingcritical_star src="no_asterisk.gif">
+<img name=fstar37 src="no_asterisk.gif">
+<BR>
+</ul>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=disruptive>Disruptive<img name=disruptive_star src="no_asterisk.gif">
+<img name=fstar38 src="no_asterisk.gif">
+<BR><p><ul>
+<input onclick=Feats() type=checkbox name=spellbreaker>Spellbreaker<img name=spellbreaker_star src="no_asterisk.gif">
+<img name=fstar39 src="no_asterisk.gif">
+<BR></ul><p>
+
+</td></tr><tr>
+
+<td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=dodge>Dodge 
+<img name=dodge_star src="no_asterisk.gif">
+<img name=fstar40 src="no_asterisk.gif">
+<img name=mstar04 src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=mobility>Mobility<img name=mobility_star src="no_asterisk.gif">
+<img name=fstar41 src="no_asterisk.gif">
+<img name=mstar13 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=springattack>Spring Attack<img name=springattack_star src="no_asterisk.gif">
+<img name=fstar42 src="no_asterisk.gif">
+<img name=mstar17 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=windstance>Wind Stance<img name=windstance_star src="no_asterisk.gif">
+<img name=fstar43 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=lightningstance>Lightning Stance<img name=lightningstance_star src="no_asterisk.gif">
+<img name=fstar44 src="no_asterisk.gif">
+<BR>
+</UL>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=endurance>Endurance 
+<img name=endurance_star src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=diehard>Die 
+Hard<img name=diehard_star src="no_asterisk.gif"></UL></FONT>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=greatfortitude>Great Fortitude<img name=greatfortitude_star src="no_asterisk.gif"><p><ul>
+<input onclick=Feats() type=checkbox name=improvedgreatfortitude>Improved Great Fortitude<img name=improvedgreatfortitude_star src="no_asterisk.gif"></ul>
+
+</td></tr><tr>
+
+<td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=improvedunarmedstrike>Improved Unarmed Strike 
+<img name=improvedunarmedstrike_star src="no_asterisk.gif">
+<img name=fstar45 src="no_asterisk.gif"><P>
+<UL>
+<INPUT onclick=Feats() type=checkbox name=deflectarrows>Deflect Arrows<img name=deflectarrows_star src="no_asterisk.gif">
+<img name=fstar46 src="no_asterisk.gif">
+<img name=mstar03 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=snatcharrows>Snatch Arrows<img name=snatcharrows_star src="no_asterisk.gif">
+<img name=fstar47 src="no_asterisk.gif">
+<img name=mstar16 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedgrapple>Improved Grapple<img name=improvedgrapple_star src="no_asterisk.gif">
+<img name=fstar48 src="no_asterisk.gif">
+<img name=mstar05 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greatergrapple>Greater Grapple<img name=greatergrapple_star src="no_asterisk.gif">
+<img name=fstar49 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=scorpionstyle>Scorpion Style<img name=scorpionstyle_star src="no_asterisk.gif">
+<img name=fstar50 src="no_asterisk.gif">
+<img name=mstar06 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=gorgonsfist>Gorgon's Fist<img name=gorgonsfist_star src="no_asterisk.gif">
+<img name=fstar51 src="no_asterisk.gif">
+<img name=mstar08 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=medusaswrath>Medusa's Wrath<img name=medusaswrath_star src="no_asterisk.gif">
+<img name=fstar52 src="no_asterisk.gif">
+<img name=mstar15 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=stunningfist>Stunning Fist <img name=stunningfist_star src="no_asterisk.gif">
+<img name=fstar53 src="no_asterisk.gif">
+</UL>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=ironwill>Iron Will<img name=ironwill_star src="no_asterisk.gif"><p><ul>
+<input onclick=Feats() type=checkbox name=improvedironwill>Improved Iron Will<img name=improvedironwill_star src="no_asterisk.gif"></ul>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=lightningreflexes>Lightning Reflexes<img name=lightningreflexes_star src="no_asterisk.gif"><p><ul>
+<input onclick=Feats() type=checkbox name=improvedlightningreflexes>Improved Lightning Reflexes<img name=improvedlightningreflexes_star src="no_asterisk.gif"></ul>
+
+</td></tr><tr>
+
+<td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=mountedcombat>Mounted Combat 
+<img name=mountedcombat_star src="no_asterisk.gif">
+<img name=fstar54 src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=mountedarchery>Mounted 
+Archery<img name=mountedarchery_star src="no_asterisk.gif">
+<img name=fstar55 src="no_asterisk.gif">
+<BR><INPUT onclick=Feats() type=checkbox name=ridebyattack>Ride-By Attack<img name=ridebyattack_star src="no_asterisk.gif">
+<img name=fstar56 src="no_asterisk.gif">
+<BR><INPUT onclick=Feats() type=checkbox name=spiritedcharge>Spirited Charge<img name=spiritedcharge_star src="no_asterisk.gif">
+<img name=fstar57 src="no_asterisk.gif">
+<BR><INPUT onclick=Feats() type=checkbox name=trample>Trample<img name=trample_star src="no_asterisk.gif">
+<img name=fstar58 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=unseat>Unseat<img name=unseat_star src="no_asterisk.gif">
+<img name=fstar59 src="no_asterisk.gif">
+<BR>
+</UL>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=nimblemoves>Nimble Moves<img name=nimblemoves_star src="no_asterisk.gif">
+<BR><p><ul>
+<input onclick=Feats() type=checkbox name=acrobaticsteps>Acrobatic Steps<img name=acrobaticsteps_star src="no_asterisk.gif">
+<BR></ul><p>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=pointblankshot>Point Blank Shot 
+<img name=pointblankshot_star src="no_asterisk.gif">
+<img name=fstar60 src="no_asterisk.gif">
+<img name=r1star01 src="no_asterisk.gif"><P>
+<UL>
+<INPUT onclick=Feats() type=checkbox name=farshot>Far Shot <img name=farshot_star src="no_asterisk.gif">
+<img name=fstar61 src="no_asterisk.gif">
+<img name=r1star02 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=preciseshot>Precise Shot<img name=preciseshot_star src="no_asterisk.gif">
+<img name=fstar62 src="no_asterisk.gif">
+<img name=r1star03 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedpreciseshot>Improved Precise Shot<img name=improvedpreciseshot_star src="no_asterisk.gif">
+<img name=fstar63 src="no_asterisk.gif">
+<img name=r1star04 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=shotontherun>Shot on the Run<img name=shotontherun_star src="no_asterisk.gif">
+<img name=fstar64 src="no_asterisk.gif">
+<img name=r1star05 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=rapidshot>Rapid 
+Shot<img name=rapidshot_star src="no_asterisk.gif">
+<img name=fstar65 src="no_asterisk.gif">
+<img name=r1star06 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=pinpointtargeting>Pinpoint Targeting<img name=pinpointtargeting_star src="no_asterisk.gif">
+<img name=fstar66 src="no_asterisk.gif">
+<img name=r1star07 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=manyshot>Many 
+Shot<img name=manyshot_star src="no_asterisk.gif">
+<img name=fstar67 src="no_asterisk.gif">
+<img name=r1star08 src="no_asterisk.gif">
+<BR>
+<p>
+</td></tr><tr>
+
+<td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=powerattack>Power Attack 
+<img name=powerattack_star src="no_asterisk.gif">
+<img name=fstar68 src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=cleave>Cleave <img name=cleave_star src="no_asterisk.gif">
+<img name=fstar69 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=greatcleave>Great Cleave<img name=greatcleave_star src="no_asterisk.gif">
+<img name=fstar70 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedbullrush>Improved Bull Rush <img name=improvedbullrush_star src="no_asterisk.gif">
+<img name=fstar71 src="no_asterisk.gif">
+<img name=mstar09 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greaterbullrush>Greater Bull Rush<img name=greaterbullrush_star src="no_asterisk.gif">
+<img name=fstar72 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedoverrun>Improved Overrun<img name=improvedoverrun_star src="no_asterisk.gif">
+<img name=fstar73 src="no_asterisk.gif">
+<BR> 
+<input onclick=Feats() type=checkbox name=greateroverrun>Greater Overrun<img name=greateroverrun_star src="no_asterisk.gif">
+<img name=fstar74 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedsunder>Improved Sunder<img name=improvedsunder_star src="no_asterisk.gif">
+<img name=fstar75 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greatersunder>Greater Sunder<img name=greatersunder_star src="no_asterisk.gif">
+<img name=fstar76 src="no_asterisk.gif">
+<BR>
+</UL>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=shieldproficiency>Shield Proficiency 
+<img name=shieldproficiency_star src="no_asterisk.gif"><P>
+<UL><INPUT onclick=Feats() type=checkbox name=improvedshieldbash>Improved Shield Bash<img name=improvedshieldbash_star src="no_asterisk.gif">
+<img name=fstar77 src="no_asterisk.gif">
+<img name=r2star02 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=shieldslam>Shield Slam<img name=shieldslam_star src="no_asterisk.gif">
+<img name=fstar78 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=shieldmaster>Shield Master<img name=shieldmaster_star src="no_asterisk.gif">
+<img name=fstar79 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=shieldfocus>Shield Focus<img name=shieldfocus_star src="no_asterisk.gif">
+<img name=fstar80 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greatershieldfocus>Greater Shield Focus<img name=greatershieldfocus_star src="no_asterisk.gif">
+<img name=fstar81 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=towershieldproficiency>Tower Shield 
+Proficiency<img name=towershieldproficiency_star src="no_asterisk.gif">
+<img name=fstar82 src="no_asterisk.gif">
+<BR>
+</UL>
+
+</td><td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=spellpenetration>Spell Penetration<img name=spellpenetration_star src="no_asterisk.gif"><p><ul>
+<INPUT onclick=Feats() type=checkbox name=greaterspellpenetration>Greater Spell Penetration<img name=greaterspellpenetration_star src="no_asterisk.gif"></FONT></ul><p>
+
+</td></tr><tr>
+
+<td width=33% valign="top">
+<INPUT onclick=Feats() type=checkbox name=twoweaponfighting>Two Weapon Fighting 
+<img name=twoweaponfighting_star src="no_asterisk.gif">
+<img name=fstar83 src="no_asterisk.gif">
+<img name=r2star03 src="no_asterisk.gif"><UL>
+<P><INPUT onclick=Feats() type=checkbox name=twoweapondefense>Two Weapon 
+Defense<img name=twoweapondefense_star src="no_asterisk.gif">
+<img name=fstar84 src="no_asterisk.gif">
+<img name=r2star08 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=improvedtwoweaponfighting>Improved Two Weapon Fighting<img name=improvedtwoweaponfighting_star src="no_asterisk.gif">
+<img name=fstar85 src="no_asterisk.gif">
+<img name=r2star04 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=greatertwoweaponfighting>Greater Two Weapon Fighting <img name=greatertwoweaponfighting_star src="no_asterisk.gif">
+<img name=fstar86 src="no_asterisk.gif">
+<img name=r2star05 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=doubleslice>Double Slice<img name=doubleslice_star src="no_asterisk.gif">
+<img name=fstar87 src="no_asterisk.gif">
+<img name=r2star06 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=twoweaponrend>Two Weapon Rend<img name=twoweaponrend_star src="no_asterisk.gif">
+<img name=fstar88 src="no_asterisk.gif">
+<img name=r2star07 src="no_asterisk.gif">
+<BR>
+</P></UL>
+
+</td><td width=33% valign="top">
+<input onclick=Feats() type=checkbox name=vitalstrike>Vital Strike<img name=vitalstrike_star src="no_asterisk.gif">
+<img name=fstar89 src="no_asterisk.gif"><p><ul>
+<input onclick=Feats() type=checkbox name=improvedvitalstrike>Improved Vital Strike<img name=improvedvitalstrike_star src="no_asterisk.gif">
+<img name=fstar90 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greatervitalstrike>Greater Vital Strike<img name=greatervitalstrike_star src="no_asterisk.gif">
+<img name=fstar91 src="no_asterisk.gif">
+<BR>
+</ul></td><td width=33% valign="top">
+<SELECT onchange=Feats() name=weaponfocus_list> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION></SELECT> Weapon 
+Focus <img name=weaponfocus_list_star src="no_asterisk.gif">
+<img name=fstar92 src="no_asterisk.gif">
+<P>
+<UL>
+<SELECT 
+onchange=Feats() name=greaterweaponfocus_list> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION></SELECT> 
+Greater Weapon Focus<img name=greaterweaponfocus_list_star src="no_asterisk.gif">
+<img name=fstar93 src="no_asterisk.gif"> 
+
+<BR>
+
+<input onclick=Feats() type=checkbox name=dazzlingdisplay>Dazzling Display<img name=dazzlingdisplay_star src="no_asterisk.gif">
+<img name=fstar94 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=shatterdefenses>Shatter Defenses<img name=shatterdefenses_star src="no_asterisk.gif">
+<img name=fstar95 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=deadlystroke>Deadly Stroke<img name=deadlystroke_star src="no_asterisk.gif">
+<img name=fstar96 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=penetratingstrike>Penetrating Strike<img name=penetratingstrike_star src="no_asterisk.gif">
+<img name=fstar97 src="no_asterisk.gif">
+<BR>
+<input onclick=Feats() type=checkbox name=greaterpenetratingstrike>Greater Penetrating Strike<img name=greaterpenetratingstrike_star src="no_asterisk.gif">
+<img name=fstar98 src="no_asterisk.gif">
+<BR>
+<SELECT 
+onchange=Feats() name=weaponspecialization_list> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION></SELECT> 
+Weapon Specialization <img name=weaponspecialization_list_star src="no_asterisk.gif">
+<img name=fstar99 src="no_asterisk.gif"> 
+
+<BR>
+
+<SELECT 
+onchange=Feats() name=greaterweaponspecialization_list> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION></SELECT> 
+Greater Weapon Specialization<img name=greaterweaponspecialization_list_star src="no_asterisk.gif">
+<img name=fstar100 src="no_asterisk.gif">
+<BR>
+</UL>
+
+</td></tr></table>
+</table>
+
+<P><p><p>
+<p>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top width="33%">Item creation feats: 
+<P>
+<UL>
+<INPUT onclick=Feats() type=checkbox name=brewpotion>Brew 
+Potion<img name=brewpotion_star src="no_asterisk.gif">
+<img name=wstar02 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=craftmaa>Craft Magic 
+Arms and Armor<img name=craftmaa_star src="no_asterisk.gif">
+<img name=wstar03 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=craftrod>Craft Rod<img name=craftrod_star src="no_asterisk.gif">
+<img name=wstar04 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=craftstaff>Craft Staff<img name=craftstaff_star src="no_asterisk.gif">
+<img name=wstar05 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=craftwand>Craft Wand<img name=craftwand_star src="no_asterisk.gif">
+<img name=wstar06 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=craftwondrousitem>Craft Wondrous Item<img name=craftwondrousitem_star src="no_asterisk.gif">
+<img name=wstar07 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=forgering>Forge Ring<img name=forgering_star src="no_asterisk.gif">
+<img name=wstar08 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=scribescroll>Scribe Scroll<img name=scribescroll_star src="no_asterisk.gif">
+<img name=wstar09 src="no_asterisk.gif"></UL></FONT></TD>
+<TD vAlign=top width="33%">Metamagic feats: 
+<P>
+<UL>
+<INPUT onclick=Feats() type=checkbox name=empowerspell>Empower 
+Spell<img name=empowerspell_star src="no_asterisk.gif">
+<img name=wstar10 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=enlargespell>Enlarge 
+Spell<img name=enlargespell_star src="no_asterisk.gif">
+<img name=wstar11 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=extendspell>Extend 
+Spell<img name=extendspell_star src="no_asterisk.gif">
+<img name=wstar12 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=heightenspell>Heighten Spell<img name=heightenspell_star src="no_asterisk.gif">
+<img name=wstar13 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=maximizespell>Maximize Spell<img name=maximizespell_star src="no_asterisk.gif">
+<img name=wstar14 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=quickenspell>Quicken Spell<img name=quickenspell_star src="no_asterisk.gif">
+<img name=wstar15 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=silentspell>Silent Spell<img name=silentspell_star src="no_asterisk.gif">
+<img name=wstar16 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=stillspell>Still Spell<img name=stillspell_star src="no_asterisk.gif">
+<img name=wstar17 src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Feats() type=checkbox name=widenspell>Widen Spell 
+<img name=widenspell_star src="no_asterisk.gif">
+<img name=wstar18 src="no_asterisk.gif"></UL></FONT></TD></TR></TBODY></TABLE>
+<P>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top width="15%">Skill Focus:</FONT></TD>
+<TD vAlign=top width="17%"><INPUT onclick=Feats() type=checkbox name=skillfocusacrobatics>Acrobatics<img name=skillfocusacrobatics_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top width="17%"><INPUT onclick=Feats() type=checkbox name=skillfocusappraise>Appraise<img name=skillfocusappraise_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top width="17%"></FONT></TD>
+<TD vAlign=top width="17%"><INPUT onclick=Feats() type=checkbox name=skillfocusbluff>Bluff<img name=skillfocusbluff_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top width="17%"><INPUT onclick=Feats() type=checkbox name=skillfocusclimb>Climb<img name=skillfocusclimb_star src="no_asterisk.gif"></FONT></TD>
+</TR>
+<TR>
+<TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocuscraft_1>Craft_1<img name=skillfocuscraft_1_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocuscraft_2>Craft_2<img name=skillfocuscraft_2_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocuscraft_3>Craft_3<img name=skillfocuscraft_3_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusdecipherscript>Decipher Script<img name=skillfocusdecipherscript_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusdiplomacy>Diplomacy<img name=skillfocusdiplomacy_star src="no_asterisk.gif"></FONT></TD></TR>
+<TR>
+<TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusdisabledevice>Disable Device<img name=skillfocusdisabledevice_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusdisguise>Disguise<img name=skillfocusdisguise_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusescapeartist>Escape Artist<img name=skillfocusescapeartist_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusfly>Fly<img name=skillfocusfly_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top></TD></TR>
+<TR>
+<TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocushandleanimal>Handle Animal<img name=skillfocushandleanimal_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusheal>Heal<img name=skillfocusheal_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusstealth>Stealth<img name=skillfocusstealth_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusintimidate>Intimidate<img name=skillfocusintimidate_star src="no_asterisk.gif"></FONT></TD>
+
+<TD vAlign=top></TD>
+</TR><TR><td></td>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgearcana>Knowledge<img name=skillfocusknowledgearcana_star src="no_asterisk.gif">
+<BR>(Arcana)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgeengineering>Knowledge<img name=skillfocusknowledgeengineering_star src="no_asterisk.gif">
+<BR>(Engineering)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgedungeoneering>Knowledge<img name=skillfocusknowledgedungeoneering_star src="no_asterisk.gif">
+<BR>(Dungeoneering)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgegeography>Knowledge<img name=skillfocusknowledgegeography_star src="no_asterisk.gif">
+<BR>(Geography)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgehistory>Knowledge<img name=skillfocusknowledgehistory_star src="no_asterisk.gif">
+<BR>(History)</FONT></TD>
+</TR><TR><TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgelocal>Knowledge<img name=skillfocusknowledgelocal_star src="no_asterisk.gif">
+<BR>(Local)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgenature>Knowledge<img name=skillfocusknowledgenature_star src="no_asterisk.gif">
+<BR>(Nature)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgenobility>Knowledge<img name=skillfocusknowledgenobility_star src="no_asterisk.gif">
+<BR>(Nobility)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgeplanes>Knowledge<img name=skillfocusknowledgeplanes_star src="no_asterisk.gif">
+<BR>(The Planes)</FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusknowledgereligion>Knowledge<img name=skillfocusknowledgereligion_star src="no_asterisk.gif">
+<BR>(Religion)</FONT></TD>
+</TR><TR><TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocuslinguistics>Linguistics<img name=skillfocuslinguistics_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperception>Perception<img name=skillfocusperception_star src="no_asterisk.gif"></FONT></TD>
+
+<TD vAlign=top></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperform_1>Perform_1<img name=skillfocusperform_1_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperform_2>Perform_2<img name=skillfocusperform_2_star src="no_asterisk.gif"></FONT></TD>
+</TR><TR><TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperform_3>Perform_3<img name=skillfocusperform_3_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperform_4>Perform_4<img name=skillfocusperform_4_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusperform_5>Perform_5<img name=skillfocusperform_5_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusprofession>Profession<img name=skillfocusprofession_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusride>Ride<img name=skillfocusride_star src="no_asterisk.gif"></FONT></TD>
+</TR><TR><TD></TD>
+<TD vAlign=top></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocussensemotive>Sense Motive<img name=skillfocussensemotive_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocussleightofhand>Sleight of Hand<img name=skillfocussleightofhand_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusspellcraft>Spellcraft<img name=skillfocusspellcraft_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top></TD>
+</TR><TR><TD></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocussurvival>Survival<img name=skillfocussurvival_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocusswim>Swim<img name=skillfocusswim_star src="no_asterisk.gif"></FONT></TD>
+<TD vAlign=top></TD>
+<TD vAlign=top><INPUT onclick=Feats() type=checkbox name=skillfocususemagicdevice>Use Magic Device<img name=skillfocususemagicdevice_star src="no_asterisk.gif"></FONT></TD>
+
+<TD vAlign=top></TD></TR></TBODY></TABLE></TD></TR></TABLE>
+<P>
+
+<P>
+
+<TABLE>
+<TBODY>
+<TR>
+<TD>Spell Focus:</FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=spellfocusabjuration>Abjuration <img name=spellfocusabjuration_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusconjuration>Conjuration <img name=spellfocusconjuration_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusdivination>Divination <img name=spellfocusdivination_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusenchantment>Enchantment <img name=spellfocusenchantment_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusevocation>Evocation <img name=spellfocusevocation_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusillusion>Illusion <img name=spellfocusillusion_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocusnecromancy>Necromancy <img name=spellfocusnecromancy_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=spellfocustransmutation>Transmutation 
+<img name=spellfocustransmutation_star src="no_asterisk.gif"></FONT></TD></TR>
+<TR>
+<TD>Greater Spell Focus:</FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=greaterspellfocusabjuration>Abjuration <img name=greaterspellfocusabjuration_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusconjuration>Conjuration <img name=greaterspellfocusconjuration_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusdivination>Divination 
+<img name=greaterspellfocusdivination_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusenchantment>Enchantment <img name=greaterspellfocusenchantment_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusevocation>Evocation <img name=greaterspellfocusevocation_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusillusion>Illusion 
+<img name=greaterspellfocusillusion_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocusnecromancy>Necromancy <img name=greaterspellfocusnecromancy_star src="no_asterisk.gif"><INPUT onclick=Feats() type=checkbox name=greaterspellfocustransmutation>Transmutation 
+<img name=greaterspellfocustransmutation_star src="no_asterisk.gif"></FONT></TD></TR>
+
+</TBODY></TABLE>
+<P>
+
+<table width=100%>
+<TR width=100%>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat1><input name="other_feat_1">
+<img name=other_feat_1_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat2><input name="other_feat_2">
+<img name=other_feat_2_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat3><input name="other_feat_3">
+<img name=other_feat_3_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat4><input name="other_feat_4">
+<img name=other_feat_4_star src="no_asterisk.gif"></FONT></TD></TR>
+<TR>
+<TD><INPUT onclick=Feats() type=checkbox
+name=otherfeat5><input name="other_feat_5">
+<img name=other_feat_5_star src="no_asterisk.gif"></FONT></TD>
+						 
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat6><input name="other_feat_6">
+<img name=other_feat_6_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat7><input name="other_feat_7">
+<img name=other_feat_7_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat8><input name="other_feat_8">
+<img name=other_feat_8_star src="no_asterisk.gif"></FONT></TD></tr>
+<tr>
+<TD><INPUT onclick=Feats() type=checkbox
+name=otherfeat9><input name="other_feat_9">
+<img name=other_feat_9_star src="no_asterisk.gif"></FONT></TD>
+<TD><INPUT onclick=Feats() type=checkbox name=otherfeat10><input name="other_feat_10">
+<img name=other_feat_10_star src="no_asterisk.gif"></FONT></TD></TR></TD></TR></TBODY></TABLE><P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD>
+
+</TD>
+<TD><INPUT onclick=lock_feats() type=button value="Accept These Feats" name=acceptfeats>
+<img name="acceptfeatsarrow" src="dragonblank.gif">
+
+<BR><TEXTAREA name=sixth_comment_box rows=5 cols=60 onchange="">
+</TEXTAREA> 
+<P></P></FONT></TD>
+<TD>
+</TD></TR></TBODY></TABLE>
+<P>Please choose the combat equipment that you want to bring. <p>
+<input onclick=Cults() type=checkbox name=cult_weapons>Clerics: Check this box to allow you to use your sect's favorite weapon(s).
+<P><TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top width="30%"><B>Simple Weapons</B>
+<P>
+<UL>
+<INPUT onclick=Arms() type=checkbox name=gauntlet>Gauntlet<img name=gauntlet_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=dagger>Dagger<img name=dagger_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=punchingdagger>Punching Dagger<img name=punchingdagger_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=spikedgauntlet>Spiked Gauntlet<img name=spikedgauntlet_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lightmace>Light Mace<img name=lightmace_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=sickle>Sickle<img name=sickle_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=club>Club<img name=club_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=heavymace>Heavy Mace<img name=heavymace_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=morningstar>Morningstar<img name=morningstar_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=shortspear>Short Spear<img name=shortspear_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=longspear>Long Spear<img name=longspear_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=quarterstaff>Quarterstaff<img name=quarterstaff_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=spear>Spear<img name=spear_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=heavycrossbow>Heavy Crossbow<img name=heavycrossbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lightcrossbow>Light Crossbow<img name=lightcrossbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=dart>Dart<img name=dart_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=javelin>Javelin<img name=javelin_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=sling>Sling<img name=sling_star src="no_asterisk.gif">
+<BR></UL></FONT></TD>
+<TD vAlign=top width="40%">
+<CENTER><B>Martial Weapons</B>
+<P>
+<TABLE>
+<TBODY>
+<TR>
+<TD vAlign=top>
+<INPUT onclick=Arms() type=checkbox name=throwingaxe>Throwing Axe<img name=throwingaxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lighthammer>Light Hammer<img name=lighthammer_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=handaxe>Hand Axe<img name=handaxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=kukri>Kukri<img name=kukri_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lightpick>Light Pick<img name=lightpick_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=sap>Sap<img name=sap_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lightshield>Light Shield<img name=lightshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=spikedarmor>Spiked Armor<img name=spikedarmor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lightspikedshield>Light Spiked Shield<img name=lightspikedshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=shortsword>Short Sword<img name=shortsword_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=battleaxe>Battle Axe<img name=battleaxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=flail>Flail<img name=flail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=longsword>Longsword<img name=longsword_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=heavypick>Heavy Pick<img name=heavypick_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=rapier>Rapier<img name=rapier_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=scimitar>Scimitar<img name=scimitar_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=heavyshield>Heavy Shield<img name=heavyshield_star src="no_asterisk.gif">
+<BR></FONT></TD>
+<TD vAlign=top>
+<INPUT onclick=Arms() type=checkbox name=trident>Trident<img name=trident_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=warhammer>War Hammer<img name=warhammer_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=falchion>Falchion<img name=falchion_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=glaive>Glaive<img name=glaive_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=greataxe>Greataxe<img name=greataxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=greatclub>Greatclub<img name=greatclub_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox
+name=heavyflail>Heavy Flail<img name=heavyflail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=greatsword>Greatsword<img name=greatsword_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=guisarme>Guisarme<img name=guisarme_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=halberd>Halberd<img name=halberd_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=lance>Lance<img name=lance_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=ranseur>Ranseur<img name=ranseur_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=scythe>Scythe<img name=scythe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=longbow>Longbow<img name=longbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=compositelongbow>Composite Longbow<img name=compositelongbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=shortbow>Shortbow<img name=shortbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=compositeshortbow>Composite Shortbow<img name=compositeshortbow_star src="no_asterisk.gif">
+<BR>
+</FONT></TD></TR></TBODY></TABLE>
+
+<BR> 
+<center></P></FONT></CENTER></TD>
+<TD vAlign=top width="30%">
+<P><B>Exotic Weapons</B>
+<P>
+<UL>
+<INPUT onclick=Arms() type=checkbox name=kama>Kama<img name=kama_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=nanchaku>Nanchaku<img name=nanchaku_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=sai>Sai<img name=sai_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=siangham>Siangham<img name=siangham_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=bastardsword>Bastard Sword<img name=bastardsword_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=dwarvenwaraxe>Dwarven Waraxe<img name=dwarvenwaraxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=whip>Whip<img name=whip_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=orcdoubleaxe>Orc Double Axe<img name=orcdoubleaxe_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=spikedchain>Spiked Chain<img name=spikedchain_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=direflail>Dire Flail<img name=direflail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=gnomehookedhammer>Gnome Hooked Hammer<img name=gnomehookedhammer_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=twobladedsword>Two-bladed Sword<img name=twobladedsword_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=dwarvenurgrosh>Dwarven Urgrosh<img name=dwarvenurgrosh_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=bolas>Bolas<img name=bolas_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=handcrossbow>Hand Crossbow<img name=handcrossbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=repeatingheavycrossbow>Repeating Heavy Crossbow<img name=repeatingheavycrossbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=repeatinglightcrossbow>Repeating Light Crossbow<img name=repeatinglightcrossbow_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=net>Net<img name=net_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=shuriken>Shuriken<img name=shuriken_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=pistol>Pistol<img name=pistol_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=checkbox name=musket>Musket<img name=musket_star src="no_asterisk.gif">
+<BR></UL></FONT></TD></TR></TBODY></TABLE>
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top width="25%"><B>Shield</B>
+<P>
+<UL>
+<INPUT onclick=Arms() type=radio name=shield_radio>None<img name=no_shield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Buckler<img name=buckler_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Light wooden shield<img name=lightwoodenshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Light steel shield<img name=lightsteelshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Heavy wooden shield<img name=heavywoodenshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Heavy steel shield<img name=heavysteelshield_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=shield_radio>Tower shield<img name=towershield_star src="no_asterisk.gif">
+<BR></UL>
+<CENTER>
+</CENTER>
+<BR>
+<P></P></FONT></TD>
+<TD vAlign=top width="33%"><B>Armor</B>
+<P>
+<UL>
+<INPUT onclick=Arms() type=radio name=armor_radio>None<img name=no_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Padded (light)<img name=padded_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Leather (light)<img name=leather_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Studded leather (light)<img name=studdedleather_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Chain shirt (light)<img name=chain_shirt_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Hide (medium)<img name=hide_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Scale mail (medium)<img name=scale_armor_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Chainmail (medium)<img name=chainmail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Breastplate (medium)<img name=breastplate_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Splint mail (heavy)<img name=splintmail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Banded mail (heavy)<img name=bandedmail_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Half-plate (heavy)<img name=halfplate_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Arms() type=radio name=armor_radio>Full plate (heavy)<img name=fullplate_star src="no_asterisk.gif">
+<BR></UL></FONT></TD>
+
+<TD vAlign=top><B>Extra Languages:</B>
+<img name="languagesarrow" src="dragonblank.gif">
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR>
+<TD vAlign=top>
+<INPUT onclick=Languages() type=checkbox name=speak_aarakocra>Aarakocra<img name=speak_aarakocra_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_aboleth>Aboleth<img name=speak_aboleth_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_abyssal>Abyssal<img name=speak_abyssal_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_aklo>Aklo<img name=speak_aklo_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_aquan>Aquan<img name=speak_aquan_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_auran>Auran<img name=speak_auran_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_celestial>Celestial<img name=speak_celestial_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_common>Common<img name=speak_common_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_darkelfsilent>Dark Elf Silent<img name=speak_darkelfsilent_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_draconic>Draconic<img name=speak_draconic_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_dwarven>Dwarven<img name=speak_dwarven_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_elven>Elven<img name=speak_elven_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_giant>Giant<img name=speak_giant_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_gith>Gith<img name=speak_gith_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_gnoll>Gnoll<img name=speak_gnoll_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_gnome>Gnome<img name=speak_gnome_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_goblin>Goblin<img name=speak_goblin_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_halfling>Halfling<img name=speak_halfling_star src="no_asterisk.gif">
+<BR>
+</TD><TD valign="top">
+<INPUT onclick=Languages() type=checkbox name=speak_ignan>Ignan<img name=speak_ignan_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_infernal>Infernal<img name=speak_infernal_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_orc>Orc<img name=speak_orc_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_pterran>Pterran<img name=speak_pterran_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_sahuagin>Sahuagin<img name=speak_sahuagin_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_sylvan>Sylvan <img name=speak_sylvan_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_terran>Terran<img name=speak_terran_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_thrikreen>Thri-Kreen<img name=speak_thrikreen_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_xeph>Xeph<img name=speak_xeph_star src="no_asterisk.gif">
+<BR>
+<INPUT
+onclick=Languages() type=checkbox name=speak_undercommon>Undercommon<img name=speak_undercommon_star src="no_asterisk.gif">
+<BR>
+
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage1><input name="other_language_1_name">
+<img name="speak_otherlanguage1_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage1_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage2><input name="other_language_2_name">
+<img name="speak_otherlanguage2_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage2_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage3><input name="other_language_3_name">
+<img name="speak_otherlanguage3_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage3_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage4><input name="other_language_4_name">
+<img name="speak_otherlanguage4_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage4_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage5><input name="other_language_5_name">
+<img name="speak_otherlanguage5_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage5_star src="no_asterisk.gif">
+<BR>
+<INPUT onclick=Languages() type=checkbox name=speak_otherlanguage6><input name="other_language_6_name">
+<img name="speak_otherlanguage6_arrow" src="dragonblank.gif">
+<img name=speak_otherlanguage6_star src="no_asterisk.gif">
+<BR>
+
+<BR></FONT></TD>
+</TR></TBODY></TABLE></P></FONT></TD></TR></TBODY></TABLE>
+<P><B>Equipment:</B> 
+<P>
+<TABLE width="100%">
+<TBODY>
+<TR width="100%">
+<TD vAlign=top><U>Projectiles</U>: 
+<P><SELECT onchange="" name=arrows> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Arrows (20)
+<BR><SELECT onchange="" 
+name=crossbowbolts> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Crossbow 
+bolts (10)
+<BR>
+
+<SELECT onchange="" name=slingbullets> 
+<OPTION
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Sling bullets 
+(10)
+<BR><SELECT onchange="" name=bullets> 
+<OPTION selected>0</OPTION>
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Bullets (20)
+<BR><SELECT onchange="" name=slingbullets> 
+<OPTION
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Sling bullets 
+(10)
+<BR>
+
+<SELECT onchange="Arms()" name=throwingdaggers> 
+<OPTION
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Throwing daggers
+
+<BR>
+
+<P><U>Adventuring gear</U> 
+<P><INPUT onclick="" type=checkbox name=backpack>Backpack
+<BR><INPUT onclick="" type=checkbox name=barrel>Barrel
+<BR><INPUT onclick="" 
+type=checkbox name=basket>Basket
+<BR><INPUT onclick="" type=checkbox name=bedroll>Bedroll
+<BR><INPUT onclick="" type=checkbox name=bell>Bell
+<BR><SELECT onchange="" name=blanketwinter_list> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Blanket, winter
+<BR><INPUT onclick="" type=checkbox name=blockandtackle>Block and tackle
+<BR><INPUT onclick="" type=checkbox name=bottle>Bottle
+<BR><INPUT onclick="" 
+type=checkbox name=bucket>Bucket
+<BR><INPUT onclick="" type=checkbox name=caltrops>Caltrops
+<BR><INPUT onclick="" type=checkbox name=candle>Candle
+<BR></P></FONT></TD>
+<TD vAlign=top><INPUT onclick="" type=checkbox name=canvas>Canvas (sq. yd.)
+<BR><INPUT onclick="" type=checkbox name=casemaporscroll>Case (map or scroll)
+<BR><SELECT onchange="" 
+name=chain> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Chain 
+(ten feet)
+<BR><INPUT onclick="" type=checkbox name=chalk>Chalk
+<BR><INPUT onclick="" type=checkbox name=chest>Chest
+<BR><INPUT onclick="" 
+type=checkbox name=crowbar>Crowbar
+<BR><SELECT onchange="" name=firewood> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Firewood (1 day)
+<BR><INPUT onclick="" type=checkbox name=fishhook>Fishhook
+<BR><INPUT onclick="" 
+type=checkbox name=fishingnet>Fishing net
+<BR><SELECT onchange="" 
+name=flask> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Flask
+<BR><INPUT onclick="" type=checkbox name=flintandsteel>Flint and steel
+<BR><INPUT onclick="" type=checkbox name=grapplinghook>Grappling hook
+<BR><INPUT onclick="" type=checkbox name=hammer>Hammer
+<BR><INPUT onclick="" type=checkbox name=inkvial>Ink 
+vial
+<BR><INPUT onclick="" type=checkbox name=inkpen>Ink pen
+<BR><INPUT onclick="" type=checkbox name=jugclay>Jug, clay
+<BR><INPUT onclick="" 
+type=checkbox name=ladder>Ladder
+<BR><INPUT onclick="" type=checkbox name=lampcommon>Lamp (common)
+<BR></FONT></TD>
+<TD vAlign=top><INPUT onclick="" type=checkbox name=lanternbullseye>Lamp (bullseye)
+<BR><INPUT onclick="" type=checkbox name=lanternhooded>Lantern (hooded)
+<BR><SELECT onchange="" name=lock> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Lock
+<BR><SELECT onchange="" 
+name=manacles> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Manacles
+<BR><INPUT onclick="" type=checkbox name=mirror>Mirror
+<BR><INPUT onclick="" type=checkbox name=mug>Mug
+<BR><SELECT onchange="" name=oilflask> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Oil flask
+<BR><SELECT 
+onchange="" name=paper> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Paper 
+(sheet)
+<BR><SELECT onchange="" name=parchment> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Parchment (sheet)
+<BR><INPUT onclick="" type=checkbox name=pick>Pick
+<BR><INPUT onclick="" type=checkbox name=pitcher>Pitcher
+<BR><SELECT onchange="" name=piton> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Piton
+<BR><INPUT onclick="" 
+type=checkbox name=pole>Pole
+<BR><INPUT onclick="" type=checkbox name=pot>Pot
+<BR><SELECT onchange="" name=pouch> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Pouch
+<BR><INPUT onclick="" 
+type=checkbox name=ram>Ram
+<BR><SELECT onchange="" name=rations> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Rations
+<BR></FONT></TD>
+<TD vAlign=top><SELECT onchange="" name=ropehempen> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Rope, hempen (fifty 
+feet)
+<BR><SELECT onchange="" name=ropesilk> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Rope (silk)
+<BR><SELECT onchange="" name=sack> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Sack
+<BR><INPUT onclick="" 
+type=checkbox name=sealingwax>Sealing wax
+<BR><INPUT onclick="" 
+type=checkbox name=sewingneedle>Sewing needle
+<BR><INPUT onclick="" 
+type=checkbox name=signalwhistle>Signal whistle
+<BR><INPUT onclick="" 
+type=checkbox name=signetring>Signet ring
+<BR><INPUT onclick="" 
+type=checkbox name=sledge>Sledge
+<BR><INPUT onclick="" type=checkbox name=soap>Soap
+<BR><INPUT onclick="" type=checkbox name=spadeorshovel>Spade 
+/ Shovel
+<BR><INPUT onclick="" type=checkbox name=spyglass>Spyglass
+<BR><INPUT onclick="" type=checkbox name=tent>Tent
+<BR><SELECT onchange="" name=torch> 
+<OPTION 
+selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Torch
+<BR><SELECT 
+onchange="" name=vialinkorpotion> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Vial (ink or potion)
+<BR><SELECT onchange="" 
+name=waterskin> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Water 
+skin
+<BR><INPUT onclick="" type=checkbox name=whetstone>Whetstone
+<BR></FONT></TD>
+<TD vAlign=top><U>Tool and skill kits</U>: 
+<P><INPUT onclick="" type=checkbox name=alchemistlab>Alchemist's 
+lab
+<BR><INPUT onclick="" type=checkbox name=artisantools>Artisan's 
+tools
+<BR><INPUT onclick="" type=checkbox name=climberskit>Climber's 
+kit
+<BR><INPUT onclick="" type=checkbox name=disguisekit>Disguise 
+kit
+<BR><INPUT onclick="" type=checkbox name=healerkit>Healer's 
+kit
+<BR><INPUT onclick="" type=checkbox name=hollyandmistletoe>Holly and 
+mistletoe
+<BR><INPUT onclick="" type=checkbox name=holysymbolwooden>Holy 
+symbol, wooden
+<BR><INPUT onclick="" type=checkbox name=holysymbolsilver>Holy symbol, silver
+<BR><INPUT onclick="" 
+type=checkbox name=hourglass>Hourglass
+<BR><INPUT onclick="" type=checkbox name=magnifyingglass>Magnifying glass
+<BR><INPUT onclick="" type=checkbox name=musicalinstrument>Musical instrument
+<BR><INPUT onclick="" 
+type=checkbox name=scale>Scale, merchant's
+<BR><INPUT onclick="" 
+type=checkbox name=spellcomponentpouch>Spell component pouch
+<BR><SELECT 
+onchange="" name=spellbook> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Spellbook
+<BR><INPUT onclick="" type=checkbox name=thievestools>Thieves' tools
+<BR><SELECT onchange="" name=tool> 
+<OPTION selected>0</OPTION> 
+<OPTION>1</OPTION> 
+<OPTION>2</OPTION> 
+<OPTION>3</OPTION> 
+<OPTION>4</OPTION> 
+<OPTION>5</OPTION> 
+<OPTION>6</OPTION> 
+<OPTION>7</OPTION> 
+<OPTION>8</OPTION> 
+<OPTION>9</OPTION> 
+<OPTION>10</OPTION></SELECT>Tool 
+(miscellaneous)
+<BR></P></FONT></TD></TR></TBODY></TABLE>
+<P>
+<table width=100%><tr width=100%><td width=50% valign="top">
+
+<p><table>
+<tr><td valign="top"><u>Additional
+<BR>equipment...</u></td>
+<td> 
+<TEXTAREA name="additionalEquipment" rows=5 cols=40></textarea>
+</td></tr>
+</table><p><P>
+<TABLE>
+<TBODY>
+<TR>
+
+<TD>
+<TEXTAREA name="Looks" rows=5 cols=40></textarea>
+<p>
+<B>Eyes:</B> 
+<INPUT onclick=pigmentation() type=radio 
+name=eye_color>Red 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Green 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Blue 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Hazel <INPUT onclick=pigmentation() type=radio 
+name=eye_color>Light Brown 
+<INPUT onclick=pigmentation() type=radio 
+name=eye_color>Dark Brown 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Black 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Gray 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Amber 
+<INPUT onclick=pigmentation() type=radio name=eye_color>Violet
+<INPUT onclick=pigmentation() type=radio name=eye_color>Silver
+<P><B>Skin:</B> 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Pale 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Light <INPUT onclick=pigmentation() type=radio 
+name=skin_color>Yellow <INPUT onclick=pigmentation() type=radio name=skin_color>Tan 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Brown 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Black 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Silvery 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Green 
+<INPUT onclick=pigmentation() type=radio name=skin_color>Gray
+<INPUT onclick=pigmentation() type=radio name=skin_color>Blue
+<INPUT onclick=pigmentation() type=radio name=skin_color>Red<P><B>Hair:</B> 
+<INPUT onclick=pigmentation() type=radio name=hair_color>White 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Blond 
+<INPUT onclick=pigmentation() type=radio 
+name=hair_color>Red 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Light 
+Brown 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Dark Brown 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Black 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Gray 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Silver
+<INPUT onclick=pigmentation() type=radio name=hair_color>Gold 
+<INPUT onclick=pigmentation() type=radio name=hair_color>Green
+<INPUT onclick=pigmentation() type=radio name=hair_color>Blue
+<INPUT onclick=pigmentation() type=radio name=hair_color>None 
+<p>
+<P><B>Hair Type:</B> 
+<INPUT onclick=pigmentation() type=radio 
+name=hair_type>Straight <INPUT onclick=pigmentation() type=radio 
+name=hair_type>Wavy 
+<INPUT onclick=pigmentation() type=radio 
+name=hair_type>Curly
+<P><B>Males:&nbsp;</B> 
+<INPUT onclick=pigmentation() type=radio 
+name=beard_type>Beardless <INPUT onclick=pigmentation() type=radio 
+name=beard_type>Thin&nbsp;beard 
+<INPUT onclick=pigmentation() type=radio 
+name=beard_type>Average&nbsp;beard 
+<INPUT onclick=pigmentation() type=radio name=beard_type>Thick&nbsp;beard&nbsp;/&nbsp;hirsute 
+<P>
+
+<P><B>Height:&nbsp; &nbsp; </B><SELECT onchange=AdjustHeight() name=how_tall> 
+<OPTION selected>--</OPTION> 
+<OPTION>2' 8"</OPTION> 
+<OPTION>2' 9"</OPTION> 
+<OPTION>2' 10"</OPTION> 
+<OPTION>2' 11"</OPTION> 
+<OPTION>3' 0"</OPTION> 
+<OPTION>3' 1"</OPTION> 
+<OPTION>3' 2"</OPTION> 
+<OPTION>3' 3"</OPTION> 
+<OPTION>3' 4"</OPTION> 
+<OPTION>3' 5"</OPTION> 
+<OPTION>3' 6"</OPTION> 
+<OPTION>3' 7"</OPTION> 
+<OPTION>3' 8"</OPTION> 
+<OPTION>3' 9"</OPTION> 
+<OPTION>3' 10"</OPTION> 
+<OPTION>3' 11"</OPTION> 
+<OPTION>4' 0"</OPTION> 
+<OPTION>4' 1"</OPTION> 
+<OPTION>4' 2"</OPTION> 
+<OPTION>4' 3"</OPTION> 
+<OPTION>4' 4"</OPTION> 
+<OPTION>4' 5"</OPTION> 
+<OPTION>4' 6"</OPTION> 
+<OPTION>4' 7"</OPTION> 
+<OPTION>4' 8"</OPTION> 
+<OPTION>4' 9"</OPTION> 
+<OPTION>4' 10"</OPTION> 
+<OPTION>4' 11"</OPTION> 
+<OPTION>5' 0"</OPTION> 
+<OPTION>5' 1"</OPTION> 
+<OPTION>5' 2"</OPTION> 
+<OPTION>5' 3"</OPTION> 
+<OPTION>5' 4"</OPTION> 
+<OPTION>5' 5"</OPTION> 
+<OPTION>5' 6"</OPTION> 
+<OPTION>5' 7"</OPTION> 
+<OPTION>5' 8"</OPTION> 
+<OPTION>5' 9"</OPTION> 
+<OPTION>5' 10"</OPTION> 
+<OPTION>5' 11"</OPTION> 
+<OPTION>6' 0"</OPTION> 
+<OPTION>6' 1"</OPTION> 
+<OPTION>6' 2"</OPTION> 
+<OPTION>6' 3"</OPTION> 
+<OPTION>6' 4"</OPTION> 
+<OPTION>6' 5"</OPTION> 
+<OPTION>6' 6"</OPTION> 
+<OPTION>6' 7"</OPTION> 
+<OPTION>6' 8"</OPTION> 
+<OPTION>6' 9"</OPTION> 
+<OPTION>6' 10"</OPTION></SELECT>&nbsp; &nbsp; &nbsp; 
+<B>Weight:&nbsp; &nbsp; </B><SELECT onchange=AdjustWeight() name=how_heavy> 
+<OPTION selected>--</OPTION> 
+<OPTION>30 lb</OPTION> 
+<OPTION>31 
+lb</OPTION> 
+<OPTION>32 lb</OPTION> 
+<OPTION>33 lb</OPTION> 
+<OPTION>34 
+lb</OPTION> 
+<OPTION>35 lb</OPTION> 
+<OPTION>36 lb</OPTION> 
+<OPTION>37 
+lb</OPTION> 
+<OPTION>38 lb</OPTION> 
+<OPTION>39 lb</OPTION> 
+<OPTION>40 
+lb</OPTION> 
+<OPTION>41 lb</OPTION> 
+<OPTION>42 lb</OPTION> 
+<OPTION>43 
+lb</OPTION> 
+<OPTION>44 lb</OPTION> 
+<OPTION>45 lb</OPTION> 
+<OPTION>46 
+lb</OPTION> 
+<OPTION>47 lb</OPTION> 
+<OPTION>48 lb</OPTION> 
+<OPTION>49 
+lb</OPTION> 
+<OPTION>50 lb</OPTION> 
+<OPTION>55 lb</OPTION> 
+<OPTION>60 
+lb</OPTION> 
+<OPTION>65 lb</OPTION> 
+<OPTION>70 lb</OPTION> 
+<OPTION>75 
+lb</OPTION> 
+<OPTION>80 lb</OPTION> 
+<OPTION>85 lb</OPTION> 
+<OPTION>90 
+lb</OPTION> 
+<OPTION>95 lb</OPTION> 
+<OPTION>100 lb</OPTION> 
+<OPTION>105 
+lb</OPTION> 
+<OPTION>110 lb</OPTION> 
+<OPTION>115 lb</OPTION> 
+<OPTION>120 
+lb</OPTION> 
+<OPTION>125 lb</OPTION> 
+<OPTION>130 lb</OPTION> 
+<OPTION>135 
+lb</OPTION> 
+<OPTION>140 lb</OPTION> 
+<OPTION>145 lb</OPTION> 
+<OPTION>150 
+lb</OPTION> 
+<OPTION>155 lb</OPTION> 
+<OPTION>160 lb</OPTION> 
+<OPTION>165 
+lb</OPTION> 
+<OPTION>170 lb</OPTION> 
+<OPTION>175 lb</OPTION> 
+<OPTION>180 
+lb</OPTION> 
+<OPTION>185 lb</OPTION> 
+<OPTION>190 lb</OPTION> 
+<OPTION>195 
+lb</OPTION> 
+<OPTION>200 lb</OPTION> 
+<OPTION>210 lb</OPTION> 
+<OPTION>220 
+lb</OPTION> 
+<OPTION>230 lb</OPTION> 
+<OPTION>240 lb</OPTION> 
+<OPTION>250 
+lb</OPTION> 
+<OPTION>260 lb</OPTION> 
+<OPTION>270 lb</OPTION> 
+<OPTION>280 
+lb</OPTION> 
+<OPTION>290 lb</OPTION> 
+<OPTION>300 lb</OPTION> 
+<OPTION>310 
+lb</OPTION> 
+<OPTION>320 lb</OPTION> 
+<OPTION>330 lb</OPTION> 
+<OPTION>340 
+lb</OPTION> 
+<OPTION>350 lb</OPTION> 
+<OPTION>360 lb</OPTION> 
+<OPTION>370 
+lb</OPTION> 
+<OPTION>380 lb</OPTION> 
+<OPTION>390 lb</OPTION> 
+<OPTION>400 
+lb</OPTION> 
+<OPTION>410 lb</OPTION> 
+<OPTION>420 lb</OPTION> 
+<OPTION>430 
+lb</OPTION> 
+<OPTION>440 lb</OPTION></SELECT>
+<BR>
+<font size="-2">Choices may need to be modified to meet racial norms.</font size><p>
+
+<TABLE>
+<TBODY>
+<TR>
+<TD><B>Character Name:</B></FONT></TD>
+<TD><INPUT name=moniker>
+<INPUT onclick=suggest_titles() type=button value=Title: name=titleclicker> 
+<SELECT onchange="" name=title_list width="20"> 
+<OPTION 
+selected>---------</OPTION></SELECT>
+</TD></TR>
+<TR>
+<TD><B>Player Name:</B>
+<FONT face=Arial></FONT></FONT></TD>
+<TD><INPUT name=playerName></TD></TR><tr><td valign="top"><b>More About...</b></td>
+<td> 
+<TEXTAREA name="moreAbout" rows=5 cols=40></textarea>
+</td></tr></TBODY></TABLE>
+<P>
+</td><td width=5%></td><td valign="top" width=45%><font size="-1"><b>Animal companion</b><p>
+<table width=100%><tr width=10%><td valign="top"><font size="-1"><b>Species:</b></td><td width=5%></td><td><font size="-1">
+<input type=radio name=ac_species onclick=AnimalCompanion()>Ape&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Badger&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Bear&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Bird&nbsp;(raptor)&nbsp;&nbsp;
+<BR>
+<input type=radio name=ac_species onclick=AnimalCompanion()>Boar&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Camel&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Cat&nbsp;(big)&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Cat&nbsp;(small)&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Crocodile&nbsp;&nbsp;
+<BR>
+<input type=radio name=ac_species onclick=AnimalCompanion()>Deionynychus&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Dog&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Horse&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Pony&nbsp;&nbsp;
+<BR>
+<input type=radio name=ac_species onclick=AnimalCompanion()>Shark&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Snake&nbsp;(constrictor)&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Snake&nbsp;(viper)&nbsp;&nbsp;
+<input type=radio name=ac_species onclick=AnimalCompanion()>Wolf&nbsp;&nbsp;
+</td></tr></table>`
+<p>
+<b>Up at Level 04:</b>
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Str&nbsp;&nbsp;
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Con&nbsp;&nbsp;
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Dex&nbsp;&nbsp;
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Int&nbsp;&nbsp;
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Wis&nbsp;&nbsp;
+<input type=radio name=ac_upat04 onclick=AnimalCompanion()>Chr&nbsp;&nbsp;
+<BR>
+<b>Up at Level 09:</b>
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Str&nbsp;&nbsp;
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Con&nbsp;&nbsp;
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Dex&nbsp;&nbsp;
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Int&nbsp;&nbsp;
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Wis&nbsp;&nbsp;
+<input type=radio name=ac_upat09 onclick=AnimalCompanion()>Chr&nbsp;&nbsp;
+<BR>
+<b>Up at Level 14:</b>
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Str&nbsp;&nbsp;
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Con&nbsp;&nbsp;
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Dex&nbsp;&nbsp;
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Int&nbsp;&nbsp;
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Wis&nbsp;&nbsp;
+<input type=radio name=ac_upat14 onclick=AnimalCompanion()>Chr&nbsp;&nbsp;
+<BR>
+<b>Up at Level 20:</b>
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Str&nbsp;&nbsp;
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Con&nbsp;&nbsp;
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Dex&nbsp;&nbsp;
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Int&nbsp;&nbsp;
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Wis&nbsp;&nbsp;
+<input type=radio name=ac_upat20 onclick=AnimalCompanion()>Chr&nbsp;&nbsp;
+<BR>
+<p><b>Skills:</b> (* = class skill)
+<BR>
+<table width=100%><tr width=100%><td width=33%><font size="-1">
+<SELECT name=ac_acrobatics_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Acrobatics *
+<BR>
+<SELECT name=ac_climb_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Climb *
+<BR>
+<SELECT name=ac_escapeartist_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Escape Artist
+<BR>
+</td><td width=33%><font size="-1">
+<SELECT name=ac_fly_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Fly *
+<BR>
+<SELECT name=ac_intimidate_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Intimidate
+<BR>
+<SELECT name=ac_perception_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Perception *
+<BR>
+</td><td width=33%><font size="-1">
+<SELECT name=ac_stealth_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Stealth *
+<BR>
+<SELECT name=ac_survival_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Survival
+<BR>
+<SELECT name=ac_swim_list onchange=AnimalCompanion()> 
+<OPTION selected>0</OPTION></SELECT>Swim *
+<BR>
+</td></tr></table><p>
+<b>Feats:</b>
+<BR>
+<table width=100%><tr width=100%><td width=33% valign="top"><font size="-1">
+<input type=checkbox name=ac_acrobatic_box onclick=AnimalCompanion()>Acrobatic
+<BR>
+<input type=checkbox name=ac_agilemaneuvers_box onclick=AnimalCompanion()>Agile Maneuvers
+<BR>
+<input type=checkbox name=ac_armorproficiencylight_box onclick=AnimalCompanion()>Armor Proficiency (light)
+<BR>
+<input type=checkbox name=ac_armorproficiencymedium_box onclick=AnimalCompanion()>Armor Proficiency (medium)
+<BR>
+<input type=checkbox name=ac_armorproficiencyheavy_box onclick=AnimalCompanion()>Armor Proficiency (heavy)
+<BR>
+<input type=checkbox name=ac_athletic_box onclick=AnimalCompanion()>Athletic
+<BR>
+<input type=checkbox name=ac_blindfight_box onclick=AnimalCompanion()>Blindfight
+<BR>
+<input type=checkbox name=ac_combatreflexes_box onclick=AnimalCompanion()>Combat Reflexes
+<BR>
+<input type=checkbox name=ac_diehard_box onclick=AnimalCompanion()>Diehard
+<BR>
+<input type=checkbox name=ac_dodge_box onclick=AnimalCompanion()>Dodge
+<BR>
+<input type=checkbox name=ac_endurance_box onclick=AnimalCompanion()>Endurance
+<BR>
+<input type=checkbox name=ac_greatfortitude_box onclick=AnimalCompanion()>Great Fortitude
+<BR>
+<input type=checkbox name=ac_improvedbullrush_box onclick=AnimalCompanion()>Improved Bull Rush
+<BR>
+</td><td width=33% valign="top"><font size="-1">
+<input type=checkbox name=ac_improvedinitiative_box onclick=AnimalCompanion()>Improved Initiative
+<BR>
+<select name=ac_improvednaturalarmor_list onclick=AnimalCompanion()>
+<option selected>--</option>
+<option selected>1</option>
+<option selected>2</option>
+<option selected>3</option>
+<option selected>4</option>
+<option selected>5</option>
+<option selected>6</option>
+<option selected>7</option>
+<option selected>8</option>
+<option selected>9</option>
+<option selected>10</option></select>Improved Natural Armor
+<BR>
+<input type=checkbox name=ac_improvednaturalattack_box onclick=AnimalCompanion()>Improved Natural Attack
+<BR>
+<input type=checkbox name=ac_improvedoverrun_box onclick=AnimalCompanion()>Improved Overrun
+<BR>
+<input type=checkbox name=ac_intimidatingprowess_box onclick=AnimalCompanion()>Intimidating Prowess
+<BR>
+<input type=checkbox name=ac_ironwill_box onclick=AnimalCompanion()>Iron Will
+<BR>
+<input type=checkbox name=ac_lightningreflexes_box onclick=AnimalCompanion()>Lightning Reflexes
+<BR>
+<input type=checkbox name=ac_mobility_box onclick=AnimalCompanion()>Mobility
+<BR>
+<input type=checkbox name=ac_powerattack_box onclick=AnimalCompanion()>Power Attack
+<BR>
+<input type=checkbox name=ac_run_box onclick=AnimalCompanion()>Run
+<BR>
+<input type=checkbox name=ac_skillfocusacrobatics_box onclick=AnimalCompanion()>Skill Focus -- Acrobatics
+<BR>
+<input type=checkbox name=ac_skillfocusclimb_box onclick=AnimalCompanion()>Skill Focus -- Climb
+<BR>
+<input type=checkbox name=ac_skillfocusescapeartist_box onclick=AnimalCompanion()>Skill Focus -- Escape Artist
+<BR>
+</td><td valign="top"><font size="-1">
+<input type=checkbox name=ac_skillfocusfly_box onclick=AnimalCompanion()>Skill Focus -- Fly
+<BR>
+<input type=checkbox name=ac_skillfocusintimidate_box onclick=AnimalCompanion()>Skill Focus -- Intimidate
+<BR>
+<input type=checkbox name=ac_skillfocusperception_box onclick=AnimalCompanion()>Skill Focus -- Perception
+<BR>
+<input type=checkbox name=ac_skillfocusstealth_box onclick=AnimalCompanion()>Skill Focus -- Stealth
+<BR>
+<input type=checkbox name=ac_skillfocussurvival_box onclick=AnimalCompanion()>Skill Focus -- Survival
+<BR>
+<input type=checkbox name=ac_skillfocusswim_box onclick=AnimalCompanion()>Skill Focus -- Swim
+<BR>
+<input type=checkbox name=ac_springattack_box onclick=AnimalCompanion()>Spring Attack
+<BR>
+<input type=checkbox name=ac_stealthy_box onclick=AnimalCompanion()>Stealthy
+<BR>
+<input type=checkbox name=ac_toughness_box onclick=AnimalCompanion()>Toughness
+<BR>
+<input type=checkbox name=ac_weaponfinesse_box onclick=AnimalCompanion()>Weapon Finesse
+<BR>
+<input type=checkbox name=ac_weaponfocus_box onclick=AnimalCompanion()>Weapon Focus
+<BR>
+</td></tr></table>
+
+<TEXTAREA name="AnimalCompanionBox" rows=5 cols=40></textarea>
+
+</td></tr></table>
+<CENTER>
+<img name="doitarrow" src="dragonblank.gif">
+<INPUT onclick=produceCharacterSheet() type=button value="Generate the Character Sheet" name=characterSheetButton><p>
+<font size="-1"><input type=checkbox name=avghp>"Average Hit Points"</font size>
+	 </center>
+<p><font size="-2">Pressing this button should generate a
+character sheet on a new screen, suitable for printing.<p>
+<p><i>For some browsers, the best way to save this character sheet
+is to select "print" and save in .pdf format.</i><p>
+
+If nothing happens when you press this button,
+your computer probably has an anti-popup program interfering.<p>
+If a new screen pops up that shows "about:blank" on the address
+line, but nothing else appears, then you have uncovered a bug. Please
+e-mail me at <a href=mailto:scalpel_blade@yahoo.com>scalpel_blade@yahoo.com</a>
+and let me know which generator you were using, and as much about the character
+you were trying to generate as you are able.
+No texting or chat messages, please. Ordinary e-mails are welcome.
+If you can, turn the javascript error messages on for your browser.
+If you have received any error messages, please let me know what each one said, including any line numbers.
+
+I should be able to make the
+corrections, and will thank you.</font size>
+<p><a href="#top_of_form">
+<img name="want_another_character" src="not_another_character.jpg" border="0"></a>
+
+</CENTER></FONT></FONT></TD></TR></TBODY></TABLE>
+<P>
+<P></FORM>
+<P>
+<P>
+<P>
+I hope you have found
+this helpful and that you enjoy "Pathfinder."
+<P>
+<img src="pf-acc.png">
+
+<BR>
+<a target=_blank href="http://paizo.com/pathfinderRPG">Learn more about the Pathfinder Role Playing Game at paizo.com</a>
+<BR>
+<a target=_blank href="community_use.html">Compatibility and Open Game License</a> -- with thanks. 
+<BR>
+
+<P><A href="index-2.html" target=_blank>Home</A>
+<BR>
+
+<a target=_blank href="http://www.beyondtabletop.com/pathfinder">Beyond Tabletop</a> -- More Pathfinder
+<BR>
+
+<A 
+href="cg35.html" target=_blank>D&amp; D 3.5 Character 
+Generator</A>
+<BR>
+<A href="cg4.html" target=_blank>D&amp; D 4 Character Generator</A>
+<BR>
+<A href="ddnext.html" target=_blank>D&amp; D Next Character Generator</A>
+<BR>
+<A href="monsters.html" target=_blank>Savage Species [under development]</A>
+<BR>
+
+<A href="d20modern.html"
+target=_blank>d20 Modern Character Generator</A>
+<BR>
+<A href="rloft.html"
+target=_blank>Ravenloft Character Generator</A>
+<BR>
+<A
+href="cthulhu.html" target=_blank>d20 Call of 
+Cthulhu Character Generator</A>
+<BR>
+<A target=_blank href="dragons.html">d20 Dragon Character Generator</A>
+<BR>
+
+<A
+href="krynn.html" target=_blank>d20 Dragonlance 
+Character Generator</A>
+<BR>
+<A href="darksun.html" target=_blank>d20 Dark Sun Character Generator</A>
+<BR>
+<A href="eberron.html" target=_blank>Eberron Character Generator</A>
+<BR>
+<a target=_blank href="fr.html">Forgotten Realms Character Generator</a>
+<BR>
+
+<a target=_blank href="starwars.html">
+<img src="starwars_tc.jpg" border="0">Star Wars Character Generator</a>
+<BR><P><B>Please report all errors and bugs</B>:<A href="mailto:scalpel_blade@yahoo.com" 
+target=_blank>scalpel_blade@yahoo.com</A>
+No texting or chat messages, please. Ordinary e-mails are welcome.
+<p>
+
+<p>
+<a target=_blank href="http://en.wikipedia.org/wiki/Asperger_syndrome">Asperger Syndrome</a>.
+<font size="-1"><blockquote>
+This special gift, which is wired in the brain from before birth,
+confers intelligence&nbsp;16 or greater, tremendous enjoyment
+from focusing the mind on a few narrow subjects, physical clumsiness,
+rapid mechanical speech,
+and much difficulty reading body language and understanding and talking to real-life people.
+As a kid, you were a "little professor." A successful wisdom check and some hard work will raise your charisma tremendously.
+Failing the same wisdom check can render you unemployable and friendless.
+"Worst of all, it's possible to be a jerk without even realizing it." -- Player's Strategy Guide.
+
+Click <a target=_blank href="http://www.wikihow.com/Live-with-Asperger's-Syndrome">here</a>
+for some good guidance. It also helps to choose a strength or endurance sport
+that requires little coordination (build yourself up; I'm an endurance swimmer), to say only nice things,
+to remember that relationships are more important than being right, and to work
+hard to be extra kind to everyone around you.</blockquote></font size><p>
+
+<P>This web-counter from <A href="http://www.digits.com/" 
+target=_blank>http://www.digits.com/</A> says you are adventurer number 
+<IMG src="http://counter.digits.com/wc/-d/4/edschargen35" height=20 hspace=4 src="#" width=60 vspace=2 border=0> to visit these 
+pages since 11/9/03. </P></FONT></TD>
+<TD>
+</TD></TR></TBODY></TABLE>
+
+<p>
+<a target=_blank href="http://paizo.com/pathfinderRPG/compatibility">Paizo Compatibility License</a> -- thank you!
+<BR>
+<a target=_blank href="http://paizo.com/paizo/about/communityuse">Paizo Community Use Policy</a> -- thank you!
+<BR>
+<a target=_blank href="ogl.html">Open Game License</a> -- Wizards of the Coast, 2000
+<BR>
+<p>
+<font size="-1">(c)2008 Ed Friedlander, code made available under the <a target=_blank href="http://opensource.org/licenses/mit-license.php">MIT license</a>.</font size>
+<p>
+
+<!--
+--></P></FONT></FONT></FONT></BODY>
+<!-- Mirrored from www.pathguy.com/PathfinderCore.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2017 21:48:27 GMT -->
+</HTML>

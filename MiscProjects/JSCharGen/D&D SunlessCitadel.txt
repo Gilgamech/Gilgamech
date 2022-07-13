@@ -1,0 +1,50 @@
+Oakhurst
+Hooks:
+- Mahima, an attendant at the shrine, visits you twice a day, asking you to look into the goblins and their apples. She feels they are unnatural. She doesn't know anything other than she doesn't like them and wants you to remove them. 
+- Mayor Leng's office has been keeping track of these apples for 12 years -	8 of the past 12 white apples have been sold in Oakhurst, and he wants you to find and stop whatever Lich or Drow is behind this. He's convinced there's an evil mastermind, and has told the town that you will find them and stop them. 
+- Kali, the town drunk, keeps singing about the glory of Ashardalon. When questioned, he rambles about drunken dreams of undeath and rebirth.
+
+- Garon wants to move in on the Apple trade, and wants to know the source of the apples. Offers 250 GP per player for the source. And 50 GP for the apple. 
+
+
+
+Players:
+Player -	Phineus		-	FlowersM	-	Maakhed	-	Miltard		-	
+RealN -	Kyle			-					-					-	David		-	
+Char -	Gilfok 		-	Feasro		-	Runt			-					-	
+Race - 	Mtn Dwarf	-	Human		-	Goliath		-	Half-elf		-	
+Class -	War Cleric	-	Warlock	-	Monk		-	Paladin		-	
+Align -	LN			-	NG			-	LN			-	LN			-	
+Level -	2				-	2				-	2				-	2				-	
+Str -		16 +2		-	12 (1)		-	15			-	18			-	
+Dex -	10 (0)		-	14 (2)		-	18			-	12			-	
+Con -	14+2		-	10 (0)		-	13			-	12			-	
+Int -		8 (-1) 		-	11 (0)		-	12			-	10			-	
+Wis -		16 (+3)		-	12 (1)		-	16			-	18			-	
+Cha -	14			-	16 (3)		-	9				-	18			-	
+AC -		16			-	13			-	17			-	18			-	
+Init -		0				-	2				-	4				-	0				-	
+Speed -	25			-	30			-	4				-	30			-	
+HP -		11			-	8				-	14			-	11			-	
+
+"Ticklecorn" = Toodaroo
+Draconic = What it sounds like in common. (More like "Tinklecone")
+
+
+20+ Warlock - 8
+23 Monk - 9
+19 War cleric - 11
+15 Paladin - 11 
+
+#15 Troll - 30 -14 -10
+#18 Kobold - 
+#13 Goblin - 9 -5 
+Skeletons - 
+1 gp 14 sp
+4 jade statues
+2 jade gems each
+450xp
+Ceremonial dagger (125gp)
+
+Ominous noisebox in room 5.
+

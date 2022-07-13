@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gilgamech Technologies</title>
+<script src="./public/js/Gilgamech.js"></script>
+<script src="./public/js/jquery.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/normalize.css">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/main.css">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/gilgamech.css">
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/mobile.css"> 
+<link rel="stylesheet" type="text/css" href="./public/stylesheets/coin.css">
+</head>
+
+<body>
+<div class="wrapper container">
+  <div class = "top">
+    <a href="/">Gilgamech</a> <a href="/">Technologies</a>
+  </div>
+</div>
+  <div class=" navbar navbar-static-top navbar-inverse">
+  <div class="wrapper container">
+    <ul class="nav navbar-nav">
+      <li class="hidden-sm hidden-xs"><a href="https://gil-api.herokuapp.com/fruitbot">Fruitbot!</a></li>
+	  <li class="hidden-sm hidden-xs"><a href="https://gil-api.herokuapp.com/badpw">Bad Password</a></li>
+	  <li class="hidden-sm hidden-xs"><a href="https://gil-api.herokuapp.com/chat">Chat</a></li>
+	  <div class="dropdown">
+        <p>Menu</p>
+        <div class="dropdown-content">
+            <p class="hidden-md hidden-lg"><a href="https://gil-api.herokuapp.com/fruitbot">Fruitbot!</a></p>
+            <p class="hidden-md hidden-lg"><a href="https://gil-api.herokuapp.com/badpw">Bad Password</a></p>
+            <p class="hidden-md hidden-lg"><a href="https://gil-api.herokuapp.com/chat">Chat</a></p>
+            <p><a href="https://gil-api.herokuapp.com/coin">Coins</a></p>
+            <p><a href="https://gil-api.herokuapp.com/jsonlint">JSON Lint</a></p>
+            <p><a href="https://gil-api.herokuapp.com/git">Git</a></p>
+            <p><a href="https://gil-api.herokuapp.com/meme">Meme Maker</a></p>
+            <p><a href="https://gil-api.herokuapp.com/demo">Arkdata Dynamap</a></p>
+            <p><a href="https://gil-api.herokuapp.com/Arkdata">Arkdata</a></p>
+            <p><a href="https://gil-api.herokuapp.com/text2">text2</a></p>
+            <p class="hidden-md hidden-lg"><a href="https://gil-api.herokuapp.com/login">Login</a></p>
+		</div>
+      </div>
+	  <div class="dropdown hidden-md hidden-lg">
+        <p>StackOverflow Links</p>
+        <div class="dropdown-content">
+			<p><a href="/coin">Coins</a></p>
+		</div>
+      </div>
+    </ul>
+    <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+	  <li class="navbar-right"><a href="https://gil-api.herokuapp.com/login">Login!</a></li>
+	  <div class="dropdown navbar-right">
+        <p>StackOverflow Links</p>
+        <div class="dropdown-content">
+			<p><a href="/coin">Coins</a></p>
+		</div>
+      </div>
+    </ul>
+  </div>
+</div>
+<script src="./public/js/coin.js" content-type="text/javascript" charset="UTF-8"></script>
+
+<div id="wrapper" class="container img-rounded">
+  <div class="row">
+  <div id="sidebar" class="sidebar col-md-2 hidden-sm hidden-xs contentRows img-rounded contentTitles">
+        <div id="consoleLogLabel" class="">Coinsole Log:</div>
+      <div id="coinMainBox" class="contentRows dataArea scrollToWindow img-rounded">Javascript is disabled.</div>
+     <div id="spacer"><br></div>
+    </div> <!-- end sidebar -->
+		
+  <div id="content" class="img-rounded col-md-10 col-xs-10">
+ 
+   <div id="cointentArea" class="img-rounded col-md-12 col-xs-12 contentRows dataArea row">
+
+  <div id="titleRow" class="row contentTitles">
+    <div id="contentLabel" contenteditable = true class="col-md-10 col-xs-10 contentTitles">Cointent</div>
+		<div id="button" class="button col-md-2 col-xs-2">
+		<button type="button" class="btn btn-success btn-sm" onclick="refreshCharts();">Refresh</button>
+	</div> <!-- end button -->
+	</div> <!-- end row -->
+	
+  <div id="titleRow" class="row contentLabels">
+    <div id="coinLabel" class=" col-md-2 col-xs-2">Coin:</div>
+    <div id="valueLabel" class=" col-md-2 col-xs-2">Value:</div>
+    <div id="medianLabel" class=" col-md-2 col-xs-2">My Coins:</div>
+   <div id="botAmountLabel" class=" col-md-2 col-xs-2">MyBot:</div>
+    <div id="botActionLabel" class=" col-md-2 col-xs-2">Fruitbot:</div>
+    <div id="botPredictionLabel" class=" col-md-2 col-xs-2">SimpleBot:</div>
+  </div>
+
+  <div id="btcContentRow" class="row ">
+	<div id="btcLabel" class="contentItems col-md-2 col-xs-2">BTC</div>
+    <input type="number" id="btcAmount" class="img-rounded col-md-2 col-xs-2 colorRow numberRow contentItems col-md-12 col-xs-12" readonly value="0"></input>
+	<div id="btcMedian" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="btcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="btcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="btcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+  </div>
+
+  <div id="ltcContentRow" class="row ">
+	<div id="ltcLabel" class="contentItems col-md-2 col-xs-2">LTC</div>
+    <input type="number" id="ltcAmount" class="img-rounded col-md-2 col-xs-2 colorRow numberRow contentItems col-md-12 col-xs-12" readonly value="0"></input>
+	<div id="ltcMedian" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ltcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ltcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ltcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+  </div>
+
+  <div id="ethContentRow" class="row ">
+	<div id="ethLabel" class="contentItems col-md-2 col-xs-2">ETH</div>
+    <input type="number" id="ethAmount" class="img-rounded col-md-2 col-xs-2 colorRow numberRow contentItems col-md-12 col-xs-12" readonly value="0"></input>
+	<div id="ethMedian" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ethBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ethBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ethBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+    </div> <!-- end ethContentRow -->
+
+  <div id="fbcContentRow" class="row ">
+	<div id="fbcLabel" class="contentItems col-md-2 col-xs-2">FBC</div>
+    <input type="number" id="fbcAmount" class="img-rounded col-md-2 col-xs-2 colorRow numberRow contentItems col-md-12 col-xs-12" readonly value="0"></input>
+	<div id="fbcMedian" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="fbcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="fbcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="fbcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+    </div> <!-- end row	 -->
+   </div><!-- end coinArea -->
+<div id="manualButtonRow" class="row">
+   </div><!-- end coinArea -->
+		<div id="button" class="button col-md-2 col-xs-2">
+   </div><!-- end coinArea -->
+	<div id="manualButtonRow" class="row">
+		<br>
+	</div> <!-- end row -->
+	<br>
+   <div id="cointentArea" class="img-rounded col-md-12 col-xs-12 contentRows dataArea row">
+
+  <div id="titleRow" class="row contentTitles">
+    <div id="botNameLabel" contenteditable = true class="col-md-10 col-xs-10 contentTitles">Cointent</div>
+		<div id="button" class="button col-md-2 col-xs-2">
+		<button type="button" class="btn btn-warning btn-sm" onclick="addBot('botNameLabel');">Add Bot</button>
+	</div> <!-- end button -->
+	</div> <!-- end row -->
+  </div>
+   
+   <div id="myBotCoinArea" class="img-rounded col-md-12 col-xs-12 contentRows dataArea row">
+  <div id="titleRow" class="row contentTitles">
+    <div id="myBotLabel" class="col-md-10 col-xs-10" contenteditable="true">MyBot</div>
+		<div id="button" class="button col-md-2 col-xs-2">
+	  <div class="dropdown">
+		<button type="button" class="btn btn-warning btn-sm" onclick="toggleSettingsDisplay('manualButtonRow2');">Bot Settings</button>
+        <div class="dropdown-content contentItems">
+		
+  <div class="col-md-2 col-xs-2">
+      buy
+      <input id = "myBotBuy" type="number" class="img-rounded col-md-12 col-xs-12" value=1>
+  </div>
+  <div class="col-md-1 col-xs-1">
+    <div class="radio">
+        <input type="radio" name="optradio" id="radioBuyAbove">above
+    </div>
+    <div class="radio">
+      <input type="radio" name="optradio" id="radioBuyBelow">below
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-2">
+      sell
+      <input id = "myBotSell" type="number" class="img-rounded col-md-12 col-xs-12" value=1>
+  </div>
+  <div class="col-md-1 col-xs-1 ">
+    <div class="radio">
+        <input type="radio" name="optradio2" id="radioSellAbove">above
+    </div>
+    <div class="radio">
+      <input type="radio" name="optradio2" id="radioSellBelow">below
+    </div>
+  </div>
+  <div id="button" class="button col-md-1 col-xs-1">
+	<button type="button" class="btn btn-primary" onclick="setMyBot()">set!</button>
+ </div> <!-- end button -->
+	<div id="button" class="button col-md-1 col-xs-1">
+	<button type="button" class="btn btn-primary" onclick="getMyBot()">Load</button>
+ </div> <!-- end button -->
+  <div id="jsonArea" class="contentRows dataArea jsonArea img-rounded col-md-2 col-xs-2" contenteditable="true" onchange="getMyBot();">Javascript is disabled.</div>
+  <div id="text" class="col-md-2 col-xs-2">Copy to export.<br>Paste to import.</div>
+</div> <!-- end manualButtonRow -->
+		
+      </div>
+	</div> <!-- end button -->
+	</div> <!-- end row -->
+
+	<div id="titleRow" class="row contentLabels">
+    <div id="coinLabel" class=" col-md-2 col-xs-2">Coin:</div>
+    <div id="valueLabel" class=" col-md-2 col-xs-2">Price:</div>
+    <div id="medianLabel" class=" col-md-2 col-xs-2">Manual Buy:</div>
+   <div id="botAmountLabel" class=" col-md-2 col-xs-2">Bot Amount:</div>
+    <div id="botActionLabel" class=" col-md-2 col-xs-2">Bot action:</div>
+    <div id="botPredictionLabel" class=" col-md-2 col-xs-2">Bot pred:</div>
+  </div>
+
+  <div id="btcContentRow" class="row ">
+	<div id="myBotBtcLabel" class="contentItems col-md-2 col-xs-2">BTC</div>
+	<div id="myBotBtcAmount" class="contentItems amount col-md-2 col-xs-2">0</div>
+	<div id="myBotBtcMedian" class="contentItems col-md-2 col-xs-2">
+		<input id = "manualBuySellBtc" type="number" class="img-rounded col-md-4 col-xs-4" value=1>
+		<button type="button" class="btn btn-primary btn-xs" onclick="manualTransaction($btc,'BUY','myBotBtcAmount')">Buy!</button>
+		<button type="button" class="btn btn-success btn-xs" onclick="manualTransaction($btc,'SELL','myBotBtcAmount')">Sell!</button>
+	</div>
+	<div id="myBotBtcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="myBotBtcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="myBotBtcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+  </div>
+
+  <div id="ltcContentRow" class="row ">
+	<div id="ltcLabel" class="contentItems col-md-2 col-xs-2">LTC</div>
+	<div id="myBotLtcAmount" class="contentItems amount col-md-2 col-xs-2">0</div>
+	<div id="ltcMedian" class="contentItems col-md-2 col-xs-2">
+		<input id = "manualBuySellLtc" type="number" class="img-rounded col-md-4 col-xs-4" value=1>
+		<button type="button" class="btn btn-primary btn-xs" onclick="manualTransaction($ltc,'BUY','myBotLtcAmount')">Buy!</button>
+		<button type="button" class="btn btn-success btn-xs" onclick="manualTransaction($ltc,'SELL','myBotLtcAmount')">Sell!</button>
+	</div>
+	<div id="ltcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ltcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ltcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+  </div>
+
+  <div id="ethContentRow" class="row ">
+	<div id="ethLabel" class="contentItems col-md-2 col-xs-2">ETH</div>
+	<div id="myBotEthAmount" class="contentItems amount col-md-2 col-xs-2">0</div>
+	<div id="ethMedian" class="contentItems col-md-2 col-xs-2">
+		<input id = "manualBuySellLtc" type="number" class="img-rounded col-md-4 col-xs-4" value=1>
+		<button type="button" class="btn btn-primary btn-xs" onclick="manualTransaction($eth,'BUY','myBotEthAmount')">Buy!</button>
+		<button type="button" class="btn btn-success btn-xs" onclick="manualTransaction($ltc,'SELL','myBotEthAmount')">Sell!</button>
+	</div>
+	<div id="ethBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ethBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="ethBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+    </div> <!-- end ethContentRow -->
+
+  <div id="fbcContentRow" class="row ">
+	<div id="fbcLabel" class="contentItems col-md-2 col-xs-2">FBC</div>
+	<div id="myBotFbcAmount" class="contentItems amount col-md-2 col-xs-2">0</div>
+	<div id="fbcMedian" class="contentItems col-md-2 col-xs-2">
+		<input id = "manualBuySellLtc" type="number" class="img-rounded col-md-4 col-xs-4" value=1>
+		<button type="button" class="btn btn-primary btn-xs" onclick="manualTransaction($fbc,'BUY','myBotFbcAmount')">Buy!</button>
+		<button type="button" class="btn btn-success btn-xs" onclick="manualTransaction($fbc,'SELL','myBotFbcAmount')">Sell!</button>
+	</div>
+	<div id="fbcBotAmount" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="fbcBotAction" class="contentItems col-md-2 col-xs-2">0</div>
+	<div id="fbcBotPrediction" class="contentItems col-md-2 col-xs-2">0</div>
+    </div> <!-- end row	 -->
+   </div><!-- end coinArea -->
+   
+	 <!-- https://www.w3schools.com/Bootstrap/bootstrap_forms_inputs.asp -->   
+<div id="manualButtonRow2" class="row" style="visibility: hidden;">
+
+  <div class="col-md-2 col-xs-2">
+      buy
+      <input id = "myBotBuy" type="number" class="img-rounded col-md-12 col-xs-12" value=1>
+  </div>
+  <div class="col-md-1 col-xs-1">
+    <div class="radio">
+        <input type="radio" name="optradio" id="radioBuyAbove">above
+    </div>
+    <div class="radio">
+      <input type="radio" name="optradio" id="radioBuyBelow">below
+    </div>
+  </div>
+  <div class="col-md-2 col-xs-2">
+      sell
+      <input id = "myBotSell" type="number" class="img-rounded col-md-12 col-xs-12" value=1>
+  </div>
+  <div class="col-md-1 col-xs-1 ">
+    <div class="radio">
+        <input type="radio" name="optradio2" id="radioSellAbove">above
+    </div>
+    <div class="radio">
+      <input type="radio" name="optradio2" id="radioSellBelow">below
+    </div>
+  </div>
+  <div id="button" class="button col-md-1 col-xs-1">
+	<button type="button" class="btn btn-primary" onclick="setMyBot()">set!</button>
+ </div> <!-- end button -->
+	<div id="button" class="button col-md-1 col-xs-1">
+	<button type="button" class="btn btn-primary" onclick="getMyBot()">Load</button>
+ </div> <!-- end button -->
+  <div id="jsonArea" class="contentRows dataArea jsonArea img-rounded col-md-2 col-xs-2" contenteditable="true" onchange="getMyBot();">Javascript is disabled.</div>
+  <div id="text" class="col-md-2 col-xs-2">Copy to export.<br>Paste to import.</div>
+</div> <!-- end manualButtonRow -->
+<br>
+ 
+   </div><!-- end content -->
+  </div> <!-- end row -->
+</div> <!-- end wrapper -->
+<!-- a href="https://stackoverflow.com/questions/3393025/how-do-you-implement-a-fixed-left-sidebar-and-fluid-right-content-in-css#3393037">How do you implement a fixed left sidebar and fluid right content in CSS</a -->
+<!-- 
+https://www.w3schools.com/Bootstrap/bootstrap_forms_inputs.asp
+https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+https://stackoverflow.com/questions/16517718/bootstrap-number-validation
+https://stackoverflow.com/questions/3368546/what-input-field-type-forces-the-number-pad-mobile-keyboard-to-come-up-when-focu
+https://html.com/input-type-radio/
+https://stackoverflow.com/questions/12084121/correct-way-to-create-rounded-corners-in-twitter-bootstrap
+https://getbootstrap.com/docs/3.3/css/
+https://v4-alpha.getbootstrap.com/components/buttons/
+http://kimbryant.net/on-bootstraps-grid-using-display-inline-block-instead-of-floats/
+https://bytes.com/topic/javascript/answers/441839-document-onload-getelementbyid-dont-cooperate
+https://stackoverflow.com/questions/9476617/how-to-set-radio-button-status-with-javascript
+
+-->
+<div class="footer navbar-static-bottom">
+  <p class="banner">
+      <a href="https://www.duckduckgo.com"><img src="/images/BannerImage.gif" title="C1ick h34r ph0r m04r inph0" width="100"/></a>
+  </p>
+  <p class="copyright">(c) 2013-2017 Gilgamech Technologies. Now enhanced with gaming technology.</p>
+</div>
+
+</body>
+</html>

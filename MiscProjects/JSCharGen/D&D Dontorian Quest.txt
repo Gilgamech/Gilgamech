@@ -1,0 +1,124 @@
+Order of Sir Dontorian (The Donnies, a nickname they hate) have lost a holy symbol of Chauntea (chawn-tay-uh) in the ancient ruins of the ancient Spring Cathedral, and this acolyte has "recruited" you to help her retrieve it.
+
+Della Bartlet - Level 3 NPC human cleric, acolyte of Dontorian, mom and dad are peasant farmers in a village near the Dontorian Monastery. Has a special hatred of people who call them "Donnies".
+
+
+Chapter: Dontorian Quest
+- Characters are enjoying Dontorian Days at the Dontorian Monastery, playing carnival games where they must perform feats to earn prizes. 
+- Characters are gathered by Della.
+- Party departs next day.
+- 5 night travel to the Spring Cathedral, each night has weather, monster, wild animal, and clumsiness (for the awake guard character) checks.
+
+Story secrets
+- Literally nobody knows what deity's congregation originally built the Spring Cathedral. It's a detail lost to the ages. The Order thoroughly cleansed the building of that deity's symbology soon after taking it over, leaving only Chauntea's symbols. Everything related to the original deity was desecrated, disintegrated, and composted deep in the forest.
+- Holy Symbol is a sphere - the Donnies believe time is a spinning sphere, much like (inner worlds?), and their goal is to move to the "equator of time" where they will have the longest life, for worship and sacrifice.
+
+Setting:
+- Dontorian Monastery is a large stone castle that sleeps 300 monks, clerics, paladins, and fighters between levels 1 and 15. 
+- Monastery courtyard is 200x200 feet (40x40 tiles) and has 10-15 booths where characters can pass strength, agility, dexterity, int, and other checks to recieve blessings, potions, and scrolls.
+- Monastery shop has low prices.
+- Della Bartlet, Acolyte of the Order of Sir Dontorian, has been sent on a quest by the lead cleric of the order. 
+	- She knows: 
+		- Spring Cathedral was built 1200 years ago by followers of a forgotten deity. 
+		- The Order began keeping the Cathedral about 600 years ago, as a meditation retreat, and The Order grew in size as pilgrims from far and wide visited for sanctuary and solace.
+		- An old druid has been keeping the place since she was a child, and the Order let him have it. They have been using a nearby mountain chateau as a new pilgrimmage destination.
+		- The druid hasn't been seen recently, and the path there has become overgrown. 
+		- The game and beasts nearby have become unusually aggressive.
+		- (Persuasion/Charisma check: The Order had a Holy Symbol there, and we're going to retrieve it.)
+- The lead cleric knew the acolyte would need help, so will pay 100 gold each to reward you for your courage and assistance in this quest, upon your return with the holy symbol. 
+- Info
+	- Innkeeper knows
+		- Cathedral was built 1200 years ago
+		- Had massive following for a while, then the Order took it as a meditation retreat.
+		- A druid was living there, but hasn't been seen in years.
+	- Bartender knows
+		- Cathedral was the first building in the area. 
+		- Travelers from distant lands ("as far as PLACE and OTHERPLACE") would stop by here on pilgrimmages to a retreat there, led by Dontorian monks.
+		- New retreat chalet is farther away and harder to get to, so people complain about the hike. But people always complain about the hike.
+	- A librarian for Order of Dontorian knows
+		- Cathedral was built using a unique magical construction technique. 
+		- Under normal circumstances, it should last 10x longer than a normal building its size.
+		- The marble used in the walls and ceiling wasn't brought in whole, but as a dust, that was magically pressed into stones. It was a revolutionary technique, since lost to the ages.
+	- Drunk in roadside gutter yells
+		- "Nice druid got eaten! He used to feed me, now he's feeding a mimic!"
+		- (for any coin) "Used to be a nice place. Now it's a mile of thorns just to get there!"
+		- (if pressed) "If you value your life, you'll stay and drink with me!"
+		- (if pressed further) *uses forestwalk to escape and druid stealth to evade* (This character gets automatic 20s when the DM wants.)
+		- (If cornered/caught) *Is a dual-class L6 Ranger and L6 Drunken Monk*
+
+Campaign:
+- It's 5 days away on a heavily-traveled road through deep forest. The party is as likely to meet traveling merchants as traveling bandits. 
+- Spring Cathedral is located in a shaded clearing about a mile off the road. 
+	- The foot path has long since overgrown, and is as impassable as general forest. (Players may have to pass checks to traverse.)
+	- The Cathedral itself is made from marble that has started to crumble. It had 4 tall spires at the corners, 2 of which have falled over, and the other 2 have little trails of dust actively falling from them.
+	- The clearing surrounding the Cathedral is grass-covered, with little chunks of rubble and dust here and there. 
+	- (DC 15 Perception check: There are little circles of dead grass wherever the rubble sits, as though the rubble were slightly larger than it actually is. The grass also leaves a slight border around the edges of the Cathedral.)
+- Front door opens to large, crumbling foyer with a marble floor. 
+	- A small marble 
+	- A rotting red rug runs around the marble basin, towards rotting doors directly ahead, and to the crumbled stairs.
+	- Ruined stone stairs lead up and down - must pass 3(?) agility checks to scale a floor.
+	- Rotting doors open into a large, mostly empty room, with a low ceiling near the door and a grand piano across the room. (It's a mimic. It ate the old driud.)
+	- Stained-glass windows cover the walls. Between them are small sconces, with small piles of marble dust. A collapsed altar sits on a raised dias in the center of the room.
+	- In the center of the area with a higher ceiling is a large rotting wooden statue. It used to hang from wires, but these have rusted, and it's faceplanted into the 2nd floor balcony above.
+- Basement (0th floor) has catacombs with numerous rotten and collapsed scroll stacks. 
+	- The paper scrolls have almost completely disintegrated. Every scroll you touch crumbles to dust as you touch it.
+	- 4 rotting chests in a back room. These have both mechanical and magical locks. (The HOLYSYMBOL unlocks all of these.)
+- 2nd floor has solid (but rotting) wooden floor planks. 
+	- It has only more stairs, and a locked door, behind which is a kobold supply stash, blocked by a rusting steel bookcase. (Players can grab a box of crackers (1 ration), 2 lanterns, and a quiver full of 20 crossbow bolts.)
+	- Hallway to locked door has Pit Trap (https://imgur.com/gallery/UmvBqtn)
+		- Cover the first pit with the same stones, with invis cast on them. Detect Magic will find, also high perception sees no dust.
+		- Meanwhile, trap door is non-magical, purely mechanical. Detect trap doors will find? Have a 2nd trap door beyond, as decoy, goes nowhere.
+		- High perception also finds the twist marks on the stones around the torch, from being twisted. High int sees tiny "twist" on wall bhn torch.
+	- The room has 4 chests and 3 other doors.
+	- Kobold Supply Stash can be accessed here. There are 4 chests along the walls, also locked by both mechanical and magical locks. (The HOLYSYMBOL unlocks all these too.)
+	- Has the large Beholder statue in the middle. (Perception check: It's made of brass, and the eye stalks aren't moving biologically, but are tight brass springs bouncing as the building crumbles.)
+		- Weighs 4800 lbs. 
+			- The floor is so badly rotten that it barely holds the Beholder. 
+			- Firing the Beholder causes the floor to creak loudly. 
+			- Firing the Beholder 3x, or any attempt to lift the Beholder, causes the floor beneath the Beholder to collapse, causing 1d8 damage to the Beholder and any player trying to lift it.
+		- Has a string running out the back - when pulled, fires a crossbow bolt out of the eye.
+		- Then the string retracts like a lawnmower cord, and can be pulled gently (until it goes "click") to rearm - then a crossbow bolt rolls into the eyeslot from the side. (Perception: There's a small reload hatch on the top, where 20 crossbow bolts are sitting. It's full - if you put more crossbow bolts there, then the hatch won't close again. But it will still fire.)
+- 3rd floor has rotting but solid wooden floor planks.
+	- Far side of 3rd floor has several 10x10 rooms on either side, each with a rotten desk and broken bed. One has a broken floor, with a makeshift ladder. 
+	- The front rooms on this floor open as a balcony into the main chapel. 
+		- In the center door is the face of the wooden statue, whose features have mostly rotted away. The nose falls off as you look at it.
+- 2nd floor back hallways are smelly and dark. The layout is almost identical to the 3rd floor.
+	- Beds lay directly on the floors here. (Perception check: No rotting beds or desks, were probably used as firewood)
+	- Front door to Kobold Supply Closet with brass Beholder here. Other 2 doors lead to similar 10x10 rooms.
+	- 18 kobolds live here, led by Deni. 
+		- They believe they're praying to Lamashtu, but have been corrupted by the corrupted holy symbol, and are receiving magical power from it instead.
+		- All 18 kobolds have bad mange, are losing teeth, and bleed black when injured.
+	- The front rooms on this floor open as a balcony into the main chapel. 
+		- In the center door are the two rotting hands of the statue, left hand on top of right, making a circle with their palms and fingers. Inside, on the right palm, lay HOLYSYMBOL, glowing in a weird, dark way.
+
+		- Touching the symbol brings holy damage? How do they purify it?
+		
+- Once the symbol is purified, Della retrieves it.
+	- Rock dust and chip checks cease, along with the first invisible timer. Second invisible timer continues as normal.
+	- Invite players to rest in the Cathedral? Or too troll-ish?
+	- The Cathedral collapses as the party is about 100 feet into the woods, just after leaving the clearing. Any remaining Kobolds are killed.
+		- A player with 18:00 strength can pass a DC 45 strength check to move the boulders (or 2 players at DC 35 each, or 3 at DC 25, or 4 at DC 15, or 5 at DC 5, or 6+ automatically) and have a 5% (20 on D20) chance of finding whatever loot (BYOTable) on the Kobold corpse, 5d6(?) times.
+	
+	
+- Closing
+	- Cathedral originally built for unknown deity 1200 years ago.
+	- Deity vanished and group broke up about 700 years ago, and the Donnies used it for meditation retreats up until a druid moved in 20 years ago.
+	- Donnies hid a holy symbol to Chauntea in the statue's palm about 600 years ago, to keep it pure, and provide them a source of divine magic.
+	- Old Druid sensed the holy symbol as being unnatural, and tried to remove it - but this corrupted the holy symbol, and the druid (who went crazy and was eaten by the piano mimic in the corner.)
+	- Piano mimic wandered in at some unknown point. Old records show an upright piano in the Cathedral, and nobody was here when the one replaced the other.
+
+
+
+Chapter 2
+- Searching for a resonant chamber
+- 400 ft tall chamber with perfectly smooth sides. The previous holy symbol would fit perfectly in the bottom, and that would let it focus SO MUCH more light.
+- Some other monks live(d?) here, worshipping an audio deity. They use the resonant chamber to sing their prayers, and tend to the sides as one of their devotions.
+- 
+- Hallway is a large room trap fakeout?
+
+
+
+
+
+
+

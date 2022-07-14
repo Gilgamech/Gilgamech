@@ -62,16 +62,18 @@ Which reduces you down to:
 		2. Corp Dev 
 		3. Corp Test
 		4. Corp Prod
-	- CI/CD pipeline handles these steps.
+	- CI/CD pipeline handles these steps. (i.e. Gitlab)
 		5. App Dev - develop locally
+		- App Repo - group code storage
 		6. App Test - automated testing
-		8. App QA - more automated testing
-		7. App Stage - blue/green deploy
+		7. App QA - more automated testing
+		8. App Stage - repo then blue/green deploy
 	6. App Prod
-		9. App Dev
-		10. App Test
-		11. App Stage
-		12. App QA
+		9. App Dev - as above
+		- App Repo - as above
+		10. App Test - as above
+		11. App Stage - as above
+		12. App QA - as above
 	7. App Prod
 	- CI/CD pipeline is entirely SaaS products.
 		13. DevOps Dev

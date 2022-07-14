@@ -15,6 +15,143 @@ Function Run-KeepTagging {
 	}
 }
 
+Function Repair-MissingTags {
+	Param (
+		$APIName,
+		$Days = 1
+	)
+	$StartTime = get-date
+	Write-Host "Report Time: $StartTime"
+	$EDWTime = get-date
+	$TagsChecked = 0
+	$TagsFixed = 0
+	$status = "Starting Up"
+	$PercentComplete = 0
+	$sections = (Get-AWSSections)
+	If ($APIName) {
+		$sections = $sections | where {$_.APIName -eq $APIName}
+	}#end if APIName
+	If (($sections.APIName -contains "pl") -or ($sections.APIName -contains "fl")) {
+		write-host "Loading tag IDs (normally takes up to 25 seconds)" -nonewline
+		$EC2Tags = Get-EC2Tag 
+	$SecondsTaken = [math]::Round( ((get-date) - $StartTime).TotalSeconds ,3)
+		write-host " - $($EC2Tags.count) EC2 tags loaded (took $SecondsTaken seconds)." 
+	}#end if sections
+	
+	write-host "Count: $TabLine Name $TabLine Owner $TabLine AlwaysOn $TabLine Lifecycle $TabLine Environment  |"
+	Foreach ($section in $sections) {
+		#$section = (Get-AWSSections) | where {$_.APIName -eq $APIName}
+		$APIname = $section.APIname
+		$TagName = $section.TagName
+		$InTagType = $section.InTagType
+		$OutTagType = $section.OutTagType
+		$SectionName = $section.SectionName
+		$Command = [Scriptblock]::Create($section.Command)
+		$TagSourceCommand = [Scriptblock]::Create($section.TagSourceCommand)
+		$TagApplyCommand = [Scriptblock]::Create($section.TagApplyCommand)
+		$IDName = $section.IDName
+		$DescriptionName = $section.DescriptionName
+		$TagKeyList = $section.SectionTags -split ":"
+		$TagRoute = $section.TagRoute
+
+		$CommandOutput = & $Command
+		$CommandOutputSectionItemIDs = $CommandOutput.$IDName | sort -unique
+		
+		$FixedCount = @{}
+		$ToFixCount = @{}
+		$ErrCount = @{}
+
+		Write-MissingTagHeader -APIName $APIName -CommandOutputCount $CommandOutput.count
+		
+#Foreach item, get ItemID, then get a list of tags for the current item
+		$itemindex = 0
+		Foreach ($item in $CommandOutput) {
+			#$item = $CommandOutput[0]
+			$ItemID = $item.$IDName
+			$TagSourceCommandOutput = & $TagSourceCommand
+			$itemindex++
+			
+			$i=0
+#Check item tag list for zero length or missing tag values, and add the tag to TagToCheck
+			Foreach ($TagKey in $TagKeyList) {
+				$OutTag = @()
+				$TagsChecked ++
+				$status = "$($ItemID): Checking Tag $TagKey"
+				$i++;
+				$PercentComplete = ($itemindex/$CommandOutput.count)*100
+				Write-Progress -Activity "Checking Tags: $APIName" -Status $status -PercentComplete $PercentComplete
+				switch ($InTagType){
+					"InTagTypeA" {
+						$TagToCheck = $TagSourceCommandOutput | where {$_.key -eq ($TagKey)} | where {$_.value.length -gt 0}
+					}
+					"InTagTypeB" {
+						$TagToCheck = $TagSourceCommandOutput.$TagKey | where {$_.length -gt 0}
+					}
+					default {
+						$ErrCount.($TagKey)++
+					}
+				}#end switch TagType
+
+#If the current tag needs fixing
+				if ($TagToCheck){
+					Continue
+				}else{
+					$ToFixCount.($TagKey)++
+
+#The Description is used to derive the Name. The Name is used to derive the rest of the tags.
+					if ($TagKey -eq "Name") {
+						$ItemName = $item.$DescriptionName
+					}else {
+						switch ($InTagType){
+							"InTagTypeA" {
+								$ItemName = Get-NameFromTags $TagSourceCommandOutput  -OutTagType $OutTagType
+							}
+							"InTagTypeB" {
+								$ItemName =  $TagSourceCommandOutput.Name
+							}
+							default {
+								$ErrCount.($TagKey)++
+							}
+						}#end switch InTagType
+					}#end if TagKey
+
+#create OutTag based on that
+					$OutTag = Generate-UnivarTag -Key $TagKey -ItemName $ItemName -OutTagType $OutTagType
+
+#If the tag has a value, apply it. 
+					if ($OutTag.Value) { #OutTagTypeA
+						try {
+							& $TagApplyCommand
+							$FixedCount.($TagKey)++
+							$TagsFixed++
+							Write-Progress -Activity "Updating Tags: $APIName" -Status $status -PercentComplete $PercentComplete
+						} catch {
+							$ErrCount.($TagKey)++
+						}
+					}elseif ($OutTag.$TagKey) { #OutTagTypeB
+						try {
+							& $TagApplyCommand
+							$FixedCount.($TagKey)++
+							$TagsFixed++
+							Write-Progress -Activity "Updating Tags: $APIName" -Status $status -PercentComplete $PercentComplete
+						} catch {
+							$ErrCount.($TagKey)++
+						}
+					}#end if OutTag
+				}# end if TagToCheck
+			}# end Foreach TagKey
+		}# end Foreach item
+
+#Print out results.
+		Write-Progress -Activity "Checking Tags" -Status "Ready" -Completed
+		Write-MissingTagOutput -TagKeyList $TagKeyList -ToFixCount $ToFixCount -FixedCount $FixedCount -ErrCount $ErrCount
+	}# end Foreach section
+	$MinutesTaken = [math]::Round( ((get-date) - $StartTime).TotalMinutes ,3)
+	$TagsPerSecond = [math]::Round( (($TagsChecked + $TagsFixed)/ $MinutesTaken / 60) ,3) 
+	Write-Host "$TagsChecked tags checked and $TagsFixed tags updated in $MinutesTaken minutes for $TagsPerSecond tagging operations per second. Errors encountered:"
+	$error -split "`n" | sort -Unique
+}#end Repair-MissingTags
+
 #region Service Data
 <#AWSSections Notes
 APIname - Console output

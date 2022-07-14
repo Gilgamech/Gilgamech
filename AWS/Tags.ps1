@@ -116,7 +116,7 @@ Function Repair-MissingTags {
 					}#end if TagKey
 
 #create OutTag based on that
-					$OutTag = Generate-UnivarTag -Key $TagKey -ItemName $ItemName -OutTagType $OutTagType
+					$OutTag = Generate-GenericCoTag -Key $TagKey -ItemName $ItemName -OutTagType $OutTagType
 
 #If the tag has a value, apply it. 
 					if ($OutTag.Value) { #OutTagTypeA

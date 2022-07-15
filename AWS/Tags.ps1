@@ -242,7 +242,7 @@ Function Get-GenericCoTag {
 		"Name"{ 
 			switch -wildcard ($ItemName) {
 				"*arn:aws:ecs:*"{ "ECS Attachment";Return}
-				"*EDWEMR*"{ ('EDWEMR' + (get-date $EDWTime -f 'yyyy-MM-dd-HH-mm-ss'));Return}
+				"*MapReduce*"{ ('MapReduce' + (get-date $EDWTime -f 'yyyy-MM-dd-HH-mm-ss'));Return}
 				#ENI: If description, use it. Else if attachment, Get-InstanceNameFromID
 				"*eni-*"{
 					If ($eni.count -le 100) {
@@ -281,258 +281,54 @@ Function Get-GenericCoTag {
 		"Owner"{
 			switch -wildcard ($ItemName) {
 				#region SalesTeam
-				"*team-name*"{"SalesTeam";Return}
-				"*SalesTeam*"{"SalesTeam";Return}
-				"*aip*"{"SalesTeam";Return}
-				"*ai-*"{"SalesTeam";Return}
-				"*-ai*"{"SalesTeam";Return}
-				"*-ai-*"{"SalesTeam";Return}
-				"*batchpredictdataset*"{"SalesTeam";Return}
-				"*Evaluation*"{"SalesTeam";Return}
-				"*Forecast*"{"SalesTeam";Return}
-				"*invml*"{"SalesTeam";Return}
-				"*invsales*"{"SalesTeam";Return}
-				"*invsls*"{"SalesTeam";Return}
-				"*newcustds*"{"SalesTeam";Return}
-				"*RStudio*"{"SalesTeam";Return}
-				"*Sagemaker*"{"SalesTeam";Return}
-				"*Sgmkr*"{"SalesTeam";Return}
-				"*Training Data*"{"SalesTeam";Return}
+				"*SalesTeamRegex*"{"SalesTeam";Return}
+				"*SalesTeamRegex*"{"SalesTeam";Return}
+				"*SalesTeamRegex*"{"SalesTeam";Return}
 				#endregion
 				#region BusinessTeam
-				"*BARD*"{"BusinessTeam";Return}
-				"*BART*"{"BusinessTeam";Return}
-				"*Hy*"{"BusinessTeam";Return}
-				"*SalesDB*"{"BusinessTeam";Return}
-				"*ServiceNow*"{"BusinessTeam";Return}
-				"*SlsDB*"{"BusinessTeam";Return}
-				"*Support_Role*"{"BusinessTeam";Return}
-				"*Tab*"{"BusinessTeam";Return}
-				"*Tableau*"{"BusinessTeam";Return}
-				"*GenericCreditCardPortal*"{"BusinessTeam";Return}
+				"*BusinessTeamRegex*"{"BusinessTeam";Return}
+				"*BusinessTeamRegex*"{"BusinessTeam";Return}
+				"*BusinessTeamRegex*"{"BusinessTeam";Return}
 				#endregion
 				#region GenericCompanyOldName
 				"*GenericCompanyOldName*"{"GenericCompanyOldName";Return}
 				#endregion
 				#region DevOpsTeam
-				"*admin*"{"DevOpsTeam";Return}
-				"*cloud9*"{"DevOpsTeam";Return}
-				"*CNFL*"{"DevOpsTeam";Return}
-				"*codepipeline*"{"DevOpsTeam";Return}
-				"*codestar*"{"DevOpsTeam";Return}
-				"*Confluence*"{"DevOpsTeam";Return}
-				"*DevOpsTeam*"{"DevOpsTeam";Return}
-				"*dvpstools*"{"DevOpsTeam";Return}
-				"*Githb*"{"DevOpsTeam";Return}
-				"*github*"{"DevOpsTeam";Return}
-				"*-gh*"{"DevOpsTeam";Return}
-				"*Jenkins*"{"DevOpsTeam";Return}
-				"*Jira*"{"DevOpsTeam";Return}
-				"*JKS*"{"DevOpsTeam";Return}
-				"*JNKS*"{"DevOpsTeam";Return}
-				"*logs*"{"DevOpsTeam";Return}
-				"*NexusRepo*"{"DevOpsTeam";Return}
-				"*properties*"{"DevOpsTeam";Return}
-				"*PythonServer*"{"DevOpsTeam";Return}
-				"*Sonar*"{"DevOpsTeam";Return}
-				"*swd*"{"DevOpsTeam";Return}
-				"*Zuul*"{"DevOpsTeam";Return}
+				"*DevOpsTeamRegex*"{"DevOpsTeam";Return}
+				"*DevOpsTeamRegex*"{"DevOpsTeam";Return}
+				"*DevOpsTeamRegex*"{"DevOpsTeam";Return}
 				#endregion
 				#region DeveloperTeam
-				"*cloudformation-stackcreation*"{"DeveloperTeam";Return}
-				"*DataModeling*"{"DeveloperTeam";Return}
-				"*DemandCaptureAutomation*"{"DeveloperTeam";Return}
-				"*DeveloperTeamcommerce*"{"DeveloperTeam";Return}
-				"*DeveloperTeam*"{"DeveloperTeam";Return}
-				"*ECS*"{"DeveloperTeam";Return}
-				"*elasticbeanstalk*"{"DeveloperTeam";Return}
-				"*email_classifier*"{"DeveloperTeam";Return}
-				"*EKS*"{"DeveloperTeam";Return}
-				"*Gorilla*"{"DeveloperTeam";Return}
-				"*UserName1*"{"DeveloperTeam";Return}
-				"*UserName2*"{"DeveloperTeam";Return}
-				"*MarketingIT*"{"DeveloperTeam";Return}
-				"*admn-mgnt*"{"DeveloperTeam";Return}
-				"*AIWEB*"{"DeveloperTeam";Return}
-				"*arn:aws:ecs:*"{"DeveloperTeam";Return}
-				"*Auto-scaling-services*"{"DeveloperTeam";Return}
-				"*AWSDO*"{"DeveloperTeam";Return}
-				"*AWSEBLoa*"{"DeveloperTeam";Return}
-				"*gncoPtimizer*"{"DeveloperTeam";Return}
-				"*config-topic-virginia*"{"DeveloperTeam";Return}
-				"*LowRoboCode*"{"DeveloperTeam";Return}
-				"*cpm_alerts_topic*"{"DeveloperTeam";Return}
-				"*custmessage01*"{"DeveloperTeam";Return}
-				"*dynamodb*"{"DeveloperTeam";Return}
-				"*eCom*"{"DeveloperTeam";Return}
-				"*ECDB*"{"DeveloperTeam";Return}
-				"*ECS Attachment*"{"DeveloperTeam";Return}
-				"*ELASTICSEARCH*"{"DeveloperTeam";Return}
-				"*emailClassification*"{"DeveloperTeam";Return}
-				"*ES_CloudWatch_Alarms*"{"DeveloperTeam";Return}
-				"*ES_Prd_number_node_topic*"{"DeveloperTeam";Return}
-				"*ES_dev_number_node_topic*"{"DeveloperTeam";Return}
-				"*ES_Slow_search_order_history_topic*"{"DeveloperTeam";Return}
-				"*ES_order_history_error_log_topic*"{"DeveloperTeam";Return}
-				"*ES_order_history_timeout_log_topic_prod*"{"DeveloperTeam";Return}
-				"*Grafana*"{"DeveloperTeam";Return}
-				"*Magento*"{"DeveloperTeam";Return}
-				"*Marketing-*"{"DeveloperTeam";Return}
-				"*Mongo*"{"DeveloperTeam";Return}
-				"*MyS3*"{"DeveloperTeam";Return}
-				"*NodeJS*"{"DeveloperTeam";Return}
-				"*notify-service-now*"{"DeveloperTeam";Return}
-				"*NX01*"{"DeveloperTeam";Return}
-				"*PetStore*"{"DeveloperTeam";Return}
-				"*PIM*"{"DeveloperTeam";Return}
-				"*postgres_api*"{"DeveloperTeam";Return}
-				"*pricing_services_topic_prod*"{"DeveloperTeam";Return}
-				"*Redis*"{"DeveloperTeam";Return}
-				"*RPA*"{"DeveloperTeam";Return}
-				"*Sales_history_prd_error_topic*"{"DeveloperTeam";Return}
-				"*SalesHistory*"{"DeveloperTeam";Return}
-				"*SANDBOX*"{"DeveloperTeam";Return}
-				"*SatisFactory*"{"DeveloperTeam";Return}
-				"*s3_sdv-aws-marketingautomation_fileevent_triggers*"{"DeveloperTeam";Return}
-				"*sales_history_job_sns*"{"DeveloperTeam";Return}
-				"*Shop*"{"DeveloperTeam";Return}
-				"*snd-aws-inspector-topic*"{"DeveloperTeam";Return}
-				"*Summary_Sales*"{"DeveloperTeam";Return}
-				"*testapi*"{"DeveloperTeam";Return}
-				"*test_api*"{"DeveloperTeam";Return}
-				"*thermalfluidproducts*"{"DeveloperTeam";Return}
-				"*topicS3*"{"DeveloperTeam";Return}
-				"*gnco-aws-vrg01-sns-inf01-cldtrl01-notifications*"{"DeveloperTeam";Return}
-				"*vol-*"{ "DeveloperTeam";Return}
+				"*DeveloperTeamRegex*"{"DeveloperTeam";Return}
+				"*DeveloperTeamRegex*"{"DeveloperTeam";Return}
+				"*DeveloperTeamRegex*"{"DeveloperTeam";Return}
 				#endregion
-				#region EDW DataTeam (Enterprise Data Warehousing)
-				"*AGW*"{"DataTeam";Return}
-				"*bidw*"{"DataTeam";Return}
-				"*Comprehend*"{"DataTeam";Return}
-				"*consumption*"{"DataTeam";Return}
-				"*Datalab*"{"DataTeam";Return}
-				"*datapipeline*"{"DataTeam";Return}
-				"*do*"{"DataTeam";Return}
-				#"*docean*"{"DataTeam";Return}
-				#"*documentRetrieval*"{"DataTeam";Return}
-				#"*Ordermaker*"{"DataTeam";Return}
-				"*ElasticMapReduce*"{"DataTeam";Return}
-				"*Email_Send*"{"DataTeam";Return}
-				"*EMR*"{"DataTeam";Return}
-				"*EDW*"{"DataTeam";Return}
-				"*esb*"{"DataTeam";Return}
-				"*ETL*"{"DataTeam";Return}
-				"*EXMB*"{"DataTeam";Return}
-				"*FIFO_Queue_Alarm_Sample_Notifiers*"{"DataTeam";Return}
-				"*gdw*"{"DataTeam";Return}
-				"*heroku*"{"DataTeam";Return}
-				"*ICC*"{"DataTeam";Return}
-				"*Inform*"{"DataTeam";Return}
-				"*integration*"{"DataTeam";Return}
-				"*marketingautomation*"{"DataTeam";Return}
-				"*mssqlbkp*"{"DataTeam";Return}
-				"*mule*"{"DataTeam";Return}
-				"*mckinsey_file_arrived*"{"DataTeam";Return}
-				"*Redshift*"{"DataTeam";Return}
-				"*SSAS*"{"DataTeam";Return}
-				"*SFTP*"{"DataTeam";Return}
-				"*Step_Function*"{"DataTeam";Return}
-				"*Textract*"{"DataTeam";Return}
-				"*writetodynamo*"{"DataTeam";Return}
+				#region DataTeam
+				"*DataTeamRegex*"{"DataTeam";Return}
+				"*DataTeamRegex*"{"DataTeam";Return}
+				"*DataTeamRegex*"{"DataTeam";Return}
 				#endregion
 				#region ITTeam
-				"*-ad-*"{"ITTeam";Return}
-				"*alb-access-logs-us-east*"{"ITTeam";Return}
-				"*archive*"{"ITTeam";Return}
-				"*athena-query-results*"{"ITTeam";Return}
-				"*AutoScaling*"{"ITTeam";Return}
-				"*backup*"{"ITTeam";Return}
-				"*catblog*"{"ITTeam";Return}
-				"*cf*"{"ITTeam";Return}
-				"*ciscoumbrella*"{"ITTeam";Return}
-				"*CloudCheckrDelegated*"{"ITTeam";Return}
-				"*cloudsecuritylogs*"{"ITTeam";Return}
-				"*cloudtrail*"{"ITTeam";Return}
-				"*CloudWatchAgentServer*"{"ITTeam";Return}
-				"*ComputeOptimizer*"{"ITTeam";Return}
-				"*config*"{"ITTeam";Return}
-				"*config-bucket*"{"ITTeam";Return}
-				"*CPFW*"{"ITTeam";Return}
-				"*CPM*"{"ITTeam";Return}
-				"*Datadog*"{"ITTeam";Return}
-				"*DirectoryMonitoring*"{"ITTeam";Return}
-				"*dms*"{"ITTeam";Return}
-				"*DPRXY*"{"ITTeam";Return}
-				"*EC2Spot*"{"ITTeam";Return}
-				"*EC2StartStop*"{"ITTeam";Return}
-				"*ElastiCache*"{"ITTeam";Return}
-				"*ElasticLoadBalancing*"{"ITTeam";Return}
-				"*elbaccesslogsgnco*"{"ITTeam";Return}
-				"*ensono*"{"ITTeam";Return}
-				"*EnvisionDataReader*"{"ITTeam";Return}
-				"*Events_Invoke_Step_Functions*"{"ITTeam";Return}
-				"*falconcrest*"{"ITTeam";Return}
-				"*Feedback*"{"ITTeam";Return}
-				"*firewall*"{"ITTeam";Return}
-				"*FSx*"{"ITTeam";Return}
-				"*gb*"{"ITTeam";Return}
-				"*GlobalAccelerator*"{"ITTeam";Return}
-				"*glue*"{"ITTeam";Return}
-				"*ido*"{"ITTeam";Return}
-				"*inf-cldtrl*"{"ITTeam";Return}
-				"*lambda_basic_execution*"{"ITTeam";Return}
-				"*MigrationHub*"{"ITTeam";Return}
-				"*MQ*"{"ITTeam";Return}
-				"*ndc*"{"ITTeam";Return}
-				"*Okta*"{"ITTeam";Return}
-				"*Organizations*"{"ITTeam";Return}
-				"*patch-target*"{"ITTeam";Return}
-				"*PrismaCloudPOC*"{"ITTeam";Return}
-				"*Qualys*"{"ITTeam";Return}
-				"*Quotas*"{"ITTeam";Return}
-				"*RDS*"{"ITTeam";Return}
-				"*ReadOnly*"{"ITTeam";Return}
-				"*serverless-deploy*"{"ITTeam";Return}
-				"*SSM*"{"ITTeam";Return}
-				"*Support*"{"ITTeam";Return}
-				"*TrustedAdvisor*"{"ITTeam";Return}
-				"*unite-data*"{"ITTeam";Return}
-				"*vm-templates*"{"ITTeam";Return}
-				"*workspace*"{"ITTeam";Return}
-				#endregion
-				#region Salesforce
-				"*Salesforce*"{"Salesforce";Return}
+				"*ITTeamRegex*"{"ITTeam";Return}
+				"*ITTeamRegex*"{"ITTeam";Return}
+				"*ITTeamRegex*"{"ITTeam";Return}
 				#endregion
 				default { Return}
 			}
 		 }
 		 "AlwaysOn"{
 			switch -wildcard ($ItemName) {
-				"*cloud9*"{"N";Return}
-				"*ElasticMapReduce*"{"N";Return}
-				"*EDWEMR*"{"N";Return}
+				"*Service1*"{"N";Return}
+				"*Service2*"{"N";Return}
+				"*Service3*"{"N";Return}
 				default { "Y"}
 			}
 		 }
 		 "Lifecycle"{
 			switch -wildcard ($ItemName) {
-				"*BARD*"{"Temporary";Return}
-				"*BART*"{"Temporary";Return}
-				"*cloud9*"{"Temporary";Return}
-				"*ElasticMapReduce*"{"Temporary";Return}
-				"*EDW*"{"Temporary";Return}
-				"*ETL*"{"Temporary";Return}
-				"*Hy*"{"Temporary";Return}
-				"*Inform*"{"Temporary";Return}
-				"*SalesDB*"{"Temporary";Return}
-				"*PythonServer*"{"Temporary";Return}
-				"*SlsDB*"{"Temporary";Return}
-				"*Sonar*"{"Temporary";Return}
-				"*SSAS*"{"Temporary";Return}
-				"*Tab*"{"Temporary";Return}
-				"*Tableau*"{"Temporary";Return}
-				"*Web-AutoScaling*"{"Temporary";Return}
-				"*Zuul*"{"Temporary";Return}
+				"*ServerOrTeamRegex*"{"Temporary";Return}
+				"*ServerOrTeamRegex*"{"Temporary";Return}
+				"*ServerOrTeamRegex*"{"Temporary";Return}
 				default { "Permanent"}
 			}
 		 }
@@ -561,80 +357,9 @@ Function Get-GenericCoTag {
 				"*uv-*"{ "UAT" ;Return}
 				default {
 					switch -wildcard ($ItemName) {
-						"*arn:aws:ecs:*"{ "PROD";Return}
-						"*Auto-scaling-services*"{ "PROD";Return}
-						#"*aws-mule-fail*"{ "PROD";Return}
-						"*AWS*"{ "PROD";Return}
-						"*AzureSSO*"{ "PROD";Return}
-						"*bard*"{ "PROD";Return}
-						"*bart*"{ "PROD";Return}
-						"*catblog*"{ "PROD";Return}
-						"*gncoPtimizer*"{ "PROD";Return}
-						"*confluence*"{ "PROD";Return}
-						"*config-topic-virginia*"{ "PROD";Return}
-						"*LowRoboCode*"{ "PROD";Return}
-						"*cpm_alerts_topic*"{ "PROD";Return}
-						"*custmessage01*"{ "PROD";Return}
-						"*DirectoryMonitoring*"{ "PROD";Return}
-						"*Ordermaker*"{ "PROD";Return}
-						"*dynamo*"{ "PROD";Return}
-						"*edw-runteam-notify*"{ "PROD";Return}
-						"*edw_filewatcher_lamda*"{ "PROD";Return}
-						"*edw_magento_job_topic*"{ "PROD";Return}
-						"*EDWEMR*"{ "PROD";Return}
-						"*ecomsvc*"{ "PROD";Return}
-						"*ElasticMapReduce*"{ "PROD";Return}
-						"*ES_CloudWatch_Alarms*"{ "PROD";Return}
-						"*ES_Slow_search_order_history_topic*"{ "PROD";Return}
-						"*ES_order_history_error_log_topic*"{ "PROD";Return}
-						"*FIFO_Queue_Alarm_Sample_Notifiers*"{ "PROD";Return}
-						"*gbnotify*"{ "PROD";Return}
-						"*github*"{ "PROD";Return}
-						"*grafana*"{ "PROD";Return}
-						"*jenkins*"{ "PROD";Return}
-						"*jira*"{ "PROD";Return}
-						"*jnks*"{ "PROD";Return}
-						"*lambda*"{ "PROD";Return}
-						"*logs*"{ "PROD";Return}
-						"*MyS3*"{ "PROD";Return}
-						"*nexus*"{ "PROD";Return}
-						"*Okta*"{ "PROD";Return}
-						"*Qualys*"{ "PROD";Return}
-						"*patch-target*"{ "PROD";Return}
-						"*postgres*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*properties*"{ "PROD";Return}
-						"*role*"{ "PROD";Return}
-						"*s3_sdv_aws_heroku_*"{ "PROD";Return}
-						"*s3_spv_aws_integration_*"{ "PROD";Return}
-						"*s3_gnco-unite-data*"{ "PROD";Return}
-						"*SageMaker*"{ "PROD";Return}
-						"*sales_history_job_sns*"{ "PROD";Return}
-						"*SalesHistory*"{ "PROD";Return}
-						"*SatisFactory*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*UserNameX*"{ "PROD";Return}
-						"*shop*"{ "PROD";Return}
-						"*snd-aws-datapipeline*"{ "PROD";Return}
-						"*snd-aws-inspector-topic*"{ "PROD";Return}
-						"*SNS*"{ "PROD";Return}
-						"*sonarqube*"{ "PROD";Return}
-						"*SSM*"{ "PROD";Return}
-						"*tableau*"{ "PROD";Return}
-						"*topicS3*"{ "PROD";Return}
-						"*genericcocloudtrail-topic-virginia*"{ "PROD";Return}
-						"*gnco-aws-vrg01-sns-inf01-cldtrl01-notifications*"{ "PROD";Return}
-						"*gnco-edwsystems-alarm*"{ "PROD";Return}
-						"*vol-*"{ "PROD";Return}
+						"*ProdServerOrTeamRegex:*"{ "PROD";Return}
+						"*ProdServerOrTeamRegex:*"{ "PROD";Return}
+						"*ProdServerOrTeamRegex:*"{ "PROD";Return}
 						default {Return}
 					}#end switch ItemName
 				}

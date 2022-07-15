@@ -95,11 +95,16 @@ git remote set-url origin https://github.com/Gilgamech/website
 git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
 
+
+
 # FreeCodeCamp.org
 # AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
 # https://www.youtube.com/watch?v=Ia-UEYYR44s
 
 # CLI
+- Can perform various tasks like list buckets, upload data, launch, start, stop, and terminate EC2 instances, update security groups, create subnets, etc.
+- Easily switch between accounts with --profile
+- Change --output between JSON, Table, and Text.
 - Programmatic Access must be setup from IAM
 - aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
 - Installed via Python script

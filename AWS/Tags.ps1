@@ -277,7 +277,7 @@ Function Get-GenericCoTag {
 				}
 				default { $ItemName}
 	}
-		}
+		} #end Name
 		"Owner"{
 			switch -wildcard ($ItemName) {
 				#region SalesTeam
@@ -314,8 +314,8 @@ Function Get-GenericCoTag {
 				"*ITTeamRegex*"{"ITTeam";Return}
 				#endregion
 				default { Return}
-			}
-		 }
+			} #end switch ItemName
+ 		 } #end Owner
 		 "AlwaysOn"{
 			switch -wildcard ($ItemName) {
 				"*Service1*"{"N";Return}

@@ -95,6 +95,9 @@ git remote set-url origin https://github.com/Gilgamech/website
 git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
 
+# FreeCodeCamp.org
+# AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
+# https://www.youtube.com/watch?v=Ia-UEYYR44s
 
 # CLI
 - Programmatic Access must be setup from IAM
@@ -231,7 +234,59 @@ VPC-nacls
 VPC-nat
 VPC-securityGroups
 
+
+
+
+# Fireship
+# Top 50+ AWS Services Explained in 10 Minutes
+# https://www.youtube.com/watch?v=JIbIYCM48to 
+
+# Oddballs
+- Robomaker - robot simulators
+- IOT Core - logging
+- Ground Station - Satellites
+- Bracket - quantum computing
+- Outposts - Run AWS APIs on your servers
+- Snow Mobile Core provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
+# Serverless
+- Lightsail - if you don't care about the infra and just want to deploy a Wordpress site.
+- Serverless repos - Lambda Marketplace
+- Fargate
+- App Runner - Point at container and it handles all the orchestration
+- Storage
+- Block Storage - Used for high-data requirements, but needs manual config.
+- Databases
+- SimpleDB - Basic NoSQL DB
+- DynamoDB - Easy to scale document DB, but no joins and limited queries.
+- DocumentDB - notMongoDB with 1:1 to be allowed to charge money for open sourced applications
+- ES (became AmazonSearch?)
+- RDS 
+ 	- Aurora is AWS proprietary, but has serverless PAYG version
+- Neptune - Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
+- ElasiCache - Fully managed Redis IMDB
+- Timestream - Time series database with built-in time-based queries and analytics
+- Quantum Ledger - QLDB is blockchain-ish
+- Redshift - Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
+# Data processing
+- Lake Formation - Create data lakes, or repositories of unstructured data. 
+- Kinesis - captures realtime data stream 
+- MapReduce - Apache Spark, lets you do massive parallel processing on data sets.
+- MSK - Fully managed Amazon Kafka
+- Glue - Serverless ETL that can connect to other data sets, and a no-code studio
+# ML
+- Data Exchange - buy someone else's data to process, or use 3rd party data
+- Sagemaker - use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
+- Rekognition - image classificaition api
+- Lex - Conversational service with the same tech that operates Amazon Alexa
+- Deep Racer - RC car that you can  program with ML 
+# Security
+- Cognito 
+- SNS can send push notificaitions to your app.
+- SES to send emails
+- Amplify - mobile SDKs to connect to AWS infra.
+
+
+
 honeycode
 datasync
 storagegateway/volume/
-

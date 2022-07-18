@@ -108,9 +108,13 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 - Programmatic Access must be setup from IAM
 - aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
 - Installed via Python script
+- Cost: Free
+- Encryption: SSL
 
 # CloudFormation
-- Best use is to automate the provisioning of resources and InfraAsCode
+- Cost: 
+- Encryption: are templates encrypted?
+- Use Case: automate the provisioning of resources and Infrastructure As Code.
 - JSON or YAML
 - Errors rollback with message "ROLLBACK_IN_PROGRESS"
 ## CloudFormation Templates
@@ -128,11 +132,13 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 	- Conditions - control if resources get created and/or properties assigned.
 
 # CloudFront CDN
+- Cost: 
+- Encryption: (Are there use cases for non-public CDNs, like large companies? Does Amazon/AWS use CDNs to accelerate internal proprietary content? Are the edge copies encrypted?)
+- Use Case: Distributes cached copies to Edge Locations for faster worldwide retrieval. 
 - Origin is storage location of data. (S3, Private S3 through Origin Access Identity (OAI), EC2, ELB, R53, etc)
 - Distribution defines a collection of Edge Locations and behavior on how it should handle your cached content.
 - 2 types: Web (static content) and RTMP (streaming media) 
 - Security through Signed URLs or Signed Cookies.
-- Distributes cached copies to Edge Locations. 
 - Write to Edge Locations with verbs like PUT objects. (How does this work and what are the use cases? Invalidate cache for a specific location, or A/B test stuff in a specific region?)
 - Lambda@Edge allows passing requests through a Lambda to transform.
 - TTL defines cache expiry in seconds.
@@ -140,37 +146,48 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 - Refreshing a cached item has a bandwidth cost of moving the item from origin to edge.
 
 # CloudTrail
-- Logs calls between AWS services.
+- Cost: 
+- Encryption: Are trails encrypted?
+- Use Case: Logs calls between AWS services.
 - Involves governance, compliance, operational auditing, and risk auditing.
 - Can be configured to gather all logs in all regions in all accounts across an AWS Organization. 
 - Default is 90 days via Event History, and beyond 90 days requires creating a Trail, which is logged to an S3 bucket, and can be analyzed with Athena.
-CloudTrail Logs
+## CloudTrail Logs
 - Log Validation prevents tampering. (How?)
-- Encryption with KMS
+- Encryption: KMS
 - Can be streamed to CloudWatch Logs
 - 2 event kinds: management (operations like IAM) and data (resources like EC2 or Lambda). Trails don't include data events by default.
 
 # CloudWatch
+- Cost: 
+- Use Case: Monitoring
 - Collection of monitoring services: Dashboards, Events, Alarms, Logs, Metrics
 - Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
 - EC2 starts with 5 and calls the 1 min option "detailed monitoring" (does it cost more?) - CloudWatch Agent required.
 - Can stream custom logs too.
-CloudWatch Dashboards
+## CloudWatch Dashboards
+- Encryption: Are Dashboards encrypted?
 - Visualize metrics
-CloudWatch Events
+## CloudWatch Events
+- Encryption: Are Events encrypted?
 - Trigger AWS events based on condition (use case hourly snapshots)
-CloudWatch Alarms
+## CloudWatch Alarms
+- Encryption: Are Alarms encrypted?
 - Notifications based on metrics
-CloudWatch Logs
+## CloudWatch Logs
+- Encryption: Are Logs encrypted?
 - Data point logging
 - Must belong to log group
-CloudWatch Metrics
+## CloudWatch Metrics
+- Encryption: Are Metrics encrypted?
 - Capture one data point across time.
 - Custom Metrics allow much higher resolution, down to 1 second.
 
 # Cognito
-- Decentralized managed auth. 
-- User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix?, Goog, AAD, itself, etc) 
+- Cost: 
+- Encryption: Are user pools and identity pools encrypted? Where are they stored?
+- Use Case: Decentralized managed auth. 
+- User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix?, Google, AAD, itself, etc) 
 	- Uses JWTs to persist auth
 - Identity Pools can provide temp AWS creds for service access (S3, DynamoDB, etc)
 - Cognito Sync can sync user data and preferences across devices with one line of code (powered by SNS)
@@ -180,7 +197,9 @@ CloudWatch Metrics
 	- SAML is an SSO type of IdP.
 
 # DNS
-- Domain Name Service converts domain names into IPs and back.
+- Cost: 
+- Encryption: (IS there any non-public info in DNS?)
+- Use Case: Domain Name Service converts domain names into IPs and back.
 - IPv4 - 32 bit address space (relatively limited)
 - IPv6 - 128 bit address space (relatively unlimited)
 - TLD i.e. .com
@@ -193,46 +212,213 @@ CloudWatch Metrics
 - Time To Live (TTL) is record cache duration. 
 
 # EBS
-- Elastic Block Store is a virtual block-level storage drive that you can attach to a single EC2 instance. 
+- Cost: 
+- Encryption: KMS?
+- Use Case: virtual block-level storage drive that you can attach to a single EC2 instance. 
 - Volume dimensions (size, storage type) can be changed at any time.
 - Instance Store Volumes are physical storage attached to a host, and cannot be stopped - if the host fails, the data is lost. (What is the use case for these?)
 - EBS backed instances can be stopped without data loss.
 - Root volumes delete on termination by default.
-- Volumes can have termination protection. 
-- Restoring a snapshots of an encrypted volume will give you a snaphsot that is still encrypted, and you can't share encrypted snapshots.
-- Unencrypted snapshots can be shared with other AWS accounts or made public. (Why would you want to make a snapshot public?)
+- Volumes can have termination protection.
 ## Snapshots
 - Snapshots are incremental point-in-time copies, and only changes made since the last snapshot are moved to S3.
 - Initial snapshots will take longer than subsequent snapshots.
 - EC2 instance should be stopped before snapshotting root volume. But other disks can be taken while the server is running. 
+- Restoring a snapshots of an encrypted volume will give you a snapshot that is still encrypted, and you can't share encrypted snapshots.
+- Unencrypted snapshots can be shared with other AWS accounts or made public. (Why would you want to make a snapshot public?)
 - AMIs can be created from snapshots, or volumes.
 
-
-IAM
-Lambda
-LandingZone
-Organizations
-R53
-RDS-Aurora
-RDS
-RDS2
-Redshift
-S3-snowball
-ELB
+EC2
 EC2-AMI
 EC2-ASG
 EC2-NAT
 EC2-pricing
 EC2-pricing2
-EC2
-ODS-DynamoDB
-S3-storageClasses
-S3-transfer
+
+# ELB
+- Cost:  is around $0.55/day or $18/month.
+- Encryption: All can hold SSL certs
+- Use Case: Split traffic from one destination across numerous servers.
+- 3 flavors: Network, Application, Classic
+	- Application: 
+		- Has Listeners, Rules, and Target Groups
+		- For HTTP(S) and is good for web apps.
+		- Can attach WAF. (Goes in front?)
+		- Advanced routing rules (can route based on subdomain header, path, and other HTTP(S) info.)
+		- Can have sticky sessions which are remembered by cookie.
+	- Network:
+		- Has Listeners and Target Groups but is a lawless place.
+		- For TCP/UDP and is good for high throughput i.e. video games.
+		- Can't have sticky sessions?
+	- Classic:
+		- Has Listeners with EC2 instances registered directly.
+		- For legacy and is being 
+		- Can have sticky sessions which are remembered by cookie.
+- Must have at least 2 AZs
+- Cannot be cross-region.
+- X-Forwarded-For header has source IP.
+
+# IAM
+- Cost: Free
+- Encryption: (Are your policies encrypted at rest?)
+- Use Case: Used to manage AWS access.
+- Universal system, applies to all regions at once. 
+- AWS account creation normally starts with root user account setup. 
+- Always setup MFA for root accounts.
+- New accounts have no permissions until assigned.
+- New users get an access key and secret key when created with the programmatic access option set.
+- Access keys are only for CLI / SDK access and not for console access.
+- Access secret keys are only shown on creation - if lost they must be made again.
+- Users must setup MFA for themselves, and this can't be done by an admin. (is this true?)
+- IAM allows setting password policies like minimum length or rotation time. 
+- IAM identities are users, groups, and roles.
+- IAM user accounts allow users to use the AWS Console, or CLI or SDK.
+- IAM Groups allow grouping users with the same permissions.
+- IAM Roles associate permissions with a resource. 
+- IAM Policies are JSON documents listing specific permissions. 
+	- Managed Policies are read-only from AWS
+	- Customer Policies are ones you make and maintain.
+	- Inline Policies are directly attached to a user, group, or resource.
+	- List Policies can be listed in the AWS Console and are not directly attached.
+
+# Lambda
+- Cost: Pay per invocation (CPU time and memory size, rounded to nearest 100 ms, and based on requests. First 1M requests are free.) 
+- Encryption:
+- Use Case: Serverless Functions - upload code and it runs without provisioning servers or architecture.
+	- Good fit for short-running tasks where you don't need to customize the OS or environment. 
+	- For longer than 15 minutes or a custom OS environment, consider Fargate/ECS
+- Supports 7 runtimes:
+	- Ruby
+	- Python
+	- Java
+	- NodeJS
+	- C#
+	- PowerShell
+	- Go
+- Adjustable duration timeout upto 15 min and memory size up to 3008 MB.
+- Can be triggered from SDK or multiple services (S3, API Gateway, DynamoDB, etc)
+- Use no VPC by default, but can use a VPC to interact with your other services, like RDS.
+- Can scale to 1000 (default) concurrent functions. Can increase this default as an AWS Service Limit increase.
+- Cold Starts - if not used recently there will be a startup delay.
+
+# ODS-DynamoDB
+- Cost: 
+- Encryption:
+- Use Case: Fully managed NOSQL key/value & document DB.
+	- Good for applications with large amounts of data and need predictable read & write while scaling. 
+- Scales to meet the specified read and write (per second) capacities.
+- Data stored as 3 copies on SSDs in 3 regions.
+- Two consistency modes: 
+	- Eventually (1 sec) Consistent Reads - can return inconsistent immediate reads too.
+	- Strongly Consistent Reads - will wait until data is consistent (1 sec) before returning, with higher latencies due to no immediate read option.
+
+LandingZone
+Organizations
+
+# R53
+- Cost: 
+- Encryption:
+- Use Case: DNS provider, registrar, and domain manager. 
+- Traffic Flow: Visual editor for chaining routing policies, has versioning for easy rollback.
+- Alias Record - AWS' smart record - it detects changed IP addresses and updates automatically. (How - is it a type of reverse DNS?)
+- R53 Resolver: Lets you regionally route DNS queries between your VPCs and your hybrid network.
+- Health checks can monitor and automatically reroute between endpoints. And health checks can monitor other health checks.
+- Routing types:
+	- Simple: Default - multiple addresses result in random endpoint selection.
+	- Weighted: Assign percentages to different routes. 
+	- Latency-based: Directs traffic based on region to get lowest latency.
+	- Failover: Directs traffic to secondary site only if primary site is down.
+	- Geolocation: Route based on geographic location.
+	- Geo-proximity: Add Bias to Geolocation (requires R53 Traffic Flow)
+	- Multi-Value Answer: Return multiple answers (using health checks)
+
+# RDS
+- Encryption: at rest with KMS, in motion with HTTPS.
+- Use Case: Relational Database Service
+- Instances are managed and cannot be accessed. 
+- Automatic Backups:
+	- You can set a schedule.
+	- No additional cost.
+	- Retention window between 1 and 35 days.
+- Manual Snapshots: 
+	- Can restore database from snapshot.
+- 6 database flavors:
+	- Aurora
+		- Fully-managed PostGres or MySQL with scaling, HA, and fault tolerance.
+		- 5x faster than MySQL and 3x faster than PostGres, on same flavor. (How much faster than MySQL is the PostGres one? How do MySQL and PG compare?)
+		- Pricing is about 1/10 other flavors.
+		- Data stored as 6 copies in 3 regions.
+		- Can span regions with Global Database.
+		- Aurora Serverless allows starting, stopping, and scaling - for new projects or those with infrequent DB use - to keep costs low.
+	- MariaDB
+	- MSSQL
+	- MySQL
+	- Oracle
+	- PostGres
+- Multi-AZ replicates a standby copy of your DB to another AZ, and keeps it up to date.
+- Automatic Failover will automatically promote to master the standby copy if the main DB's AZ goes down.
+- Read-Replicas 
+	- Allow you to run multiple read-only copies of your DB, to improve performance
+	- Uses asynchronous replication. (What's the significance of this?) 
+	- Requires automatic backups be setup.
+	- Limit of 5, except Aurora can have 15.
+	- Can be multi-AZ and use Read-Replicas.
+	- Can be in another region (Cross-Region Read-Replicas)
+	- Can be promoted to their own database, but this breaks replication.
+	- You can have replicas of Read-Replicas. (Can you have Read-Replicas of Read-Replicas?)
+
+# Redshift
+- Cost: Billed per hour for single-nodes and compute nodes.
+- Encryption: KMS or CloudHSM
+- Use Case: BI Data warehousing - can handle petabytes of data.
+- Columnar Store OLAP DB that takes SQL-like queries.
+- Can ingest data from S3, EMR, DynamoDB, or multiple sources on remote hosts.
+- Limited to single-AZ.
+- Single-node or multi-node (clustered).
+	- Each node holds 160 GB.
+	- Multi-node has a leader node and upto 128 compute nodes. Leader node is free.
+- Two node types: Dense Compute and Dense Storage
+- Attempts 3 backup copies: Original, Compute, S3. 
+- Uses sequential HDD caching.
+- Backup retention default is 1 day, can be set up to 35 days.
+	- Can asynchronously backup snapshots to another region's S3 bucket.
+- Uses massively parallel processing (MPP) to distribute queries and data.
+- Uses sample data to create an empty table.
+
 S3
+- Cost: 
+- Encryption:
+- Use Case: 
+
+S3-snowball
+- Cost: 
+- Encryption:
+- Use Case: 
+
+S3-storageClasses
+- Cost: 
+- Encryption:
+- Use Case: 
+
+S3-transfer
+- Cost: 
+- Encryption:
+- Use Case: 
+
 SDK
+- Cost: 
+- Encryption:
 - Programmatic Access must be setup from IAM
 - Available languages: C++, Go, Java, JS & NodeJS, .NET, PHP, Python, Ruby
+
 Transit Gateway
+- Cost: 
+- Encryption:
+- Use Case: 
+
+VPC
+- Cost: 
+- Encryption:
 VPC-endpoints
 VPC-flowLogs
 VPC-nacls
@@ -281,12 +467,12 @@ VPC-securityGroups
 # ML
 - Data Exchange - buy someone else's data to process, or use 3rd party data
 - Sagemaker - use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
-- Rekognition - image classificaition api
+- Rekognition - image classification api
 - Lex - Conversational service with the same tech that operates Amazon Alexa
 - Deep Racer - RC car that you can  program with ML 
 # Security
 - Cognito 
-- SNS can send push notificaitions to your app.
+- SNS can send push notifications to your app.
 - SES to send emails
 - Amplify - mobile SDKs to connect to AWS infra.
 
@@ -295,3 +481,7 @@ VPC-securityGroups
 honeycode
 datasync
 storagegateway/volume/
+Graviton CPUs
+Trainium ML Training hardware Trn1
+STS
+

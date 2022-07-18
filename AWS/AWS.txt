@@ -1,6 +1,8 @@
 Set up sample companies based on real data.
 - Uber as a CloudFormation template
 
+- Where to incorporate shift left?
+
 CI/CD pipeline as a bunch of local containers.
 - Repo?
 - Jenkins
@@ -94,26 +96,29 @@ cd website
 git remote set-url origin https://github.com/Gilgamech/website
 git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
-
-
+IaaS - lets you host your applications
+PaaS - lets you build your applications 
+SaaS - lets you use your applications 
 
 # FreeCodeCamp.org
 # AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
 # https://www.youtube.com/watch?v=Ia-UEYYR44s
 
 # CLI
-- Can perform various tasks like list buckets, upload data, launch, start, stop, and terminate EC2 instances, update security groups, create subnets, etc.
+- Cost: Free
+- Encryption: SSL
+- PaaS
+- Use Case: perform various tasks like list buckets, upload data, launch, start, stop, and terminate EC2 instances, update security groups, create subnets, etc.
 - Easily switch between accounts with --profile
 - Change --output between JSON, Table, and Text.
 - Programmatic Access must be setup from IAM
 - aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
 - Installed via Python script
-- Cost: Free
-- Encryption: SSL
 
 # CloudFormation
 - Cost: 
 - Encryption: are templates encrypted?
+- IaaS
 - Use Case: automate the provisioning of resources and Infrastructure As Code.
 - JSON or YAML
 - Errors rollback with message "ROLLBACK_IN_PROGRESS"
@@ -134,6 +139,7 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 # CloudFront CDN
 - Cost: 
 - Encryption: (Are there use cases for non-public CDNs, like large companies? Does Amazon/AWS use CDNs to accelerate internal proprietary content? Are the edge copies encrypted?)
+- IaaS
 - Use Case: Distributes cached copies to Edge Locations for faster worldwide retrieval. 
 - Origin is storage location of data. (S3, Private S3 through Origin Access Identity (OAI), EC2, ELB, R53, etc)
 - Distribution defines a collection of Edge Locations and behavior on how it should handle your cached content.
@@ -148,6 +154,7 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 # CloudTrail
 - Cost: 
 - Encryption: Are trails encrypted?
+- SaaS
 - Use Case: Logs calls between AWS services.
 - Involves governance, compliance, operational auditing, and risk auditing.
 - Can be configured to gather all logs in all regions in all accounts across an AWS Organization. 
@@ -160,6 +167,7 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
 # CloudWatch
 - Cost: 
+- SaaS
 - Use Case: Monitoring
 - Collection of monitoring services: Dashboards, Events, Alarms, Logs, Metrics
 - Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
@@ -186,6 +194,7 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 # Cognito
 - Cost: 
 - Encryption: Are user pools and identity pools encrypted? Where are they stored?
+- PaaS
 - Use Case: Decentralized managed auth. 
 - User Pools directory allows users to auth using OAuth to IdP (Meta, AZ, Netflix?, Google, AAD, itself, etc) 
 	- Uses JWTs to persist auth
@@ -196,9 +205,10 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 	- OIDC is an Oauth type of IdP.
 	- SAML is an SSO type of IdP.
 
-# DNS
+# DNS - Is this just general DNS info that's not directly connected to R53?
 - Cost: 
-- Encryption: (IS there any non-public info in DNS?)
+- Encryption: (Is there any non-public info in DNS?)
+- IaaS
 - Use Case: Domain Name Service converts domain names into IPs and back.
 - IPv4 - 32 bit address space (relatively limited)
 - IPv6 - 128 bit address space (relatively unlimited)
@@ -214,6 +224,7 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 # EBS
 - Cost: 
 - Encryption: KMS?
+- IaaS
 - Use Case: virtual block-level storage drive that you can attach to a single EC2 instance. 
 - Volume dimensions (size, storage type) can be changed at any time.
 - Instance Store Volumes are physical storage attached to a host, and cannot be stopped - if the host fails, the data is lost. (What is the use case for these?)
@@ -228,16 +239,21 @@ git remote add upstream https://github.com/Gilgamech/SiteTemplate
 - Unencrypted snapshots can be shared with other AWS accounts or made public. (Why would you want to make a snapshot public?)
 - AMIs can be created from snapshots, or volumes.
 
-EC2
-EC2-AMI
-EC2-ASG
-EC2-NAT
-EC2-pricing
-EC2-pricing2
+# EC2
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+## EC2-AMI
+## EC2-ASG
+## EC2-NAT
+## EC2-pricing
+## EC2-pricing2
 
 # ELB
-- Cost:  is around $0.55/day or $18/month.
+- Cost: ~$0.55/day or $18/month.
 - Encryption: All can hold SSL certs
+- IaaS
 - Use Case: Split traffic from one destination across numerous servers.
 - 3 flavors: Network, Application, Classic
 	- Application: 
@@ -261,6 +277,7 @@ EC2-pricing2
 # IAM
 - Cost: Free
 - Encryption: (Are your policies encrypted at rest?)
+- PaaS (Foundational)
 - Use Case: Used to manage AWS access.
 - Universal system, applies to all regions at once. 
 - AWS account creation normally starts with root user account setup. 
@@ -284,6 +301,7 @@ EC2-pricing2
 # Lambda
 - Cost: Pay per invocation (CPU time and memory size, rounded to nearest 100 ms, and based on requests. First 1M requests are free.) 
 - Encryption:
+- PaaS
 - Use Case: Serverless Functions - upload code and it runs without provisioning servers or architecture.
 	- Good fit for short-running tasks where you don't need to customize the OS or environment. 
 	- For longer than 15 minutes or a custom OS environment, consider Fargate/ECS
@@ -304,6 +322,7 @@ EC2-pricing2
 # ODS-DynamoDB
 - Cost: 
 - Encryption:
+- PaaS
 - Use Case: Fully managed NOSQL key/value & document DB.
 	- Good for applications with large amounts of data and need predictable read & write while scaling. 
 - Scales to meet the specified read and write (per second) capacities.
@@ -312,12 +331,22 @@ EC2-pricing2
 	- Eventually (1 sec) Consistent Reads - can return inconsistent immediate reads too.
 	- Strongly Consistent Reads - will wait until data is consistent (1 sec) before returning, with higher latencies due to no immediate read option.
 
-LandingZone
-Organizations
+# LandingZone
+- Cost: 
+- Encryption:
+- PaaS? (Foundational)
+- Use Case: 
+
+# Organizations
+- Cost: 
+- Encryption:
+- PaaS? (Foundational)
+- Use Case: 
 
 # R53
 - Cost: 
 - Encryption:
+- IaaS
 - Use Case: DNS provider, registrar, and domain manager. 
 - Traffic Flow: Visual editor for chaining routing policies, has versioning for easy rollback.
 - Alias Record - AWS' smart record - it detects changed IP addresses and updates automatically. (How - is it a type of reverse DNS?)
@@ -333,7 +362,9 @@ Organizations
 	- Multi-Value Answer: Return multiple answers (using health checks)
 
 # RDS
+- Cost: 
 - Encryption: at rest with KMS, in motion with HTTPS.
+- PaaS
 - Use Case: Relational Database Service
 - Instances are managed and cannot be accessed. 
 - Automatic Backups:
@@ -370,6 +401,7 @@ Organizations
 # Redshift
 - Cost: Billed per hour for single-nodes and compute nodes.
 - Encryption: KMS or CloudHSM
+- PaaS
 - Use Case: BI Data warehousing - can handle petabytes of data.
 - Columnar Store OLAP DB that takes SQL-like queries.
 - Can ingest data from S3, EMR, DynamoDB, or multiple sources on remote hosts.
@@ -385,46 +417,162 @@ Organizations
 - Uses massively parallel processing (MPP) to distribute queries and data.
 - Uses sample data to create an empty table.
 
-S3
+ #S3
 - Cost: 
 - Encryption:
+- SaaS
+- Use Case: 
+## S3-storageClasses
+## S3-transfer
+
+# S3-snowball
+- Cost: 
+- Encryption:
+- SaaS
 - Use Case: 
 
-S3-snowball
+# SDK
 - Cost: 
 - Encryption:
+- PaaS
 - Use Case: 
-
-S3-storageClasses
-- Cost: 
-- Encryption:
-- Use Case: 
-
-S3-transfer
-- Cost: 
-- Encryption:
-- Use Case: 
-
-SDK
-- Cost: 
-- Encryption:
 - Programmatic Access must be setup from IAM
 - Available languages: C++, Go, Java, JS & NodeJS, .NET, PHP, Python, Ruby
 
-Transit Gateway
+# Transit Gateway
 - Cost: 
 - Encryption:
+- SaaS
 - Use Case: 
 
-VPC
+# VPC
 - Cost: 
 - Encryption:
-VPC-endpoints
-VPC-flowLogs
-VPC-nacls
-VPC-nat
-VPC-securityGroups
+- IaaS
+- Use Case: 
+## VPC-endpoints
+## VPC-flowLogs
+## VPC-nacls
+## VPC-nat
+## VPC-securityGroups
 
+
+
+
+# Fireship
+# Top 50+ AWS Services Explained in 10 Minutes
+# https://www.youtube.com/watch?v=JIbIYCM48to 
+
+
+Oddballs
+# Robomaker - robot simulators
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+# IOT
+- Cost: 
+- Encryption:
+- PaaS?
+- Use Case: 
+## IOT Core 
+	- logging
+# Ground Station - Satellites
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+# Bracket - quantum computing
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+# Outposts - Run AWS APIs on your servers
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+# Snow Mobile Core provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+
+Serverless
+# Lightsail
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: if you don't care about the infra and just want to deploy a Wordpress site.
+# Serverless repos
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Lambda Marketplace
+# Fargate
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: 
+# App Runner
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Point at container and it handles all the orchestration.
+# Block Storage
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Used for high-data requirements, but needs manual config.
+
+Databases
+# ODS-SimpleDB
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Basic NoSQL DB.
+# ODS-DynamoDB
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Easy to scale document DB, but no joins and limited queries.
+# ODS-DocumentDB
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: notMongoDB with 1:1 to be allowed to charge money for open sourced applications.
+# ODS-ES (became AmazonSearch?)
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+# RDS 
+ 	- Aurora is AWS proprietary, but has serverless PAYG version
+# ODS-Neptune - Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+# ODS-ElasiCache
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Fully managed Redis in-memory database.
+# ODS-Timestream - Time series database with built-in time-based queries and analytics
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+# ODS-Quantum Ledger - QLDB is blockchain-ish
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+# ODS-Redshift - Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
 
 
 

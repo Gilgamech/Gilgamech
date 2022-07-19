@@ -100,9 +100,30 @@ IaaS - lets you host your applications (servers)
 PaaS - lets you build your applications (functions)
 SaaS - lets you use your applications (cloud hosted)
 
-# FreeCodeCamp.org
-# AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
-# https://www.youtube.com/watch?v=Ia-UEYYR44s
+
+# Amplify
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: mobile SDKs to connect to AWS infra.
+
+# App Runner
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Point at container and it handles all the orchestration.
+
+# Block Storage (EBS?)
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Used for high-data requirements, but needs manual config.
+
+# Bracket - quantum computing
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
 
 # CLI
 - Cost: Free
@@ -206,6 +227,24 @@ SaaS - lets you use your applications (cloud hosted)
 	- OIDC is an Oauth type of IdP.
 	- SAML is an SSO type of IdP.
 
+# Data Exchange
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Buy someone else's data to process, or use 3rd party data
+
+# Datasync
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Data transfer agent deployed on a VM in your network, an EC2 Outpost in your network, or on an AWS Snowcone in your network.
+
+# Deep Racer
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: RC car that you can program with ML 
+
 # DNS - Is this just general DNS info that's not directly connected to R53?
 - Cost: 
 - Encryption: (Is there any non-public info in DNS?)
@@ -221,6 +260,25 @@ SaaS - lets you use your applications (cloud hosted)
 - A Record converts directly into an IPv4 address.
 - CName Record redirects to another record.
 - Time To Live (TTL) is record cache duration. 
+
+# ODS-DocumentDB
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: notMongoDB with 1:1 to be allowed to charge money for open sourced applications.
+
+# ODS-DynamoDB
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Fully managed NOSQL key/value & document DB.
+	- Easy to scale document DB, but no joins and limited queries.
+	- Good for applications with large amounts of data and need predictable read & write while scaling. 
+- Scales to meet the specified read and write (per second) capacities.
+- Data stored as 3 copies on SSDs in 3 regions.
+- Two consistency modes: 
+	- Eventually (1 sec) Consistent Reads - can return inconsistent immediate reads too.
+	- Strongly Consistent Reads - will wait until data is consistent (1 sec) before returning, with higher latencies due to no immediate read option.
 
 # EBS
 - Cost: 
@@ -251,6 +309,12 @@ SaaS - lets you use your applications (cloud hosted)
 ## EC2-pricing
 ## EC2-pricing2
 
+# ODS-ElasiCache
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Fully managed Redis in-memory database.
+
 # ELB
 - Cost: ~$0.55/day or $18/month.
 - Encryption: All can hold SSL certs
@@ -274,6 +338,48 @@ SaaS - lets you use your applications (cloud hosted)
 - Must have at least 2 AZs
 - Cannot be cross-region.
 - X-Forwarded-For header has source IP.
+
+# ODS-ES (became AmazonSearch?)
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+
+# FSx 
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
+
+# Fargate
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Run containers without worrying about servers.
+
+# Glue
+- Cost: 
+- Encryption: Serverless ETL that can connect to other data sets, and a no-code studio
+- PaaS
+- Use Case: 
+
+# Graviton CPUs
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+
+# Ground Station - Satellites
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+
+# Honeycode
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Write functions without code
 
 # IAM
 - Cost: Free
@@ -299,6 +405,26 @@ SaaS - lets you use your applications (cloud hosted)
 	- Inline Policies are directly attached to a user, group, or resource.
 	- List Policies can be listed in the AWS Console and are not directly attached.
 
+# IOT
+- Cost: 
+- Encryption:
+- PaaS?
+- Use Case: 
+## IOT Core 
+	- logging
+
+# Kinesis
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Captures realtime data stream 
+
+# Lake Formation
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Create data lakes, or repositories of unstructured data. 
+
 # Lambda
 - Cost: Pay per invocation (CPU time and memory size, rounded to nearest 100 ms, and based on requests. First 1M requests are free.) 
 - Encryption:
@@ -320,29 +446,59 @@ SaaS - lets you use your applications (cloud hosted)
 - Can scale to 1000 (default) concurrent functions. Can increase this default as an AWS Service Limit increase.
 - Cold Starts - if not used recently there will be a startup delay.
 
-# ODS-DynamoDB
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Fully managed NOSQL key/value & document DB.
-	- Good for applications with large amounts of data and need predictable read & write while scaling. 
-- Scales to meet the specified read and write (per second) capacities.
-- Data stored as 3 copies on SSDs in 3 regions.
-- Two consistency modes: 
-	- Eventually (1 sec) Consistent Reads - can return inconsistent immediate reads too.
-	- Strongly Consistent Reads - will wait until data is consistent (1 sec) before returning, with higher latencies due to no immediate read option.
-
 # LandingZone
 - Cost: 
 - Encryption:
 - PaaS? (Foundational)
 - Use Case: 
 
+# Lex
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Conversational service with the same tech that operates Amazon Alexa
+
+# Lightsail
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: if you don't care about the infra and just want to deploy a Wordpress site.
+
+# MapReduce
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Apache Spark, lets you do massive parallel processing on data sets.
+
+# MSK
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Fully managed Apache Kafka message queue
+
+# ODS-Neptune
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
+
 # Organizations
 - Cost: 
 - Encryption:
 - PaaS? (Foundational)
 - Use Case: 
+
+# Outposts - Run AWS APIs on your servers
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+
+# ODS-Quantum Ledger
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: QLDB is blockchain-ish
 
 # R53
 - Cost: 
@@ -399,11 +555,12 @@ SaaS - lets you use your applications (cloud hosted)
 	- Can be promoted to their own database, but this breaks replication.
 	- You can have replicas of Read-Replicas. (Can you have Read-Replicas of Read-Replicas?)
 
-# Redshift
+# ODS-Redshift
 - Cost: Billed per hour for single-nodes and compute nodes.
 - Encryption: KMS or CloudHSM
 - PaaS
-- Use Case: BI Data warehousing - can handle petabytes of data.
+- Use Case: Analytics data store (shift away from Oracle) - dump multiple data sets in one place.  
+	- BI Data warehousing - can handle petabytes of data. Data in a warehouse is structured.
 - Columnar Store OLAP DB that takes SQL-like queries.
 - Can ingest data from S3, EMR, DynamoDB, or multiple sources on remote hosts.
 - Limited to single-AZ.
@@ -417,6 +574,24 @@ SaaS - lets you use your applications (cloud hosted)
 	- Can asynchronously backup snapshots to another region's S3 bucket.
 - Uses massively parallel processing (MPP) to distribute queries and data.
 - Uses sample data to create an empty table.
+
+# Registry of Open Data 
+- Cost: Free
+- Encryption:
+- SaaS
+- Use Case: Use a public data set, like the Cancer Genome Atlas, USGS LandSat, NOAA GOES, etc.
+
+# Rekognition
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Image classification API
+
+# Robomaker - robot simulators
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: 
 
  #S3
 - Cost: 
@@ -432,6 +607,12 @@ SaaS - lets you use your applications (cloud hosted)
 - SaaS
 - Use Case: 
 
+# Sagemaker
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
+
 # SDK
 - Cost: 
 - Encryption:
@@ -440,232 +621,35 @@ SaaS - lets you use your applications (cloud hosted)
 - Programmatic Access must be setup from IAM
 - Available languages: C++, Go, Java, JS & NodeJS, .NET, PHP, Python, Ruby
 
-# Transit Gateway
+# Serverless repos
 - Cost: 
 - Encryption:
 - SaaS
-- Use Case: 
+- Use Case: Lambda Marketplace
 
-# VPC
+# SES
 - Cost: 
 - Encryption:
-- IaaS
-- Use Case: 
-## VPC-endpoints
-## VPC-flowLogs
-## VPC-nacls
-## VPC-nat
-## VPC-securityGroups
+- SaaS
+- Use Case: can send emails
 
-
-
-
-# Fireship
-# Top 50+ AWS Services Explained in 10 Minutes
-# https://www.youtube.com/watch?v=JIbIYCM48to 
-
-
-Oddballs
-# Robomaker - robot simulators
+# ODS-SimpleDB
 - Cost: 
 - Encryption:
 - PaaS
-- Use Case: 
-# IOT
-- Cost: 
-- Encryption:
-- PaaS?
-- Use Case: 
-## IOT Core 
-	- logging
-# Ground Station - Satellites
-- Cost: 
-- Encryption:
-- IaaS
-- Use Case: 
-# Bracket - quantum computing
-- Cost: 
-- Encryption:
-- IaaS
-- Use Case: 
-# Outposts - Run AWS APIs on your servers
-- Cost: 
-- Encryption:
-- IaaS
-- Use Case: 
+- Use Case: Basic NoSQL DB.
+
 # Snow Mobile Core (SnowCone?) provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: 
 
-Serverless
-# Lightsail
+# SNS
 - Cost: 
 - Encryption:
 - SaaS
-- Use Case: if you don't care about the infra and just want to deploy a Wordpress site.
-# Serverless repos
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: Lambda Marketplace
-# Fargate
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: 
-# App Runner
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: Point at container and it handles all the orchestration.
-# Block Storage
-- Cost: 
-- Encryption:
-- IaaS
-- Use Case: Used for high-data requirements, but needs manual config.
-
-Databases
-# ODS-SimpleDB
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Basic NoSQL DB.
-# ODS-DynamoDB
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Easy to scale document DB, but no joins and limited queries.
-# ODS-DocumentDB
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: notMongoDB with 1:1 to be allowed to charge money for open sourced applications.
-# ODS-ES (became AmazonSearch?)
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: 
-# RDS 
- 	- Aurora is AWS proprietary, but has serverless PAYG version
-# ODS-Neptune
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
-# ODS-ElasiCache
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Fully managed Redis in-memory database.
-# ODS-Timestream
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Time series database with built-in time-based queries and analytics
-# ODS-Quantum Ledger
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: QLDB is blockchain-ish
-# ODS-Redshift
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
-
-Data processing
-# Lake Formation
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Create data lakes, or repositories of unstructured data. 
-# Kinesis
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Captures realtime data stream 
-# MapReduce
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Apache Spark, lets you do massive parallel processing on data sets.
-# MSK
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Fully managed Apache Kafka message queue
-# Glue
-- Cost: 
-- Encryption: Serverless ETL that can connect to other data sets, and a no-code studio
-- PaaS
-- Use Case: 
-
-ML
-# Data Exchange
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: Buy someone else's data to process, or use 3rd party data
-# Registry of Open Data 
-- Cost: Free
-- Encryption:
-- SaaS
-- Use Case: Use a public data set, like the Cancer Genome Atlas, USGS LandSat, NOAA GOES, etc.
-# Sagemaker
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
-# Rekognition
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Image classification API
-# Lex
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Conversational service with the same tech that operates Amazon Alexa
-# Deep Racer
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: RC car that you can program with ML 
-
-Security
-# Cognito 
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: 
-# SNS can send push notifications to your app.
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: 
-# SES to send emails
-- Cost: 
-- Encryption:
-- SaaS
-- Use Case: 
-# Amplify - mobile SDKs to connect to AWS infra.
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: 
-
-# Honeycode
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: Write functions without code
-# Datasync
-- Cost: 
-- Encryption:
-- IaaS
-- Use Case: Data transfer agent deployed on a VM in your network, an EC2 Outpost in your network, or on an AWS Snowcone in your network.
+- Use Case: can send push notifications to your app.
 
 # Storage Gateway
 - Cost: Services are billed separately below. 
@@ -711,33 +695,55 @@ Security
 - EBS Snapshot storage - Stored and billed as Amazon EBS snapshots.
 - Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month.
 
-
-# Graviton CPUs
+# STS
 - Cost: 
 - Encryption:
-- IaaS
+- PaaS (Foundational)
 - Use Case: 
+
+# Transit Gateway
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: 
+
+# ODS-Timestream
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Time series database with built-in time-based queries and analytics
+
 # Trainium ML 
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Machine Learning ASICs can improve training speed while reducing costs.
 - Training hardware Trn1
-# STS
-- Cost: 
-- Encryption:
-- PaaS (Foundational)
-- Use Case: 
-# FSx 
-- Cost: 
-- Encryption:
-- PaaS
-- Use Case: 
+
 # VMWare Cloud
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Rehost VMWare workloads in AWS before pursuing a more cloud-native tech strategy.
 
+# VPC
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+## VPC-endpoints
+## VPC-flowLogs
+## VPC-nacls
+## VPC-nat
+## VPC-securityGroups
 
+
+
+#Bibliography:
+- FreeCodeCamp.org
+	- AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
+	- https://www.youtube.com/watch?v=Ia-UEYYR44s
+- Fireship
+	- Top 50+ AWS Services Explained in 10 Minutes
+	- https://www.youtube.com/watch?v=JIbIYCM48to 
 

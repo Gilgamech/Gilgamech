@@ -96,9 +96,9 @@ cd website
 git remote set-url origin https://github.com/Gilgamech/website
 git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
-IaaS - lets you host your applications
-PaaS - lets you build your applications 
-SaaS - lets you use your applications 
+IaaS - lets you host your applications (servers)
+PaaS - lets you build your applications (functions)
+SaaS - lets you use your applications (cloud hosted)
 
 # FreeCodeCamp.org
 # AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
@@ -169,6 +169,7 @@ SaaS - lets you use your applications
 - Cost: 
 - SaaS
 - Use Case: Monitoring
+- You can track the amount of data written to AWS using Amazon CloudWatch. https://aws.amazon.com/c-tax-faqs/
 - Collection of monitoring services: Dashboards, Events, Alarms, Logs, Metrics
 - Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
 - EC2 starts with 5 and calls the 1 min option "detailed monitoring" (does it cost more?) - CloudWatch Agent required.
@@ -492,7 +493,7 @@ Oddballs
 - Encryption:
 - IaaS
 - Use Case: 
-# Snow Mobile Core provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
+# Snow Mobile Core (SnowCone?) provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
 - Cost: 
 - Encryption:
 - IaaS
@@ -548,88 +549,195 @@ Databases
 - Use Case: 
 # RDS 
  	- Aurora is AWS proprietary, but has serverless PAYG version
-# ODS-Neptune - Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
+# ODS-Neptune
 - Cost: 
 - Encryption:
 - PaaS
-- Use Case: 
+- Use Case: Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
 # ODS-ElasiCache
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Fully managed Redis in-memory database.
-# ODS-Timestream - Time series database with built-in time-based queries and analytics
+# ODS-Timestream
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Time series database with built-in time-based queries and analytics
+# ODS-Quantum Ledger
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: QLDB is blockchain-ish
+# ODS-Redshift
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
+
+Data processing
+# Lake Formation
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Create data lakes, or repositories of unstructured data. 
+# Kinesis
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Captures realtime data stream 
+# MapReduce
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Apache Spark, lets you do massive parallel processing on data sets.
+# MSK
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Fully managed Apache Kafka message queue
+# Glue
+- Cost: 
+- Encryption: Serverless ETL that can connect to other data sets, and a no-code studio
+- PaaS
+- Use Case: 
+
+ML
+# Data Exchange
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: Buy someone else's data to process, or use 3rd party data
+# Registry of Open Data 
+- Cost: Free
+- Encryption:
+- SaaS
+- Use Case: Use a public data set, like the Cancer Genome Atlas, USGS LandSat, NOAA GOES, etc.
+# Sagemaker
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
+# Rekognition
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Image classification API
+# Lex
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Conversational service with the same tech that operates Amazon Alexa
+# Deep Racer
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: RC car that you can program with ML 
+
+Security
+# Cognito 
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: 
-# ODS-Quantum Ledger - QLDB is blockchain-ish
+# SNS can send push notifications to your app.
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: 
+# SES to send emails
+- Cost: 
+- Encryption:
+- SaaS
+- Use Case: 
+# Amplify - mobile SDKs to connect to AWS infra.
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: 
-# ODS-Redshift - Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
+
+# Honeycode
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Write functions without code
+# Datasync
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Data transfer agent deployed on a VM in your network, an EC2 Outpost in your network, or on an AWS Snowcone in your network.
+
+# Storage Gateway
+- Cost: Services are billed separately below. 
+	- The AWS Hardware Appliance is available exclusively through resellers, including CDW.
+	- Data Transfer from your gateway appliance to the AWS Storage Gateway service is free.
+	- Data Transfer from the AWS Storage Gateway service to your on-premises gateway appliance 
+	| TB/Month | per GB | 
+	| 9.999 | $0.09 |
+	| 40 | $0.085 |
+	| 100 | $0.07 |
+	| -gt 150 | $0.05 |
+	- Data Transfer from the AWS Storage Gateway service to an Amazon EC2-based gateway appliance in the same region is free.
+	- Data Transfer from the AWS Storage Gateway service to your gateway appliance in other regions is $0.02 per GB currently.
+- Encryption:
+- IaaS
+- Use Case: Data transfer agent deployed on a VM or hardware device in your network, or as EC2 or VMWare Cloud VM.
+## S3 Gateway
+- Storage Cost: S3 rate
+- Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month. (Billed as Amazon S3 requests.)
+## FSx Gateway
+- Gateway Cost: $0.69 per Hour
+- Storage Cost: FSx for Windows rate
+- Transfer Cost: (None listed)
+## Tape Gateway
+- Gateway Cost: 
+- Storage tiers: (per GB-month)
+	- Standard: $0.023 
+	- Glacier Flexible Retrieval: $0.0036 
+	- Glacier Deep Archive: $0.00099
+- Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month.
+- Retrieval tiers: (per GB)
+	- Standard: $0.01 
+	- Glacier Flexible Retrieval: $0.02 
+	- Glacier Deep Archive: $0.0032
+- Early Deletion tiers: (per GB)
+	- Standard: None listed
+	- Glacier Flexible Retrieval: $0.0108 (Prorated across 90 days.)
+	- Glacier Deep Archive: $0.00099 (Prorated across 180 days.)
+- Archival: Free (what does this entail?)
+## Volume Gateway
+- Gateway Cost: 
+- Storage Cost: $0.023 per GB-month of data stored
+- EBS Snapshot storage - Stored and billed as Amazon EBS snapshots.
+- Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month.
+
+
+# Graviton CPUs
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: 
+# Trainium ML 
+- Cost: 
+- Encryption:
+- PaaS
+- Use Case: Machine Learning ASICs can improve training speed while reducing costs.
+- Training hardware Trn1
+# STS
+- Cost: 
+- Encryption:
+- PaaS (Foundational)
+- Use Case: 
+# FSx 
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: 
+# VMWare Cloud
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Rehost VMWare workloads in AWS before pursuing a more cloud-native tech strategy.
 
 
-
-# Fireship
-# Top 50+ AWS Services Explained in 10 Minutes
-# https://www.youtube.com/watch?v=JIbIYCM48to 
-
-# Oddballs
-- Robomaker - robot simulators
-- IOT Core - logging
-- Ground Station - Satellites
-- Bracket - quantum computing
-- Outposts - Run AWS APIs on your servers
-- Snow Mobile Core provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
-# Serverless
-- Lightsail - if you don't care about the infra and just want to deploy a Wordpress site.
-- Serverless repos - Lambda Marketplace
-- Fargate
-- App Runner - Point at container and it handles all the orchestration
-- Storage
-- Block Storage - Used for high-data requirements, but needs manual config.
-- Databases
-- SimpleDB - Basic NoSQL DB
-- DynamoDB - Easy to scale document DB, but no joins and limited queries.
-- DocumentDB - notMongoDB with 1:1 to be allowed to charge money for open sourced applications
-- ES (became AmazonSearch?)
-- RDS 
- 	- Aurora is AWS proprietary, but has serverless PAYG version
-- Neptune - Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
-- ElasiCache - Fully managed Redis IMDB
-- Timestream - Time series database with built-in time-based queries and analytics
-- Quantum Ledger - QLDB is blockchain-ish
-- Redshift - Analytics data store (shift away from Oracle) - dump multiple data sets in one place. Data in a warehouse is structured. 
-# Data processing
-- Lake Formation - Create data lakes, or repositories of unstructured data. 
-- Kinesis - captures realtime data stream 
-- MapReduce - Apache Spark, lets you do massive parallel processing on data sets.
-- MSK - Fully managed Amazon Kafka
-- Glue - Serverless ETL that can connect to other data sets, and a no-code studio
-# ML
-- Data Exchange - buy someone else's data to process, or use 3rd party data
-- Sagemaker - use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
-- Rekognition - image classification api
-- Lex - Conversational service with the same tech that operates Amazon Alexa
-- Deep Racer - RC car that you can  program with ML 
-# Security
-- Cognito 
-- SNS can send push notifications to your app.
-- SES to send emails
-- Amplify - mobile SDKs to connect to AWS infra.
-
-
-
-honeycode
-datasync
-storagegateway/volume/
-Graviton CPUs
-Trainium ML Training hardware Trn1
-STS
 

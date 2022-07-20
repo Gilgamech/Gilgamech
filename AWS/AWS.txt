@@ -2,6 +2,8 @@ Set up sample companies based on real data.
 - Uber as a CloudFormation template
 
 - Where to incorporate shift left?
+- Antipatterns? 
+	- 
 
 CI/CD pipeline as a bunch of local containers.
 - Repo?
@@ -23,7 +25,7 @@ Overlay rental and house sales price on the same map.
 - Make 3d comparative levels of architecture solutions - tech level, tech flavor, tech maturity (Gartner bracket) 
 - How do game studios go cloud native? Epic?
 - Why buy what you can make?
-- What makes your proprietary standard more valuable than the industry standard? 
+- What makes this proprietary standard more valuable than the industry standard? 
 
 - Getting companies to stop operating like it's 2006 or 2014 and act like it's 2022. (messaging)
 - Replacing with SaaS allows coupling costs to usage much more effectively than hiring contractors to mange your IaaS.
@@ -85,11 +87,12 @@ Which reduces you down to:
 - SaaS cost differential
 
 # Misc 
-Code should be as atomic as possible, leading to smaller microservices, leading to smaller clusters, and more flexible compute supply
-The short term benefits of doing X exceed the long term support costs.
+Code should be as atomic as possible while having as few dependencies as possible. This dual mandate leads to smaller microservices, leading to smaller clusters, and more flexible compute supply. Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
+The short term benefits of (doing X) exceeds the long term support costs.
 Maintenance is technical taxes.
 Lift and shift on cloud is a technical loan. It gives you more runway but doesn't reduce your technical taxes.
 Unscalable, inefficient, or unmaintained is technical debt, and refactoring/rewriting/redesigning is paying off technical debt. 
+DBaaS - DB are software, so DBaaS are SaaS by definition.
 
 # Fork your own repo 
 cd website
@@ -119,11 +122,11 @@ SaaS - lets you use your applications (cloud hosted)
 - IaaS
 - Use Case: Used for high-data requirements, but needs manual config.
 
-# Bracket - quantum computing
+# Bracket
 - Cost: 
 - Encryption:
 - IaaS
-- Use Case: 
+- Use Case: Quantum Computing
 
 # CLI
 - Cost: Free
@@ -245,22 +248,6 @@ SaaS - lets you use your applications (cloud hosted)
 - PaaS
 - Use Case: RC car that you can program with ML 
 
-# DNS - Is this just general DNS info that's not directly connected to R53?
-- Cost: 
-- Encryption: (Is there any non-public info in DNS?)
-- IaaS
-- Use Case: Domain Name Service converts domain names into IPs and back.
-- IPv4 - 32 bit address space (relatively limited)
-- IPv6 - 128 bit address space (relatively unlimited)
-- TLD i.e. .com
-- 2LD i.e. Gilgamech.com
-- Domain Registrar is a 3rd party company who sells domains.
-- Name Servers are the DNS servers with your domain info.
-- Start of Authority (SOA) contains info about the DNS zone and associated records.
-- A Record converts directly into an IPv4 address.
-- CName Record redirects to another record.
-- Time To Live (TTL) is record cache duration. 
-
 # ODS-DocumentDB
 - Cost: 
 - Encryption:
@@ -333,13 +320,13 @@ SaaS - lets you use your applications (cloud hosted)
 		- Can't have sticky sessions?
 	- Classic:
 		- Has Listeners with EC2 instances registered directly.
-		- For legacy and is being 
+		- For legacy and is being depreciated
 		- Can have sticky sessions which are remembered by cookie.
 - Must have at least 2 AZs
 - Cannot be cross-region.
 - X-Forwarded-For header has source IP.
 
-# ODS-ES (became AmazonSearch?)
+# ODS-ES
 - Cost: 
 - Encryption:
 - PaaS
@@ -369,11 +356,11 @@ SaaS - lets you use your applications (cloud hosted)
 - IaaS
 - Use Case: 
 
-# Ground Station - Satellites
+# Ground Station
 - Cost: 
 - Encryption:
 - IaaS
-- Use Case: 
+- Use Case: Contact satellites in orbit around the Earth.
 
 # Honeycode
 - Cost: 
@@ -488,11 +475,11 @@ SaaS - lets you use your applications (cloud hosted)
 - PaaS? (Foundational)
 - Use Case: 
 
-# Outposts - Run AWS APIs on your servers
+# Outposts
 - Cost: 
 - Encryption:
 - IaaS
-- Use Case: 
+- Use Case: Run AWS APIs on your servers.
 
 # ODS-Quantum Ledger
 - Cost: 
@@ -502,7 +489,7 @@ SaaS - lets you use your applications (cloud hosted)
 
 # R53
 - Cost: 
-- Encryption:
+- Encryption: (Is there any non-public info in DNS?)
 - IaaS
 - Use Case: DNS provider, registrar, and domain manager. 
 - Traffic Flow: Visual editor for chaining routing policies, has versioning for easy rollback.
@@ -704,7 +691,7 @@ SaaS - lets you use your applications (cloud hosted)
 # Transit Gateway
 - Cost: 
 - Encryption:
-- SaaS
+- IaaS
 - Use Case: 
 
 # ODS-Timestream
@@ -739,7 +726,7 @@ SaaS - lets you use your applications (cloud hosted)
 
 
 
-#Bibliography:
+# Bibliography:
 - FreeCodeCamp.org
 	- AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
 	- https://www.youtube.com/watch?v=Ia-UEYYR44s
@@ -747,3 +734,5 @@ SaaS - lets you use your applications (cloud hosted)
 	- Top 50+ AWS Services Explained in 10 Minutes
 	- https://www.youtube.com/watch?v=JIbIYCM48to 
 
+
+# Third Party Programs

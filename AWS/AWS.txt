@@ -736,3 +736,33 @@ SaaS - lets you use your applications (cloud hosted)
 
 
 # Third Party Programs
+# CockroachDB
+- Cost: 
+	- Serverless: 
+		- Free 5GiB Storage
+			- $1 per additional 1GiB storage
+		-	Free 250M Request Units/month
+			- $1 per additional 10M RUs
+	- Dedicated: 
+		- AWS
+			vCPU - $/hr
+			2 - $0.51
+			4 - $0.90
+			8 - $1.60
+			16 - $3.11
+			32 - $5.34
+			1GB - $0.0005088/hr (1TB - $0.5088)
+			1IOPS  - $0.0000196/hr (1k IOPS - $0.0196)
+		- GCP
+			2 - $0.43/hr
+			4 - $0.71/hr
+			8 - $1.18/hr
+			16 - $2.30/hr
+			32 - $4.20/hr
+			1GB - $0.0011986/hr (1TB - $1.1986)
+- Encryption:
+- SaaS (has PaaS container option)
+- Use Case: PostGres switchover?
+- Designed to be highly PG compliant, and some applications might "just work". 
+
+

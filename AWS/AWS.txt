@@ -7,6 +7,11 @@ CI/CD pipeline as a bunch of local containers.
 - DinD
 - etc
 
+# Fork your own repo 
+cd website
+git remote set-url origin https://github.com/Gilgamech/website
+git remote add upstream https://github.com/Gilgamech/SiteTemplate
+
 How to install Audacity inside a container?
 Host websites. What's after this? Download the container instead of the website - is this just apps all over again?
 Incubation & Startup Advising
@@ -20,18 +25,14 @@ Overlay rental and house sales price on the same map.
 - What makes this proprietary standard more valuable than the industry standard? 
 
 # Misc 
-Code should be as atomic as possible while having as few dependencies as possible. This dual mandate leads to smaller microservices, leading to smaller clusters, and more flexible compute supply. Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
+Code should have minimal dependencies and then be as atomic as possible. This dual mandate leads to smaller and simpler microservices, leading to smaller clusters, and more flexible compute supply. Reducing dependencies reduces package bloat, and reducing obfuscation makes understanding the code less complex. Smaller and simpler containers make smaller and simpler pods. Smaller and simpler containers and pods are easier to stack in RAM and schedule across CPUs. 
+Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
 The short term benefits of (doing X) exceeds the long term support costs.
-DBaaS - DB are software, so DBaaS are SaaS by definition.
-
-# Fork your own repo 
-cd website
-git remote set-url origin https://github.com/Gilgamech/website
-git remote add upstream https://github.com/Gilgamech/SiteTemplate
 
 IaaS - lets you host your applications (servers)
 PaaS - lets you build your applications (functions)
 SaaS - lets you use your applications (cloud hosted)
+DBaaS - DB are software, so DBaaS are SaaS by definition.
 
 
 # Amplify
@@ -275,10 +276,10 @@ SaaS - lets you use your applications (cloud hosted)
 - Use Case: Run containers without worrying about servers.
 
 # Glue
-- Cost: 
-- Encryption: Serverless ETL that can connect to other data sets, and a no-code studio
+- Cost: Free?
+- Encryption: 
 - PaaS
-- Use Case: 
+- Use Case: Serverless ETL that can connect to other data sets, and has a no-code studio. (If a user can access ALL s3 files in a Glue Table, then Glue will present the Table to Athena for the user to query.)
 
 # Graviton CPUs
 - Cost: 
@@ -644,10 +645,10 @@ SaaS - lets you use your applications (cloud hosted)
 - Use Case: Rehost VMWare workloads in AWS before pursuing a more cloud-native tech strategy.
 
 # VPC
-- Cost: 
-- Encryption:
+- Cost: Free
+- Encryption: Unsure
 - IaaS
-- Use Case: 
+- Use Case: Container for other AWS IaaS and PaaS products, and can have Endpoints for AWS SaaS products.
 ## VPC-endpoints
 ## VPC-flowLogs
 ## VPC-nacls

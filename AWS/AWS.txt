@@ -1,9 +1,4 @@
-Set up sample companies based on real data.
-- Uber as a CloudFormation template
-
-- Where to incorporate shift left?
 - Antipatterns? 
-	- 
 
 CI/CD pipeline as a bunch of local containers.
 - Repo?
@@ -20,78 +15,13 @@ Incubation & Startup Advising
 - Solutions Architect 
 Overlay rental and house sales price on the same map.
 
-
-# Combine A and B
-- Make 3d comparative levels of architecture solutions - tech level, tech flavor, tech maturity (Gartner bracket) 
 - How do game studios go cloud native? Epic?
 - Why buy what you can make?
 - What makes this proprietary standard more valuable than the industry standard? 
 
-- Getting companies to stop operating like it's 2006 or 2014 and act like it's 2022. (messaging)
-- Replacing with SaaS allows coupling costs to usage much more effectively than hiring contractors to mange your IaaS.
-- To move from the multi-network hydra of VPC foam:
-	1. Main
-	2. Audit
-	3. Logging
-	4. Security Dev
-	5. Security Prod
-	6. Corp Dev
-	7. Corp Test
-	8. Corp Prod
-	9. AppA Dev
-	10. AppA Test 
-	11. AppA Stage
-	12. AppA QA
-	13. AppA Prod
-	14. AppB Dev
-	15. AppB Test 
-	16. AppB Stage
-	17. AppB QA
-	18. AppB Prod
-	19. DevOps Dev
-	20. DevOps Test
-	21. DevOps Prod
-
-Remodel your workflow of Dev -> (Test -> Stage -> QA ->) Prod (a few stacks are optional in some applications)
-to a workflow more like Dev locally -> Commit -> CI/CD pipeline [automated unit Testing -> automated Build -> automated stack Validation -> automated Deploy] -> automated blue/green rebalancing (until only the new version is running).
-
-Which reduces you down to:
-	1. Main
-	2. Audit
-	3. Logging
-	4. Security Prod
-	5. Security is using entirely SaaS products.
-		1. Security Dev - new sandbox accounts as needed
-	- Corp is using entirely SaaS products.
-		2. Corp Dev 
-		3. Corp Test
-		4. Corp Prod
-	- CI/CD pipeline handles these steps. (i.e. Gitlab)
-		5. App Dev - develop locally
-		- App Repo - group code storage
-		6. App Test - automated testing
-		7. App QA - more automated testing
-		8. App Stage - repo then blue/green deploy
-	6. App Prod
-		9. App Dev - as above
-		- App Repo - as above
-		10. App Test - as above
-		11. App Stage - as above
-		12. App QA - as above
-	7. App Prod
-	- CI/CD pipeline is entirely SaaS products.
-		13. DevOps Dev
-		14. DevOps Test
-		15. DevOps Prod
-
-- SaaS cost differential
-
 # Misc 
 Code should be as atomic as possible while having as few dependencies as possible. This dual mandate leads to smaller microservices, leading to smaller clusters, and more flexible compute supply. Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
 The short term benefits of (doing X) exceeds the long term support costs.
-Maintenance is technical taxes.
-Lift and shift on cloud is a technical loan. It gives you more runway but doesn't reduce your technical taxes.
-Unscalable, inefficient, or unmaintained is technical debt, and refactoring/rewriting/redesigning is paying off technical debt. 
 DBaaS - DB are software, so DBaaS are SaaS by definition.
 
 # Fork your own repo 

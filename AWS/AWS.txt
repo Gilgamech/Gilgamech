@@ -1,4 +1,7 @@
-- Antipatterns? 
+Author: Stephen Gillie
+Created: 7/1/2022
+Updated: 7/25/2022
+Notes: Antipatterns? 
 
 CI/CD pipeline as a bunch of local containers.
 - Repo?

@@ -109,14 +109,14 @@ function finder($checkArr) {
 	$cr[7] = "h";
 	$cr[8] = "i";
 
-	for ($r = 0; $r < 9; $r++) { 
+	for ($r = 0; $r < 9; $r++) {
 //console.log($r)
-		for ($c = 0; $c < 9; $c++) { 
+		for ($c = 0; $c < 9; $c++) {
 //console.log($c)
 			if ($checkArr[$cr[$r] + $c] == null) {
 //console.log("Checking cell " + $cr[$r] + $c)
 				var $out=[];
-				for ($n = 1; $n < 10; $n++) { 
+				for ($n = 1; $n < 10; $n++) {
 					//var $ret = null;
 					$ret = check($cr[$r],$c,$n,$checkArr)
 //console.log($n)
@@ -166,7 +166,7 @@ function check($row,$col,$checkNum,$checkArr) {
 
 //Check column
 	var $checkCol;
-	for ($checkCol = 0; $checkCol < 9; $checkCol++) { 
+	for ($checkCol = 0; $checkCol < 9; $checkCol++) {
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$checkCol+",";
 //console.log("col check: " + $row + $checkCol + " = " + $checkNum)
@@ -213,7 +213,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 0; $checkCol < 3; $checkCol++) {  
+	for ($checkCol = 0; $checkCol < 3; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -229,7 +229,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 3; $checkCol < 6; $checkCol++) { 
+	for ($checkCol = 3; $checkCol < 6; $checkCol++) {
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -245,7 +245,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 6; $checkCol < 9; $checkCol++) {  
+	for ($checkCol = 6; $checkCol < 9; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -261,7 +261,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 0; $checkCol < 3; $checkCol++) {  
+	for ($checkCol = 0; $checkCol < 3; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -277,7 +277,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 3; $checkCol < 6; $checkCol++) { 
+	for ($checkCol = 3; $checkCol < 6; $checkCol++) {
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -293,7 +293,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 6; $checkCol < 9; $checkCol++) {  
+	for ($checkCol = 6; $checkCol < 9; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -309,7 +309,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 0; $checkCol < 3; $checkCol++) {  
+	for ($checkCol = 0; $checkCol < 3; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -325,7 +325,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 3; $checkCol < 6; $checkCol++) { 
+	for ($checkCol = 3; $checkCol < 6; $checkCol++) {
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)
@@ -341,7 +341,7 @@ if ($row == "a" || $row == "b" || $row == "c"){
 	}; //end for
 
 	var $checkCol;
-	for ($checkCol = 6; $checkCol < 9; $checkCol++) {  
+	for ($checkCol = 6; $checkCol < 9; $checkCol++) { 
 		if ($checkArr[$row+$checkCol] == $checkNum) {
 			$output += $row+$col+",";
 //console.log("ennearent check: " + $row + $checkCol + " = " + $checkNum)

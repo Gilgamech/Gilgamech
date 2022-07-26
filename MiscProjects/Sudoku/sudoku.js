@@ -97,6 +97,58 @@ $arr.h3=5;
 $arr.h4=9;
 $arr.h7=8;
 $arr.h7=7;
+function finder($checkArr) {
+	var $r,$c,$n,$ret,$loc,$out=[],$arrCount=Object.keys($checkArr).length;
+	var $cr = ["a","b","c","d","e","f","g","h","i"];
+console.log("Start Finder");
+	for ($r = 0; $r < 9; $r++) {
+		for ($c = 0; $c < 9; $c++) {
+			$loc = $cr[$r] + $c;
+			if ($checkArr[$loc] == null) {
+				var $out=[];
+				for ($n = 1; $n < 10; $n++) {
+					check($cr[$r],$c,$n,$checkArr,($rv)=>$ret=$rv);
+					if (($ret.col+$ret.row+$ret.output)== "") {
+						$out[$out.length] = $n;
+					} else {
+					};
+				};
+				if ($out.length==1) {
+console.log($loc + " value is "+ $out[$out.length-1]);
+					$checkArr[$cr[$r] + $c] = $out[$out.length-1];
+				} else {
+console.log("Possible values for cell "+$loc+" are "+ $out);
+				};
+			};
+		};
+	};
+	if (Object.keys($checkArr).length == $arrCount) {
+		for ($r = 0; $r < 9; $r++) {
+			for ($c = 0; $c < 9; $c++) {
+				$loc = $cr[$r] + $c;
+				var $out=[];
+				if ($checkArr[$loc] == null) {
+					for ($n = 1; $n < 10; $n++) {
+						var $r2=[],$r3=[];
+						check($cr[$r],$c,$n,$checkArr,($rv)=>$ret=$rv);
+						checkEnnerant($ret["ennerantA"],$n,$checkArr,($rv)=> $r2.a= $rv)
+						checkEnnerant($ret["ennerantB"],$n,$checkArr,($rv)=> $r2.b= $rv)
+						checkEnnerant($ret["ennerantC"],$n,$checkArr,($rv)=> $r3.a= $rv)
+						checkEnnerant($ret["ennerantD"],$n,$checkArr,($rv)=> $r3.b= $rv)
+						if (($r2.a!="" && $r2.b!="" || $r3.a!="" && $r3.b!="") && (($ret.col+$ret.row+$ret.output)== "")){
+								$out[$out.length] = $n;
+						} else {
+						};
+					};
+				};
+				if ($out.length==1) {
+console.log($loc + " value from ennerant is "+ $out[$out.length-1]);
+						$checkArr[$loc] = $out[$out.length-1];
+				} else {
+console.log("Possible values from ennerant for cell "+$loc+" are "+ $out);
+				};
+			};
+		};
 function addToGrid($checkArr) {
 	var $checkRow = ["a","b","c","d","e","f","g","h","i"],$output="",i;
 	for (i = 0; i <=8; i++) {
@@ -254,58 +306,6 @@ function check($row,$col,$checkNum,$checkArr,$returnVar) {
 	checkEnnerant($o["ennerant"],$checkNum,$checkArr,($rv)=> $o["output"] = $rv)
 	return $returnVar($o);
 };
-function finder($checkArr) {
-	var $r,$c,$n,$ret,$loc,$out=[],$arrCount=Object.keys($checkArr).length;
-	var $cr = ["a","b","c","d","e","f","g","h","i"];
-console.log("Start Finder");
-	for ($r = 0; $r < 9; $r++) {
-		for ($c = 0; $c < 9; $c++) {
-			$loc = $cr[$r] + $c;
-			if ($checkArr[$loc] == null) {
-				var $out=[];
-				for ($n = 1; $n < 10; $n++) {
-					check($cr[$r],$c,$n,$checkArr,($rv)=>$ret=$rv);
-					if (($ret.col+$ret.row+$ret.output)== "") {
-						$out[$out.length] = $n;
-					} else {
-					};
-				};
-				if ($out.length==1) {
-console.log($loc + " value is "+ $out[$out.length-1]);
-					$checkArr[$cr[$r] + $c] = $out[$out.length-1];
-				} else {
-console.log("Possible values for cell "+$loc+" are "+ $out);
-				};
-			};
-		};
-	};
-	if (Object.keys($checkArr).length == $arrCount) {
-		for ($r = 0; $r < 9; $r++) {
-			for ($c = 0; $c < 9; $c++) {
-				$loc = $cr[$r] + $c;
-				var $out=[];
-				if ($checkArr[$loc] == null) {
-					for ($n = 1; $n < 10; $n++) {
-						var $r2=[],$r3=[];
-						check($cr[$r],$c,$n,$checkArr,($rv)=>$ret=$rv);
-						checkEnnerant($ret["ennerantA"],$n,$checkArr,($rv)=> $r2.a= $rv)
-						checkEnnerant($ret["ennerantB"],$n,$checkArr,($rv)=> $r2.b= $rv)
-						checkEnnerant($ret["ennerantC"],$n,$checkArr,($rv)=> $r3.a= $rv)
-						checkEnnerant($ret["ennerantD"],$n,$checkArr,($rv)=> $r3.b= $rv)
-						if (($r2.a!="" && $r2.b!="" || $r3.a!="" && $r3.b!="") && (($ret.col+$ret.row+$ret.output)== "")){
-								$out[$out.length] = $n;
-						} else {
-						};
-					};
-				};
-				if ($out.length==1) {
-console.log($loc + " value from ennerant is "+ $out[$out.length-1]);
-						$checkArr[$loc] = $out[$out.length-1];
-				} else {
-console.log("Possible values from ennerant for cell "+$loc+" are "+ $out);
-				};
-			};
-		};
 	};
 };
 

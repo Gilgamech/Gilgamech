@@ -672,6 +672,25 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Top 50+ AWS Services Explained in 10 Minutes
 	- https://www.youtube.com/watch?v=JIbIYCM48to 
 
+#AzureAD
+- Use Case: 
+- Cost: 
+- Encryption:
+- SaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+#Amazon Sortation Center
+- Use Case: Package sort for physical logistics throughput.
+- Cost: 
+- Encryption:
+- SaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+
 
 # Third Party Programs
 # CockroachDB
@@ -702,6 +721,156 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - SaaS (has PaaS container option)
 - Use Case: PostGres switchover?
 - Designed to be highly PG compliant, and some applications might "just work". 
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## ClearScale
+- Use Case: 
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## JupiterOne
+- Use Case: 
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Snowflake
+- Use Case: Very big data
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Flywheel
+- Use Case: 
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## SonicWall
+- Use Case: 
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Qualys
+- Use Case: Scan all ports on all hosts on your network, and report back which ones are open, alongside scary reports of which kinds of hacks hold open these ports.
+- Cost: 
+- Encryption: No
+- SaaS?
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Apica
+- Use Case: Find vulnerabilities in your dependencies.
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Snyk
+- Use Case: Find vulnerabilities in your dependencies.
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Zeck: Quirky sense of humor, or unprofessional presentation?
+- Use Case: Board Deck creation software (automation?) 
+- Cost: 
+- Encryption:
+- SaaS?
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## RapidAPI
+- Use Case: 
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Tailwind https://www.youtube.com/watch?v=mr15Xzb1Ook
+- Use Case: Provides CSS utility classes to be combined into your desired style. Use @apply keyword in normal CSS to prevent boilerplating. VSCode aids in utility class disambiguation.
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## CircleCI
+- Use Case: CI/CD testing
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Crunchbase
+- Use Case: Info about companies - Bloomberg competitor?
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Glassdoor
+- Use Case: Employee reviews of companies.
+- Cost: 
+- Encryption:
+- XaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+## Optum Cloud (Not to be confused with OptumCare.)
+- Use Case: Remote primary hosting, data recovery, and backup hosting. (Cloud Partner / MSP?)
+- Cost: 
+- Encryption:
+- PaaS
+- Stock price / ownership structure:
+- Crunchbase: 
+- Glassdoor: 
+
+- Antipatterns? 
+	- Software testing ice cream cone
+
+# Misc 
+- Code should have minimal dependencies and then be as atomic as possible. This leads to smaller and simpler microservices, leading to smaller clusters, and more flexible compute supply. Reducing dependencies reduces package bloat, and reducing obfuscation makes understanding the code less complex. Smaller and simpler containers make smaller and simpler pods. Smaller and simpler containers and pods are easier to stack in RAM and schedule across CPUs. 
+- Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
+- Why buy what you can make?
+- What makes this proprietary standard more valuable than the industry standard? 
+- Do the short term benefits of (doing X) exceed the long term support costs?
+- How do game studios go cloud native? What's a better way to commit to a repo than shoving hundreds of gigabytes of textures and meshes and game levels across an Internet backbone?
+- Red-green-refactor TDD process is the "buy the cheapest one and use it as a learning experience to know what you really need" strategy.
 
 # DBaaS
 1. Key-Value: Basically remote variables.

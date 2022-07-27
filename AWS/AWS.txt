@@ -1,7 +1,5 @@
 Author: Stephen Gillie
 Created: 7/1/2022
-Updated: 7/25/2022
-Notes: Antipatterns? 
 
 CI/CD pipeline as a bunch of local containers.
 - Repo?
@@ -32,6 +30,8 @@ Code should have minimal dependencies and then be as atomic as possible. This du
 Heavy library reuse is not good, as including multiple dependencies bloats a software package while obfuscating its full functionality from even its programmer. 
 The short term benefits of (doing X) exceeds the long term support costs.
 
+Updated: 7/27/2022
+Notes: 
 IaaS - lets you host your applications (servers)
 PaaS - lets you build your applications (functions)
 SaaS - lets you use your applications (cloud hosted)
@@ -693,7 +693,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 
 
 # Third Party Programs
-# CockroachDB
+## CockroachDB
 - Cost: 
 	- Serverless: 
 		- Free 5GiB Storage
@@ -701,7 +701,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 		-	Free 250M Request Units/month
 			- $1 per additional 10M RUs
 	- Dedicated: 
-		- AWS
+		- AWS (How much markup over EC2 or Aurora is this?)
 			vCPU - $/hr
 			2 - $0.51
 			4 - $0.90
@@ -872,8 +872,8 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - How do game studios go cloud native? What's a better way to commit to a repo than shoving hundreds of gigabytes of textures and meshes and game levels across an Internet backbone?
 - Red-green-refactor TDD process is the "buy the cheapest one and use it as a learning experience to know what you really need" strategy.
 
-# DBaaS
-1. Key-Value: Basically remote variables.
+# DBaaS paradigms https://www.youtube.com/watch?v=W2Z7fbCLSTw
+1. Key-Value: Basically remote variables. Remote Procedure Call where the Remote Procedure just stores and responds with the data sent to it.
 	- Data is stored as: Values that are attached to keys.
 	- Use Case: Very fast in-memory caching to supplement another database option.
 	- Non-Ideal: Structured or general site data, joins. 

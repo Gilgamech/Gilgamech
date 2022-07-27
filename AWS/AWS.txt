@@ -37,32 +37,32 @@ PaaS - lets you build your applications (functions)
 SaaS - lets you use your applications (cloud hosted)
 DBaaS - DB are software, so DBaaS are SaaS by definition.
 
-
-# Amplify
+# AWS Services
+## Amplify
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: mobile SDKs to connect to AWS infra.
 
-# App Runner
+## App Runner
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: Point at container and it handles all the orchestration.
 
-# Block Storage (EBS?)
+## Block Storage (EBS?)
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Used for high-data requirements, but needs manual config.
 
-# Bracket
+## Bracket
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Quantum Computing
 
-# CLI
+## CLI
 - Cost: Free
 - Encryption: SSL
 - PaaS
@@ -73,14 +73,14 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - aws configure command sets up IAM keys, stored plaintext on the filesystem, so use roles instead wherever possible.
 - Installed via Python script
 
-# CloudFormation
+## CloudFormation
 - Cost: 
 - Encryption: are templates encrypted?
 - IaaS
 - Use Case: automate the provisioning of resources and Infrastructure As Code.
 - JSON or YAML
 - Errors rollback with message "ROLLBACK_IN_PROGRESS"
-## CloudFormation Templates
+### CloudFormation Templates
 - Must define at least one resource.
 - Larger than 51,200 bytes (0.05 MB) must be imported from S3 bucket
 - Can be nested into NestedStacks. 
@@ -94,7 +94,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Resources - define what to provision (minimum 1)
 	- Conditions - control if resources get created and/or properties assigned.
 
-# CloudFront CDN
+## CloudFront CDN
 - Cost: 
 - Encryption: (Are there use cases for non-public CDNs, like large companies? Does Amazon/AWS use CDNs to accelerate internal proprietary content? Are the edge copies encrypted?)
 - IaaS
@@ -109,7 +109,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Invalidating cache immediately expires the cached items, so they refresh immediately.
 - Refreshing a cached item has a bandwidth cost of moving the item from origin to edge.
 
-# CloudTrail
+## CloudTrail
 - Cost: 
 - Encryption: Are trails encrypted?
 - SaaS
@@ -117,13 +117,13 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Involves governance, compliance, operational auditing, and risk auditing.
 - Can be configured to gather all logs in all regions in all accounts across an AWS Organization. 
 - Default is 90 days via Event History, and beyond 90 days requires creating a Trail, which is logged to an S3 bucket, and can be analyzed with Athena.
-## CloudTrail Logs
+### CloudTrail Logs
 - Log Validation prevents tampering. (How?)
 - Encryption: KMS
 - Can be streamed to CloudWatch Logs
 - 2 event kinds: management (operations like IAM) and data (resources like EC2 or Lambda). Trails don't include data events by default.
 
-# CloudWatch
+## CloudWatch
 - Cost: 
 - SaaS
 - Use Case: Monitoring
@@ -132,25 +132,25 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Most services default to 1 minute reporting intervals, with options for 1, 3, and 5. 
 - EC2 starts with 5 and calls the 1 min option "detailed monitoring" (does it cost more?) - CloudWatch Agent required.
 - Can stream custom logs too.
-## CloudWatch Dashboards
+### CloudWatch Dashboards
 - Encryption: Are Dashboards encrypted?
 - Visualize metrics
-## CloudWatch Events
+### CloudWatch Events
 - Encryption: Are Events encrypted?
 - Trigger AWS events based on condition (use case hourly snapshots)
-## CloudWatch Alarms
+### CloudWatch Alarms
 - Encryption: Are Alarms encrypted?
 - Notifications based on metrics
-## CloudWatch Logs
+### CloudWatch Logs
 - Encryption: Are Logs encrypted?
 - Data point logging
 - Must belong to log group
-## CloudWatch Metrics
+### CloudWatch Metrics
 - Encryption: Are Metrics encrypted?
 - Capture one data point across time.
 - Custom Metrics allow much higher resolution, down to 1 second.
 
-# Cognito
+## Cognito
 - Cost: 
 - Encryption: Are user pools and identity pools encrypted? Where are they stored?
 - PaaS
@@ -164,31 +164,31 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- OIDC is an Oauth type of IdP.
 	- SAML is an SSO type of IdP.
 
-# Data Exchange
+## Data Exchange
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: Buy someone else's data to process, or use 3rd party data
 
-# Datasync
+## Datasync
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Data transfer agent deployed on a VM in your network, an EC2 Outpost in your network, or on an AWS Snowcone in your network.
 
-# Deep Racer
+## Deep Racer
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: RC car that you can program with ML 
 
-# ODS-DocumentDB
+## ODS-DocumentDB
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: notMongoDB with 1:1 to be allowed to charge money for open sourced applications.
 
-# ODS-DynamoDB
+## ODS-DynamoDB
 - Cost: 
 - Encryption:
 - PaaS
@@ -201,7 +201,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Eventually (1 sec) Consistent Reads - can return inconsistent immediate reads too.
 	- Strongly Consistent Reads - will wait until data is consistent (1 sec) before returning, with higher latencies due to no immediate read option.
 
-# EBS
+## EBS
 - Cost: 
 - Encryption: KMS?
 - IaaS
@@ -211,7 +211,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - EBS backed instances can be stopped without data loss.
 - Root volumes delete on termination by default.
 - Volumes can have termination protection.
-## Snapshots
+### Snapshots
 - Snapshots are incremental point-in-time copies, and only changes made since the last snapshot are moved to S3.
 - Initial snapshots will take longer than subsequent snapshots.
 - EC2 instance should be stopped before snapshotting root volume. But other disks can be taken while the server is running. 
@@ -219,24 +219,24 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Unencrypted snapshots can be shared with other AWS accounts or made public. (Why would you want to make a snapshot public?)
 - AMIs can be created from snapshots, or volumes.
 
-# EC2
+## EC2
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: 
-## EC2-AMI
-## EC2-ASG
-## EC2-NAT
-## EC2-pricing
-## EC2-pricing2
+### EC2-AMI
+### EC2-ASG
+### EC2-NAT
+### EC2-pricing
+### EC2-pricing2
 
-# ODS-ElasiCache
+## ODS-ElasiCache
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Fully managed Redis in-memory database.
 
-# ELB
+## ELB
 - Cost: ~$0.55/day or $18/month.
 - Encryption: All can hold SSL certs
 - IaaS
@@ -260,49 +260,49 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Cannot be cross-region.
 - X-Forwarded-For header has source IP.
 
-# ODS-ES
+## ODS-ES
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: 
 
-# FSx 
+## FSx 
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: 
 
-# Fargate
+## Fargate
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: Run containers without worrying about servers.
 
-# Glue
+## Glue
 - Cost: Free?
 - Encryption: 
 - PaaS
 - Use Case: Serverless ETL that can connect to other data sets, and has a no-code studio. (If a user can access ALL s3 files in a Glue Table, then Glue will present the Table to Athena for the user to query.)
 
-# Graviton CPUs
+## Graviton CPUs
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: 
 
-# Ground Station
+## Ground Station
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Contact satellites in orbit around the Earth.
 
-# Honeycode
+## Honeycode
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Write functions without code
 
-# IAM
+## IAM
 - Cost: Free
 - Encryption: (Are your policies encrypted at rest?)
 - PaaS (Foundational)
@@ -326,27 +326,27 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Inline Policies are directly attached to a user, group, or resource.
 	- List Policies can be listed in the AWS Console and are not directly attached.
 
-# IOT
+## IOT
 - Cost: 
 - Encryption:
 - PaaS?
 - Use Case: 
-## IOT Core 
+### IOT Core 
 	- logging
 
-# Kinesis
+## Kinesis
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Captures realtime data stream 
 
-# Lake Formation
+## Lake Formation
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Create data lakes, or repositories of unstructured data. 
 
-# Lambda
+## Lambda
 - Cost: Pay per invocation (CPU time and memory size, rounded to nearest 100 ms, and based on requests. First 1M requests are free.) 
 - Encryption:
 - PaaS
@@ -367,61 +367,61 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Can scale to 1000 (default) concurrent functions. Can increase this default as an AWS Service Limit increase.
 - Cold Starts - if not used recently there will be a startup delay.
 
-# LandingZone
+## LandingZone
 - Cost: 
 - Encryption:
 - PaaS? (Foundational)
 - Use Case: 
 
-# Lex
+## Lex
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Conversational service with the same tech that operates Amazon Alexa
 
-# Lightsail
+## Lightsail
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: if you don't care about the infra and just want to deploy a Wordpress site.
 
-# MapReduce
+## MapReduce
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Apache Spark, lets you do massive parallel processing on data sets.
 
-# MSK
+## MSK
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Fully managed Apache Kafka message queue
 
-# ODS-Neptune
+## ODS-Neptune
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Graph DB that can get better performance on highly-connected data like a social graph or recommendation engine.
 
-# Organizations
+## Organizations
 - Cost: 
 - Encryption:
 - PaaS? (Foundational)
 - Use Case: 
 
-# Outposts
+## Outposts
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: Run AWS APIs on your servers.
 
-# ODS-Quantum Ledger
+## ODS-Quantum Ledger
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: QLDB is blockchain-ish
 
-# R53
+## R53
 - Cost: 
 - Encryption: (Is there any non-public info in DNS?)
 - IaaS
@@ -439,7 +439,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Geo-proximity: Add Bias to Geolocation (requires R53 Traffic Flow)
 	- Multi-Value Answer: Return multiple answers (using health checks)
 
-# RDS
+## RDS
 - Cost: 
 - Encryption: at rest with KMS, in motion with HTTPS.
 - PaaS
@@ -476,7 +476,7 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Can be promoted to their own database, but this breaks replication.
 	- You can have replicas of Read-Replicas. (Can you have Read-Replicas of Read-Replicas?)
 
-# ODS-Redshift
+## ODS-Redshift
 - Cost: Billed per hour for single-nodes and compute nodes.
 - Encryption: KMS or CloudHSM
 - PaaS
@@ -496,19 +496,19 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Uses massively parallel processing (MPP) to distribute queries and data.
 - Uses sample data to create an empty table.
 
-# Registry of Open Data 
+## Registry of Open Data 
 - Cost: Free
 - Encryption:
 - SaaS
 - Use Case: Use a public data set, like the Cancer Genome Atlas, USGS LandSat, NOAA GOES, etc.
 
-# Rekognition
+## Rekognition
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Image classification API
 
-# Robomaker - robot simulators
+## Robomaker - robot simulators
 - Cost: 
 - Encryption:
 - PaaS
@@ -519,22 +519,22 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Encryption:
 - SaaS
 - Use Case: 
-## S3-storageClasses
-## S3-transfer
+### S3-storageClasses
+### S3-transfer
 
-# S3-snowball
+## S3-snowball
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: 
 
-# Sagemaker
+## Sagemaker
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Use Tensorflow or Pytorch with a managed Jupyter notebook that can connect to a GPU.
 
-# SDK
+## SDK
 - Cost: 
 - Encryption:
 - PaaS
@@ -542,37 +542,37 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Programmatic Access must be setup from IAM
 - Available languages: C++, Go, Java, JS & NodeJS, .NET, PHP, Python, Ruby
 
-# Serverless repos
+## Serverless repos
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: Lambda Marketplace
 
-# SES
+## SES
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: can send emails
 
-# ODS-SimpleDB
+## ODS-SimpleDB
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Basic NoSQL DB.
 
-# Snow Mobile Core (SnowCone?) provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
+## Snow Mobile Core (SnowCone?) provides a suite of services (Systems Manager, Config, CloudWatch, AutoScaling, CloudFormation, CloudTrail, S3, SAS, VPC Management Tools, Provisioning and Subscriber tools, Mobile core control plane through a 5G or 4G connection.)
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: 
 
-# SNS
+## SNS
 - Cost: 
 - Encryption:
 - SaaS
 - Use Case: can send push notifications to your app.
 
-# Storage Gateway
+## Storage Gateway
 - Cost: Services are billed separately below. 
 	- The AWS Hardware Appliance is available exclusively through resellers, including CDW.
 	- Data Transfer from your gateway appliance to the AWS Storage Gateway service is free.
@@ -587,14 +587,14 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 - Encryption:
 - IaaS
 - Use Case: Data transfer agent deployed on a VM or hardware device in your network, or as EC2 or VMWare Cloud VM.
-## S3 Gateway
+### S3 Gateway
 - Storage Cost: S3 rate
 - Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month. (Billed as Amazon S3 requests.)
-## FSx Gateway
+### FSx Gateway
 - Gateway Cost: $0.69 per Hour
 - Storage Cost: FSx for Windows rate
 - Transfer Cost: (None listed)
-## Tape Gateway
+### Tape Gateway
 - Gateway Cost: 
 - Storage tiers: (per GB-month)
 	- Standard: $0.023 
@@ -610,57 +610,61 @@ DBaaS - DB are software, so DBaaS are SaaS by definition.
 	- Glacier Flexible Retrieval: $0.0108 (Prorated across 90 days.)
 	- Glacier Deep Archive: $0.00099 (Prorated across 180 days.)
 - Archival: Free (what does this entail?)
-## Volume Gateway
+### Volume Gateway
 - Gateway Cost: 
 - Storage Cost: $0.023 per GB-month of data stored
 - EBS Snapshot storage - Stored and billed as Amazon EBS snapshots.
 - Transfer Cost: The first 100 GB into AWS per account is free, then $0.01 per GB up to a maximum of $125.00 per gateway per month.
 
-# STS
+## STS
 - Cost: 
 - Encryption:
 - PaaS (Foundational)
 - Use Case: 
 
-# Transit Gateway
+## Transit Gateway
 - Cost: 
 - Encryption:
 - IaaS
 - Use Case: 
 
-# ODS-Timestream
+## ODS-Timestream
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Time series database with built-in time-based queries and analytics
 
-# Trainium ML 
+## Trainium ML 
 - Cost: 
 - Encryption:
 - PaaS
 - Use Case: Machine Learning ASICs can improve training speed while reducing costs.
 - Training hardware Trn1
 
-# VMWare Cloud
+## VMWare Cloud
 - Cost: 
 - Encryption:
 - IaaS
-- Use Case: Rehost VMWare workloads in AWS before pursuing a more cloud-native tech strategy.
+- Use Case: Rehost VMWare workloads in AWS before/while pursuing a more cloud-native tech strategy.
 
-# VPC
+## VPC
 - Cost: Free
 - Encryption: Unsure
 - IaaS
 - Use Case: Container for other AWS IaaS and PaaS products, and can have Endpoints for AWS SaaS products.
-## VPC-endpoints
-## VPC-flowLogs
-## VPC-nacls
-## VPC-nat
-## VPC-securityGroups
+### VPC-endpoints
+### VPC-flowLogs
+### VPC-nacls
+### VPC-nat
+### VPC-securityGroups
 
+## Cloud Audit Academy
+- Cost: 
+- Encryption:
+- IaaS
+- Use Case: Rehost VMWare workloads in AWS before/while pursuing a more cloud-native tech strategy.
 
-
-# Bibliography:
+## Bibliography:
 - FreeCodeCamp.org
 	- AWS Certified Solutions Architect - Associate 2020 (PASS THE EXAM!)
 	- https://www.youtube.com/watch?v=Ia-UEYYR44s

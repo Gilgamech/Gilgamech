@@ -1,0 +1,8 @@
+- SaaSBase
+Site with my AWS .txt notes in an ExpressJS template, read from a local CSV/JSON.
+Pages
+- Product page
+- Company page?
+- Main page?
+- Index?
+- 

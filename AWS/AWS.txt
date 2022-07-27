@@ -1,26 +1,5 @@
 Author: Stephen Gillie
 Created: 7/1/2022
-
-CI/CD pipeline as a bunch of local containers.
-- Repo?
-- Jenkins
-- Testing
-- DinD
-- etc
-
-# Fork your own repo 
-cd website
-git remote set-url origin https://github.com/Gilgamech/website
-git remote add upstream https://github.com/Gilgamech/SiteTemplate
-
-How to install Audacity inside a container?
-Host websites. What's after this? Download the container instead of the website - is this just apps all over again?
-Incubation & Startup Advising
-- Designing 3d printed products that people can buy.
-- Animation (make animation of your process of animating - animated flowchart)
-- Solutions Architect 
-Overlay rental and house sales price on the same map.
-
 - How do game studios go cloud native? Epic?
 - Why buy what you can make?
 - What makes this proprietary standard more valuable than the industry standard? 

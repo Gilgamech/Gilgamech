@@ -1,187 +1,341 @@
-# Third Party Programs
-## CockroachDB
-- Cost: 
-	- Serverless: 
-		- Free 5GiB Storage
-			- $1 per additional 1GiB storage
-		-	Free 250M Request Units/month
-			- $1 per additional 10M RUs
-	- Dedicated: 
-		- AWS (How much markup over EC2 or Aurora is this?)
-			vCPU - $/hr
-			2 - $0.51
-			4 - $0.90
-			8 - $1.60
-			16 - $3.11
-			32 - $5.34
-			1GB - $0.0005088/hr (1TB - $0.5088)
-			1IOPS  - $0.0000196/hr (1k IOPS - $0.0196)
-		- GCP
-			2 - $0.43/hr
-			4 - $0.71/hr
-			8 - $1.18/hr
-			16 - $2.30/hr
-			32 - $4.20/hr
-			1GB - $0.0011986/hr (1TB - $1.1986)
-- Encryption:
-- SaaS (has PaaS container option)
-- Use Case: PostGres switchover?
-- Designed to be highly PG compliant, and some applications might "just work". 
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
+[{
+	"cost": [{
+		"Serverless": [
+			"Free 5GiB Storage",
+			"$1 per additional 1GiB storage",
+			"Free 250M Request Units/month",
+			"$1 per additional 10M RUs"
+		],
+		"Dedicated":[{
+			"AWS (How much markup over EC2 or Aurora is this?)":{
+				"vCPU": "$/hr",
+				"2": "$0.51",
+				"4": "$0.90",
+				"8": "$1.60",
+				"16": "$3.11",
+				"32": "$5.34",
+				"1GB": "$0.0005088/hr (1TB - $0.5088)",
+				"1IOPS ": "$0.0000196/hr (1k IOPS - $0.0196)"
+			},
+			"GCP":{
+				"vCPU": "$/hr",
+				"2": "$0.43",
+				"4": "$0.71",
+				"8": "$1.18",
+				"16": "$2.30",
+				"32": "$4.20",
+				"1GB": "$0.0011986/hr (1TB - $1.1986)"
+			}
+		}]
+	}],
+	"Crunchbase": "",
+	"encryption": "",
+	"Glassdoor": "",
+	"HaBcDr": "",
+	"name": "CockroachDB",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"type": "- SaaS (has PaaS container option)",
+  	"useCase": "PostGres switchover?",
+	"notes":[
+		"Designed to be highly PG compliant, and some applications might 'just work'."
+	]
 
-## ClearScale
-- Use Case: 
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "ClearScale",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "JupiterOne",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Snowflake",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Very big data",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Flywheel",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "SonicWall",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "No",
+	"HaBcDr": "",
+	"name": "Qualys",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Scan all ports on all hosts on your network, and report back which ones are open, alongside scary reports of which kinds of hacks hold open these ports.",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Apica",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Find vulnerabilities in your dependencies, Codesmells Dashboards.",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Snyk",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Find vulnerabilities in your dependencies.",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Zeck",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Board Deck creation software (automation?)",
+	"notes":[
+		"Quirky sense of humor, or unprofessional presentation?"
+	]
 
-## JupiterOne
-- Use Case: 
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "RapidAPI",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Jetstack",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Traefik",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "",
+	"notes":[]
 
-## Snowflake
-- Use Case: Very big data
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Redbear",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Australian MSP",
+	"notes":[]
+},
+{
+	"cost": "free",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "SQLite",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "Infra",
+  	"useCase": "Lightweight SQL as flat files.",
+	"notes":[]
+},
+{
+	"cost": "free",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "NGINX (Engine-X)",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "Infra",
+  	"useCase": "High-volume webserver, caching reverse proxy. Defaults to programmatic file handling.",
+	"notes":[
+		"Video: https://www.youtube.com/watch?v=JKxlsvZXG7c"
+	]
 
-## Flywheel
-- Use Case: 
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## SonicWall
-- Use Case: 
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Qualys
-- Use Case: Scan all ports on all hosts on your network, and report back which ones are open, alongside scary reports of which kinds of hacks hold open these ports.
-- Cost: 
-- Encryption: No
-- SaaS?
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Apica
-- Use Case: Find vulnerabilities in your dependencies.
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Snyk
-- Use Case: Find vulnerabilities in your dependencies.
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Zeck: Quirky sense of humor, or unprofessional presentation?
-- Use Case: Board Deck creation software (automation?) 
-- Cost: 
-- Encryption:
-- SaaS?
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## RapidAPI
-- Use Case: 
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Tailwind https://www.youtube.com/watch?v=mr15Xzb1Ook
-- Use Case: Provides CSS utility classes to be combined into your desired style. Use @apply keyword in normal CSS to prevent boilerplating. VSCode aids in utility class disambiguation.
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## CircleCI
-- Use Case: CI/CD testing
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Crunchbase
-- Use Case: Info about companies - Bloomberg competitor?
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Glassdoor
-- Use Case: Employee reviews of companies.
-- Cost: 
-- Encryption:
-- XaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-## Optum Cloud (Not to be confused with OptumCare.)
-- Use Case: Remote primary hosting, data recovery, and backup hosting. (Cloud Partner / MSP?)
-- Cost: 
-- Encryption:
-- PaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-#AzureAD
-- Use Case: Serverless Active Directory
-- Cost: 
-- Encryption:
-- SaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-#Amazon Sortation Center
-- Use Case: Package sort for physical logistics throughput.
-- Cost: 
-- Encryption:
-- SaaS
-- Stock price / ownership structure:
-- Crunchbase: 
-- Glassdoor: 
-
-
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Tailwind",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Provides CSS utility classes to be combined into your desired style. Use @apply keyword in normal CSS to prevent boilerplating. VSCode aids in utility class disambiguation.",
+	"notes":[
+		"Video: https://www.youtube.com/watch?v=mr15Xzb1Ook"
+	]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "CircleCI",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "CI/CD testing",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Crunchbase",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Info about companies - Bloomberg competitor?",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Glassdoor",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "",
+  	"useCase": "Employee reviews of companies.",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Optum Cloud",
+	"stack": "",
+	"stockPriceOrOwnership": "",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "PaaS",
+  	"useCase": "Remote primary hosting, data recovery, and backup hosting. (Cloud Partner / MSP?)",
+	"notes":[
+		"Not to be confused with OptumCare."
+	]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "AzureAD",
+	"stack": "",
+	"stockPriceOrOwnership": "Microsoft",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "SaaS",
+  	"useCase": "Serverless Active Directory",
+	"notes":[]
+},
+{
+	"cost": "",
+	"encryption": "",
+	"HaBcDr": "",
+	"name": "Amazon Sortation Center",
+	"stack": "",
+	"stockPriceOrOwnership": "Amazon",
+	"Crunchbase": "",
+	"Glassdoor": "",
+	"type": "SaaS",
+  	"useCase": "Package sort for physical logistics throughput.",
+	"notes":[]
+}]

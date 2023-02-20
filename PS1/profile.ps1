@@ -2,7 +2,7 @@
 #Author: Stephen Gillie
 #Created 2/4/2023
 #Updated 2/4/2023
-#Notes: C:\repos\Gilgamech\PS1\profile.ps1
+#Notes: Import-Module C:\repos\Gilgamech\PS1\profile.ps1 -force
 
 function Get-YoutubeDL ($videoURI) {
 	& 'C:\Program Files\util\youtube-dl.exe' -x $videoURI

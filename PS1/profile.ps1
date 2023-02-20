@@ -29,3 +29,8 @@ function Get-File2Dir ($dir){
 	}
 }
 
+function Restart-ProgWebserver($i) {
+	copy .\inMemCacheFile.json .\imcs\$i.json
+	copy .\inMemCacheFileCopy.json .\inMemCacheFile.json;
+	node .\index.js
+}

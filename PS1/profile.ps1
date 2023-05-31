@@ -3,6 +3,68 @@
 #Created 2/4/2023
 #Updated 2/19/2023
 #Notes: Import-Module C:\repos\Gilgamech\PS1\profile.ps1 -force
+#And the love kickstarts again.
+
+#They say "break a leg" because "good luck" is bad luck and they want you to be "in the cast". 
+
+function Get-ScreenResolution {            
+[void] [Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms")            
+[void] [Reflection.Assembly]::LoadWithPartialName("System.Drawing")            
+$Screens = [system.windows.forms.screen]::AllScreens            
+
+foreach ($Screen in $Screens) {            
+ $DeviceName = $Screen.DeviceName            
+ $Width  = $Screen.Bounds.Width            
+ $Height  = $Screen.Bounds.Height            
+ $IsPrimary = $Screen.Primary            
+
+ $OutputObj = New-Object -TypeName PSobject             
+ $OutputObj | Add-Member -MemberType NoteProperty -Name DeviceName -Value $DeviceName            
+ $OutputObj | Add-Member -MemberType NoteProperty -Name Width -Value $Width            
+ $OutputObj | Add-Member -MemberType NoteProperty -Name Height -Value $Height            
+ $OutputObj | Add-Member -MemberType NoteProperty -Name IsPrimaryMonitor -Value $IsPrimary            
+ $OutputObj            
+
+}            
+}
+
+Function Get-Mouse {
+Process {
+        Add-Type -AssemblyName System.Windows.Forms
+        $screen = [System.Windows.Forms.SystemInformation]::VirtualScreen
+        [Windows.Forms.Cursor]::Position
+    }
+}
+
+Function Move-Mouse {
+	Param (
+[int]$X = ((Get-ScreenResolution).Width), 
+[int]$y = ((Get-ScreenResolution).Height/2)
+    )
+Process {
+        Add-Type -AssemblyName System.Windows.Forms
+        $screen = [System.Windows.Forms.SystemInformation]::VirtualScreen
+        $screen.Width = $X
+        $screen.Height = $y
+        [Windows.Forms.Cursor]::Position = "$($screen.Width),$($screen.Height)"
+    }
+}
+
+Function Run-Cat {
+$newMouse = (Get-Mouse)
+	while ($true) {
+$oldMouse = $newMouse
+$newMouse = (Get-Mouse)
+Write-Host "oldMouse $oldMouse newMouse $newMouse"
+if (!(diff $oldMouse $newMouse)) {
+Move-Mouse
+Write-Host "move"
+}
+sleep 3
+
+}
+}
+
 
 New-Alias note "C:\Program Files\n++\notepad++.exe"
 
@@ -34,3 +96,4 @@ function Restart-ProgWebserver($i) {
 	copy .\inMemCacheFileCopy.json .\inMemCacheFile.json;
 	node .\index.js
 }
+
